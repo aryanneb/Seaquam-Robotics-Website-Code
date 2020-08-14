@@ -13,3 +13,8 @@
     -webkit-user-select: none;
     -ms-user-select: none;
 }
+
+.welcome-page   {
+    width: 100vw;
+    height: 80vh;
+}
