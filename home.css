@@ -1,20 +1,39 @@
-.bigimg  {
-    height: 100vh;
-    max-height: 1400px;
-    position: absolute;
-    opacity: 0.2;
-    z-index: -1;
-    right: 0;
-    bottom: 0;
-    user-drag: none;
-    user-select: none;
-    -moz-user-select: none;
-    -webkit-user-drag: none;
-    -webkit-user-select: none;
-    -ms-user-select: none;
+body {
+  height: 350vh;
+}
+.home-title {
+  margin-bottom: 2vh;
+}
+.home-desc {
+  margin-bottom: 2vh;
 }
 
-.welcome-page   {
-    width: 100vw;
-    height: 80vh;
+.home-button {
+  margin-top: 2vh;
 }
+.bigimg {
+  height: 100vh;
+  max-height: 1400px;
+  position: absolute;
+  opacity: 0.2;
+  z-index: -1;
+  right: 0;
+  bottom: 0;
+  user-drag: none;
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-drag: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+}
+
+.greeting {
+  width: 250px;
+  height: 10px;
+}
+
+@media screen and (max-width: 680px) {
+    .greeting {
+      width: 165px;
+    }
+  }
