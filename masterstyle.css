@@ -5,12 +5,12 @@
 }
 
 html {
+  overflow-x: hidden;
   font-size: 16px;
 }
 
 body {
   background-color: black;
-  overflow-x: hidden;
 }
 
 .home-content {
@@ -112,18 +112,13 @@ button {
   cursor: pointer;
 }
 
-button:focus {
-  outline: none;
-  transform: scale(1.05);
-  background-color: #ffd382;
-  color: black;
-}
+
 
 .button-style {
   background-color: transparent;
   color: #ffd382;
   border: 2px solid #ffd382;
-  transition-duration: 0.3s;
+  transition-duration: 0.2s;
 }
 
 .button-style2 {
@@ -136,6 +131,17 @@ button:focus {
 .home-button:hover {
   background-color: #ffd382;
   color: black;
+}
+
+button:focus {
+  outline: none;
+  transform: scale(1.08);
+  background-color: #ffd382;
+  color: black;
+}
+
+button:active {
+  background-color: #ffdea1 !important;
 }
 
 .arrow-box {
@@ -212,7 +218,7 @@ button:focus {
     font-size: 0.9rem;
   }
   .grey-text {
-    width: 90vw;
+    width: 88vw;
     font-size: 1rem;
   }
 
@@ -233,9 +239,19 @@ button:focus {
   header ul li a {
     display: none;
   }
+
+  .grey-title-content {
+    top: 5vh;
+  }
+  .grey-text-box {
+    margin-top: 10vh;
+  }
 }
 @media screen and (max-width: 320px) {
   h1 {
     font-size: 3.25rem;
+  }
+  p {
+    font-size: 0.8rem;
   }
 }

@@ -40,7 +40,7 @@ body {
   grid-template-areas:
     "img1 img2 img3"
     "button1 button2 button3";
-  grid-gap: 25px;
+  grid-gap: 2vw;
   margin-left: 10vw;
   margin-top: 10vh;
   justify-content: center;
@@ -99,4 +99,42 @@ body {
   .greeting {
     width: 165px;
   }
+  
+  .grey-page {
+    height: 140vh;
+  }
+
+  .grey-img-link-content {
+    width: 80vw;
+    display: grid;
+    grid-template-areas:
+      'img1'
+      'button1'
+      'img2'
+      'button2'
+      'img3'
+      'button3';
+    grid-gap: 5vw;
+    margin-left: 10vw;
+    margin-top: 3vh;
+    justify-content: center;
+  }
+  .grey-img {
+    width: 40vw;
+    height: 20vh;
+    margin: auto;
+    
+  }
+  .grey-text {
+    font-size: 0.8rem;
+    line-height: 25px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+
+.grey-page {
+  height: 160vh;
+}
+
 }
