@@ -105,7 +105,7 @@ button {
   height: 40px;
   border-radius: 43px;
   font-family: "Poppins", sans-serif;
-  font-weight: 500;
+  font-weight: 600;
   font-style: normal;
   font-size: 1.1rem;
   text-align: center;
@@ -120,8 +120,15 @@ button:focus {
 }
 
 .button-style {
-  background-color: black;
+  background-color: transparent;
   color: #ffd382;
+  border: 2px solid #ffd382;
+  transition-duration: 0.3s;
+}
+
+.button-style2 {
+  background-color: #ffd382;
+  color: black;
   border: 2px solid #ffd382;
   transition-duration: 0.3s;
 }

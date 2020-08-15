@@ -33,46 +33,70 @@ body {
 }
 
 .grey-img-link-content {
-    position: relative;
-    left: 10vw;
-    width: 80vw;
-    margin-top: 20vh;
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
+  position: relative;
+  width: 80vw;
+  height: 40vh;
+  display: grid;
+  grid-template-areas:
+    "img1 img2 img3"
+    "button1 button2 button3";
+  grid-gap: 25px;
+  margin-left: 10vw;
+  margin-top: 10vh;
+  justify-content: center;
 }
 
-.grey-box{
-    width: 26.6vw;
-    display: flex;
-    justify-content: flex-end;
-    flex-direction: column;
-    
+.image1 {
+  grid-area: img1;
+  display: flex;
+  justify-content: center;
 }
 
-.grey-img1 {
-    width: 200px;
-    height: 200px;
-    transform: translateX(-0.5vw);
+.image2 {
+  grid-area: img2;
+  display: flex;
+  justify-content: center;
 }
 
-.grey-img2 {
-    width: 200px;
-    height: 180px;
-    margin-bottom: 20px;
+.image3 {
+  grid-area: img3;
+  display: flex;
+  justify-content: center;
 }
 
-.grey-img1 img {
-    max-width: 100%;
-    max-height: 100%;
+.buttonbox1 {
+  grid-area: button1;
+  display: flex;
+  justify-content: center;
 }
 
-.grey-img2 img {
-    max-width: 100%;
-    max-height: 100%;
+.buttonbox2 {
+  grid-area: button2;
+  display: flex;
+  justify-content: center;
 }
+
+.buttonbox3 {
+  grid-area: button3;
+  display: flex;
+  justify-content: center;
+}
+
+.grey-img {
+  width: 20vw;
+  height: 20vh;
+  margin: auto;
+  
+}
+
+.grey-img img {
+  max-width: 100%;
+  max-height: 100%; 
+  object-fit: contain;
+}
+
 @media screen and (max-width: 680px) {
-    .greeting {
-      width: 165px;
-    }
+  .greeting {
+    width: 165px;
   }
+}
