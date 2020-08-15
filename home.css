@@ -129,6 +129,13 @@ body {
     font-size: 0.8rem;
     line-height: 25px;
   }
+
+  .bigimg {
+    height: 90vh;
+    object-fit: contain;
+    transform: translate(45vh, -8vh);
+    
+  }
 }
 
 @media screen and (max-width: 320px) {
