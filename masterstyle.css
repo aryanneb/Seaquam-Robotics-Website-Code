@@ -98,6 +98,7 @@ p {
 .rect {
   background-color: #ffd382;
   border-radius: 43px;
+  width: 100%;
 }
 button {
   border: none;
@@ -111,8 +112,6 @@ button {
   text-align: center;
   cursor: pointer;
 }
-
-
 
 .button-style {
   background-color: transparent;
@@ -190,6 +189,7 @@ button:active {
   top: 10vh;
   display: grid;
   justify-content: center;
+  text-align: center;
 }
 
 .grey-text-box {
@@ -202,40 +202,27 @@ button:active {
 .grey-text {
   width: 66vw;
   text-align: center;
-  line-height: 30px;
+  line-height: 2rem;
 }
 
 
 @media screen and (max-width: 680px) {
-  h1 {
-    font-size: 4rem;
-  }
-
-  h2 {
-    font-size: 2rem;
-  }
-
-  p {
-    font-size: 0.9rem;
+  html {
+    font-size: 13px;
   }
   .grey-text {
     width: 88vw;
-    font-size: 1rem;
+    font-size: 1.5rem;
   }
 
   button {
-    font-size: 0.9rem;
     width: 125px;
     height: 35px;
   }
 
   .home-content {
     transform: translate(6vw, 26vh);
-  }
-
-  header .logo {
-    height: 4rem;
-  }
+  }  
 
   header ul li a {
     display: none;
@@ -245,12 +232,13 @@ button:active {
     top: 5vh;
   }
   .grey-text-box {
-    margin-top: 10vh;
+    margin-top: 8vh;
   }
+
 }
 @media screen and (max-width: 320px) {
   h1 {
-    font-size: 3.25rem;
+    font-size: 3.9rem;
   }
   p {
     font-size: 0.8rem;

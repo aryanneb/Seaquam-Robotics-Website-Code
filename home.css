@@ -92,13 +92,11 @@ body {
 .grey-img img {
   max-width: 100%;
   max-height: 100%; 
+  min-width: 100%;
   object-fit: contain;
 }
 
 @media screen and (max-width: 680px) {
-  .greeting {
-    width: 165px;
-  }
   
   .grey-page {
     height: 140vh;
@@ -126,8 +124,8 @@ body {
     
   }
   .grey-text {
-    font-size: 0.8rem;
-    line-height: 25px;
+    font-size: 0.9rem;
+    line-height: 2rem;
   }
 
   .bigimg {
