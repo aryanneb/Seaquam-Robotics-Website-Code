@@ -6,7 +6,7 @@
 
 html {
   overflow-x: hidden;
-  font-size: 16px;
+  font-size: calc(1vh + 7px);
 }
 
 body {
@@ -107,10 +107,11 @@ p {
   border-radius: 43px;
   width: 100%;
 }
+
 button {
   border: none;
-  width: 150px;
-  height: 40px;
+  width: 8rem;
+  height: 2rem;
   border-radius: 43px;
   font-family: "Poppins", sans-serif;
   font-weight: 600;
@@ -212,18 +213,17 @@ button:active {
 }
 
 
-@media screen and (max-width: 680px) {
+@media screen and (max-width: 680px)  {
   html {
-    font-size: 13px;
+    font-size: calc(0.8vh + 7px);
   }
   .grey-text {
     width: 88vw;
     font-size: 1.5rem;
   }
 
-  button {
-    width: 125px;
-    height: 35px;
+  .button-style {
+    border: min(0.5vh, 2px) solid #ffd382;
   }
 
   header ul li a {
