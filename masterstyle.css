@@ -14,9 +14,12 @@ body {
 }
 
 .home-content {
-  transform: translate(13vw, 26vh);
-  width: 100%;
-  margin: 1vh;
+  height: 100%;
+  width: 90%; margin-left: 10vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: left;
 }
 
 header {
@@ -41,11 +44,15 @@ header.sticky {
 header .logo-box {
   position: relative;
   left: 3vw;
+  height: 100%;
 }
-header .logo {
-  position: relative;
-  height: 5.4rem;
+
+header .logo-box img {
+  max-width: 100%;
+  max-height: 100%;
 }
+
+
 
 header ul {
   position: relative;
@@ -219,10 +226,6 @@ button:active {
     height: 35px;
   }
 
-  .home-content {
-    transform: translate(6vw, 26vh);
-  }  
-
   header ul li a {
     display: none;
   }
@@ -243,3 +246,13 @@ button:active {
     font-size: 0.8rem;
   }
 }
+/*
+@media screen and (max-width: ) {
+  h1 {
+    font-size: 3.9rem;
+  }
+  p {
+    font-size: 0.8rem;
+  }
+}
+*/
