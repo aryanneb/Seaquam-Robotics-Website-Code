@@ -101,7 +101,6 @@ h2 {
     font-family: 'Poppins', sans-serif;
     color: white;
     font-size: 5vh;
-    margin-bottom: 2vh;
 }
 
 p {
@@ -220,7 +219,7 @@ in the individual css files,under the .banner class*/
     }
 
     h1 {
-        font-size: 7vh;
+        font-size: 7vw;
     }
 
     p  {
@@ -242,5 +241,8 @@ in the individual css files,under the .banner class*/
       margin-right: 5vh;
       fill: rgba(255, 255, 255, 1);
     }
-  }
 
+    .short-bar {
+      width: 30vh;
+    }
+  }
