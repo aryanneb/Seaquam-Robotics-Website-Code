@@ -178,7 +178,25 @@ button:active {
   transition: opacity 1s;
 }
 
+.arrow-up {
+  border: solid #b8b8b8;
+  opacity: 0.5;
+  height: 0px;
+  border-width: 0px 2px 2px 0px;
+  padding: 11px;
+  transform: rotate(-135deg);
+  -webkit-transform: rotate(-135deg);
+  transition: border 0.5s;
+  transition: opacity 1s;
+}
+
 .arrow-down:hover {
+  opacity: 1;
+  border: solid #ffd382;
+  border-width: 0px 2px 2px 0px;
+  height: 0px;
+}
+.arrow-up:hover {
   opacity: 1;
   border: solid #ffd382;
   border-width: 0px 2px 2px 0px;
@@ -217,6 +235,62 @@ button:active {
   line-height: 2rem;
 }
 
+footer {
+  height: 30vh;
+  width: 100%;
+  margin-top: 15vh;
+  padding-left: 5vw;
+  padding-right: 5vw;
+  background-color: #464444;
+  display: flex;
+  justify-content: space-between;
+}
+.main-content {
+  flex-basis: 45%;
+  margin-top: auto;
+  margin-bottom: auto;
+  line-height: 4rem;
+}
+
+.main-content img {
+  height: 2.5rem;
+  margin-right: 1rem;
+}
+
+.arrow-box-up {
+  flex-basis: 0%;
+  height: 0%;
+  transform: translate(0,15vh);
+}
+
+.list-content {
+  flex-basis: 45%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+}
+.list-content ul {
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  list-style: none;
+}
+
+.list-content ul li a{
+  position: relative;
+  margin: 1vw;
+  text-decoration: none;
+  color: #ffd382;
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+  font-size: 1.2rem;
+  transition: 0.6s;
+}
+
+
+
 @media screen and (max-width: 680px) {
   html {
     font-size: calc(0.8vh + 7px);
@@ -243,6 +317,16 @@ button:active {
   h1 {
     font-size: 4.8rem;
   }
+  .list-content {
+    display: none;
+    flex-basis: 0%;
+  }
+  .arrow-box-up {
+    transform: translate(-5vw, 15vh);
+  }
+  .main-content {
+    flex-basis: 80%;
+  }
 }
 @media screen and (max-width: 320px) {
   h1 {
@@ -252,13 +336,3 @@ button:active {
     font-size: 0.8rem;
   }
 }
-/*
-@media screen and (max-width: ) {
-  h1 {
-    font-size: 3.9rem;
-  }
-  p {
-    font-size: 0.8rem;
-  }
-}
-*/
