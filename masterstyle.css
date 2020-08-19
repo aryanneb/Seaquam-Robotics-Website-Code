@@ -13,15 +13,35 @@ body {
   background-color: black;
 }
 
+.home {
+  height: 100%;
+  width: 100%;
+  display: flex; 
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
 
 .home-content {
-  margin-top: 30vh;
   width: 50%;
+  height: 50%;
   margin-left: 10vw;
+  margin-top: 25vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: left;
+}
+
+.home-content h2 {
+  font-size: 4rem;
+}
+.home-img {
+  width: 30%;
+  height: 50%;
+  margin: auto;
+  padding-top: -10vh;
+  margin-right: 10vw;
+  object-fit: contain;
 }
 
 header {
@@ -301,7 +321,7 @@ footer {
     font-size: 1.5rem;
   }
 
-  .home-content{
+  .home-content {
     width: 100%;
   }
   
