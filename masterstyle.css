@@ -13,9 +13,10 @@ body {
   background-color: black;
 }
 
+
 .home-content {
-  height: 100%;
-  width: 90%;
+  margin-top: 30vh;
+  width: 50%;
   margin-left: 10vw;
   display: flex;
   flex-direction: column;
@@ -300,6 +301,10 @@ footer {
     font-size: 1.5rem;
   }
 
+  .home-content{
+    width: 100%;
+  }
+  
   .button-style {
     border: min(0.5vh, 2px) solid #ffd382;
   }
