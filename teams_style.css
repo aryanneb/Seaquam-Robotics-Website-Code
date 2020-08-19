@@ -54,7 +54,7 @@
   margin-top: calc(4vw - 40px);
 }
 
-@media screen and (max-width:1000px) {
+@media screen and (max-width:1024px) {
   .tms {
     width:45vw;
   }
