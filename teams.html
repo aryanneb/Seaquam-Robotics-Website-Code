@@ -23,20 +23,22 @@
 <body>
   <header>
     <a href="#" class="logo-box"><img src="img/logo.png" alt="Seaquam Robotics Logo" class="logo"></a>
-    <div class="menu-icon-container">
+    <div class="menu-icon-wrapper">
       <a id="menu-button" href="#">
-        <svg class="menu-icon" xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24">
-          <path d="M0 0h24v24H0z" fill="none" />
-          <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z" />
-        </svg>
+        <div class="menu-icon-container">
+          <svg class="menu-icon" xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24">
+            <path d="M0 0h24v24H0z" fill="none" />
+            <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z" />
+          </svg>
+        </div>
       </a>
     </div>
     <ul>
-      <li><a href="#">Home</a></li>
-      <li><a href="#">History</a></li>
-      <li><a href="#">Teams</a></li>
-      <li><a href="#">Resources</a></li>
-      <li><a href="#">Schedule</a></li>
+      <a href="#"><li>Home</li></a>
+      <a href="#"><li>History</li></a>
+      <a href="#"><li>Teams</li></a>
+      <a href="#"><li>Resources</li></a>
+      <a href="#"><li>Schedule</li></a>
     </ul>
   </header>
   <script type="text/javascript">
@@ -47,7 +49,7 @@
   </script>
   <div class="banner"></div>
   <div class="title-top">
-    <h1>Teams</h1>
+    <h1 id="pg-title">Teams</h1>
     <div class="short-bar"></div>
     <div class="intro-text">
       <p>Currently, we have 12 teams in our program. Scroll down to learn more about each of those teams.</p>
@@ -59,28 +61,120 @@
     </a>
   </div>
 
-  <div class="main-content-wrapper">
-    <div class="container">
-      <div class="tms">
-        <img src="img/9181A_top.jpg">
-      </div>
-      <div class="tms text">
-        <h2 class="teamname">9181A</h2>
-        <p class="team-intro">Add some introduction from themselves? The text needs to be about 20-30 words long I guess...</p>
-      </div>
-      <div class="tms">
-        <img src="img/9181C_top.jpg">
-      </div>
-      <div class="tms text">
-        <h2 class="teamname">9181C</h2>
-        <p class="team-intro">Add some introduction from themselves? The text needs to be about 20-20 words long I guess...</p>
-      </div>
-    </div>
-  </div>
+      <div class="parent AC">
+        <img src="img/9181A_top.jpg" class="tms photo">
+        <div class="tms text">
+          <h2 class="teamname">9181A</h2>
+          <p class="team-intro">Add some introduction from themselves? The text needs to be about 20-30 words long I guess...</p>
+          <div class="button-container">
+            <button class="button-style2 learn-more">Learn More</button>
+          </div>
+        </div>
 
+        <img src="img/9181C_top.jpg" class="tms photo">
+        <div class="tms text">
+          <h2 class="teamname">9181C</h2>
+          <p class="team-intro">Add some introduction from themselves? The text needs to be about 20-20 words long I guess...</p>
+          <div class="button-container">
+            <button class="button-style2 learn-more">Learn More</button>
+          </div>
+        </div>
+      </div>
 
+      <div class="parent DE">
+        <img src="img/9181D_top.jpg" class="tms photo">
+        <div class="tms text">
+          <h2 class="teamname">9181D</h2>
+          <p class="team-intro">Add some introduction from themselves? The text needs to be about 20-30 words long I guess...</p>
+          <div class="button-container">
+            <button class="button-style2 learn-more">Learn More</button>
+          </div>
+        </div>
+        <img src="img/9181E_top.jpg" class="tms photo">
+        <div class="tms text">
+          <h2 class="teamname">9181E</h2>
+          <p class="team-intro">Add some introduction from themselves? The text needs to be about 20-20 words long I guess...</p>
+          <div class="button-container">
+            <button class="button-style2 learn-more">Learn More</button>
+          </div>
+        </div>
+      </div>
 
+      <div class="parent GJ">
+        <img src="img/9181G_top.jpg" class="tms photo">
+        <div class="tms text">
+          <h2 class="teamname">9181G</h2>
+          <p class="team-intro">Add some introduction from themselves? The text needs to be about 20-30 words long I guess...</p>
+          <div class="button-container">
+            <button class="button-style2 learn-more">Learn More</button>
+          </div>
+        </div>
+        <img src="img/9181J_top.jpg" class="tms photo">
+        <div class="tms text">
+          <h2 class="teamname">9181J</h2>
+          <p class="team-intro">Add some introduction from themselves? The text needs to be about 20-20 words long I guess...</p>
+          <div class="button-container">
+            <button class="button-style2 learn-more">Learn More</button>
+          </div>
+        </div>
+      </div>
 
+      <div class="parent KS">
+        <img src="img/9181K_top.jpg" class="tms photo">
+        <div class="tms text">
+          <h2 class="teamname">9181K</h2>
+          <p class="team-intro">Add some introduction from themselves? The text needs to be about 20-30 words long I guess...</p>
+          <div class="button-container">
+            <button class="button-style2 learn-more">Learn More</button>
+          </div>
+        </div>
+        <img src="img/9181S_top.jpg" class="tms photo">
+        <div class="tms text">
+          <h2 class="teamname">9181S</h2>
+          <p class="team-intro">Add some introduction from themselves? The text needs to be about 20-20 words long I guess...</p>
+          <div class="button-container">
+            <button class="button-style2 learn-more">Learn More</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="parent TV">
+        <img src="img/9181T_top.jpg" class="tms photo">
+        <div class="tms text">
+          <h2 class="teamname">9181T</h2>
+          <p class="team-intro">Better photo for T, no full member photo available</p>
+          <div class="button-container">
+            <button class="button-style2 learn-more">Learn More</button>
+          </div>
+        </div>
+        <img src="img/9181V_top.jpg" class="tms photo">
+        <div class="tms text">
+          <h2 class="teamname">9181V</h2>
+          <p class="team-intro">Add some introduction from themselves? The text needs to be about 20-20 words long I guess...</p>
+          <div class="button-container">
+            <button class="button-style2 learn-more">Learn More</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="parent WX">
+        <img src="img/9181W_top.jpg" class="tms photo">
+        <div class="tms text">
+          <h2 class="teamname">9181W</h2>
+          <p class="team-intro">Add some introduction from themselves? The text needs to be about 20-30 words long I guess...</p>
+          <div class="button-container">
+            <button class="button-style2 learn-more">Learn More</button>
+          </div>
+        </div>
+        <img src="img/9181X_top.jpg" class="tms photo">
+        <div class="tms text">
+          <h2 class="teamname">9181X</h2>
+          <p class="team-intro">Add some introduction from themselves? The text needs to be about 20-20 words long I guess...</p>
+          <div class="button-container">
+            <button class="button-style2 learn-more">Learn More</button>
+          </div>
+        </div>
+      </div>
 
 </body>
 

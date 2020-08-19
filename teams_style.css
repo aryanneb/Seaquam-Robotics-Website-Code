@@ -10,7 +10,7 @@
 }
 
 .banner {
-    top: -12vh;
+    top: -5vh;
     background-image: url("http://127.0.0.1:3000/img/teams page banner.jpg");
 }
 
@@ -20,28 +20,85 @@
   padding: 8vh 5vw 0 5vw;
 }
 
-.main-content-wrapper {
-  position: absolute;
-  width: 100vw;
+
+.parent {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 2vw;
 }
 
-.container {
-
-}
 .tms {
-  position: relative;
-  float:left;
-  width: 20vw;
-  display: block;
-  margin-left: 2.5vw
+  margin: 0 auto;
 }
 
-.tms img {
-  height: 25vh;
-  width: 20vw;
+.photo {
+  width: 24vw;
+  height: 16vw;
+  min-width: 300px;
+  min-height:200px;
+  display: block;
 }
 
 .text {
-  width: 20vw;
-  height: 25vh;
+  width: 18vw;
+  height:20vw;
+  display: block;
+}
+
+.text p {
+  font-size: 1.3vw;
+  display: block;
+}
+
+.button-container {
+  margin-top: calc(4vw - 40px);
+}
+
+@media screen and (max-width:1000px) {
+  .tms {
+    width:45vw;
+  }
+  .photo {
+    height:30vw;
+
+  }
+  .text p {
+    font-size: 2.2vw;
+  }
+  .button-container {
+    margin-top: calc(7vw - 30px);
+  }
+  .tms {
+    margin-bottom: 2vw;
+  }
+}
+
+@media screen and (max-width:670px) {
+  #pg-title {
+    font-size: 7vh;
+  }
+
+  .tms {
+    width:75vw;
+  }
+  .photo {
+    height:50vw;
+  }
+
+  .parent {
+    flex-direction: column;
+  }
+  .text{
+    height:auto;
+    text-align:center;
+  }
+
+  .text p {
+    font-size: 18px;
+  }
+
+  .button-container {
+    margin-top: 2vh;
+    margin-bottom: 2vh;
+  }
 }
