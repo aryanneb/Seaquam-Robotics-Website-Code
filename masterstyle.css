@@ -260,15 +260,17 @@ button:active {
 }
 
 footer {
-  height: 30vh;
+  height: max(30vh, 10rem);
   width: 100%;
   margin-top: 15vh;
+  margin-bottom: 0vh;
   padding-left: 5vw;
   padding-right: 5vw;
   background-color: #464444;
   display: flex;
   justify-content: space-between;
 }
+
 .main-content {
   flex-basis: 45%;
   margin-top: auto;
