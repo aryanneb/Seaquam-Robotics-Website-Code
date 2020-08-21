@@ -382,6 +382,10 @@ footer {
     margin-top: 5vh;
   }
 
+  .list-content li{
+    margin-bottom:2vh;
+  }
+
 }
 
 .grey-page {
