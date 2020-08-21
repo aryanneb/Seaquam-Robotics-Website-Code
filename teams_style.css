@@ -24,7 +24,8 @@
 .parent {
   display: flex;
   flex-wrap: wrap;
-  padding: 0 2vw;
+  padding: 0 5vw;
+  margin-bottom: 2vw;
 }
 
 .tms {
@@ -34,46 +35,70 @@
 .photo {
   width: 24vw;
   height: 16vw;
-  min-width: 300px;
-  min-height:200px;
+  min-width: 270px;
+  min-height:180px;
   display: block;
 }
 
 .text {
   width: 18vw;
-  height:20vw;
+  height: 16vw;
+  min-height: 180px;
   display: block;
+  text-align:center;
+  /*border: 2px solid #ffd382;  for checking the text container size*/
+}
+
+.text h2 {
+  font-size: 2.5rem;
 }
 
 .text p {
-  font-size: 1.3vw;
+  font-size: calc(1.8vw - 15px);
   display: block;
 }
 
 .button-container {
-  margin-top: calc(4vw - 40px);
+  margin-top: calc(4vw - 30px);
+  position: relative;
 }
+
 
 @media screen and (max-width:1000px) {
   .tms {
-    width:45vw;
+    width:42vw;
   }
-  .photo {
-    height:30vw;
 
+  .photo {
+    height: 28vw;
   }
+
+  .text {
+    height: 28vw;
+    display: flex;
+    flex-direction: column;
+    text-align:left;
+  }
+
+  .text h2{
+    height: 30%;
+  }
+
   .text p {
-    font-size: 2.2vw;
+      height: 50%;
+      font-size: calc(2.2vw - 2px);
   }
   .button-container {
-    margin-top: calc(7vw - 30px);
+    height: 20%;
+    /*margin-top: calc(7vw - 30px);*/
+    padding: 0 0;
   }
   .tms {
     margin-bottom: 2vw;
   }
 }
 
-@media screen and (max-width:670px) {
+@media screen and (max-width:680px) {
   #pg-title {
     font-size: 7vh;
   }
@@ -94,7 +119,7 @@
   }
 
   .text p {
-    font-size: 18px;
+    font-size: 3vw;
   }
 
   .button-container {
