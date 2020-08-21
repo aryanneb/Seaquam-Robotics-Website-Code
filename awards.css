@@ -16,9 +16,117 @@
     max-height: 100%;
     object-fit: contain;
 }
+.button-row {
+    position: relative;
+    width: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 5vh 10vw 5vh 10vw;
+}
 
+.award {
+    width: 10rem;
+    margin: 0.5rem 0.5rem;
+}
+
+
+
+.team {
+    flex-basis: max(33%,480px);
+    margin: auto;
+    margin-top: 5vh;
+   
+}
+
+.changeUp {
+    display: flex;
+    flex-wrap: wrap;
+    width: 80%;
+    margin-left: 10%;
+    justify-content: center;
+    margin-bottom: 10vh;
+}
+
+.towerTakeover {
+    display: flex;
+    flex-wrap: wrap;
+    width: 80%;
+    margin-left: 10%;
+    justify-content: center;
+    margin-bottom: 10vh;
+    display: none;
+}
+.turningPoint {
+    display: flex;
+    flex-wrap: wrap;
+    width: 80%;
+    margin-left: 10%;
+    justify-content: center;
+    margin-bottom: 10vh;
+    display: none;
+}
+
+.inTheZone {
+    display: flex;
+    flex-wrap: wrap;
+    width: 80%;
+    margin-left: 10%;
+    justify-content: center;
+    margin-bottom: 10vh;
+    display: none;
+}
+
+.nothingButNet {
+    display: flex;
+    flex-wrap: wrap;
+    width: 80%;
+    margin-left: 10%;
+    justify-content: center;
+    margin-bottom: 10vh;
+    display: none;
+}
+
+.starstruck {
+    display: flex;
+    flex-wrap: wrap;
+    width: 80%;
+    margin-left: 10%;
+    justify-content: center;
+    margin-bottom: 10vh;
+    display: none;
+}
+
+.skyrise {
+    display: flex;
+    flex-wrap: wrap;
+    width: 80%;
+    margin-left: 10%;
+    justify-content: center;
+    margin-bottom: 10vh;
+    display: none;
+}
+
+.tossUp {
+    display: flex;
+    flex-wrap: wrap;
+    width: 80%;
+    margin-left: 10%;
+    justify-content: center;
+    margin-bottom: 10vh;
+    display: none;
+}
+
+
+.visible {
+    display: flex;
+}
 @media screen and (max-width: 680px) {
     .grey-image {
         height: 50vh;
+    }
+
+    h2 {
+        font-size: 1.8rem;
     }
 }

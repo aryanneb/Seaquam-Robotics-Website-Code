@@ -14,10 +14,10 @@ body {
 }
 
 .classic {
-  width: 15.5rem;
-  height: 0.5rem;
-  margin-bottom: 2vh;
-  margin-top: -1vh;
+ width: 15.5rem;
+ height: 0.5rem;
+ margin-bottom: 2vh;
+ margin-top: -1vh;
 }
 
 .centered-classic {
@@ -30,7 +30,7 @@ body {
 .home {
   height: 100%;
   width: 100%;
-  display: flex;
+  display: flex; 
   flex-wrap: nowrap;
   justify-content: space-between;
 }
@@ -44,7 +44,7 @@ body {
   margin-left: 10vw;
 }
 
-.home-content {
+.home-content{
   width: 50%;
   display: flex;
   flex-direction: column;
@@ -55,6 +55,7 @@ body {
 .home-content-with-img h2 {
   font-size: 4rem;
 }
+
 .home-img {
   width: 35%;
   margin-right: 10vw;
@@ -129,13 +130,13 @@ h1 {
 h2 {
   font-family: "Poppins", sans-serif;
   color: white;
-  font-size: 3rem;
+  font-size: 2.5rem;
 }
 
 h3 {
   font-family: "Poppings", sans-serif;
   color: white;
-  font-size: 2.5rem;
+  font-size: 2rem;
 }
 
 p {
@@ -254,15 +255,18 @@ button:active {
 .grey-title-content {
   position: relative;
   width: 100vw;
-  top: 10vh;
   display: grid;
   justify-content: center;
   text-align: center;
 }
 
+.greeting-text {
+  margin-top: 10vh;
+}
+
 .grey-text-box {
   width: 100vw;
-  margin-top: 20vh;
+  margin-top: 10vh;
   display: flex;
   justify-content: center;
 }
@@ -299,7 +303,7 @@ footer {
 .arrow-box-up {
   flex-basis: 0%;
   height: 0%;
-  transform: translate(0, 15vh);
+  transform: translate(0,15vh);
 }
 
 .list-content {
@@ -317,7 +321,7 @@ footer {
   list-style: none;
 }
 
-.list-content ul li a {
+.list-content ul li a{
   position: relative;
   margin: 1vw;
   text-decoration: none;
@@ -329,23 +333,28 @@ footer {
 }
 
 @media screen and (max-width: 1024px) {
+
   .home {
     flex-wrap: wrap;
   }
-  .home-content-with-img {
+
+  .home-content-with-img{
     width: 80%;
     margin: auto;
     margin-bottom: 0vh;
     margin-left: 10vw;
-  }
 
+  }
+  
   .home-img {
     height: 35%;
     width: 70%;
     margin: auto;
     margin-top: 5vh;
   }
+
 }
+
 
 @media screen and (max-width: 680px) {
   html {
@@ -367,7 +376,7 @@ footer {
     width: 80%;
     margin-left: 10vw;
   }
-
+  
   .button-style {
     border: min(0.5vh, 2px) solid #ffd382;
   }
@@ -379,6 +388,10 @@ footer {
   .grey-title-content {
     top: 5vh;
   }
+  .greeting-text {
+    margin-top: 5vh;
+  }
+  
   .grey-text-box {
     margin-top: 8vh;
   }
