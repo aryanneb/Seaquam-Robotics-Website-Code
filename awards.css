@@ -46,6 +46,7 @@
     margin-left: 10%;
     justify-content: center;
     margin-bottom: 10vh;
+    transition: 0.2s;
 }
 
 .towerTakeover {
@@ -56,6 +57,7 @@
     justify-content: center;
     margin-bottom: 10vh;
     display: none;
+    transition: all 0.2s ease;
 }
 .turningPoint {
     display: flex;
