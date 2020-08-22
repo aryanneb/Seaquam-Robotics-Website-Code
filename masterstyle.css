@@ -329,11 +329,16 @@ footer {
   margin-right: 1rem;
 }
 
+.up {
+  flex-basis: 10%;
+  height: 33.94px;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+}
+
 .arrow-box-up {
-  flex-basis: 0%;
-  height: 0%;
-  width: 8px; /* I don't know WHy this works but I guess It does*/
-  transform: translate(0,15vh);
+  margin: auto;
 }
 
 .list-content {
@@ -361,6 +366,16 @@ footer {
   font-size: 1.2rem;
   transition: 0.6s;
 }
+/* center-aligner
+.block {
+  position: absolute;
+  height: 500vh;
+  width: 10px;
+  left: 50vw;
+  top: 0;
+  background-color: white;
+  opacity: 0.5;
+} */
 
 @media screen and (max-width: 1024px) {
 
