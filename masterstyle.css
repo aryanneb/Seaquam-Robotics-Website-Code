@@ -178,12 +178,22 @@ header ul li a:hover::after{
   opacity: 1;
 }
 
-.dropdown:hover{
+.history:hover{
   display: block;
   opacity: 1;
 }
 
-.dorpdown li:hover + .dropdown{
+.history li:hover + .dropdown{
+  display: block;
+  opacity: 1;
+}
+
+.teams:hover + .dropdown{
+  display: block;
+  opacity: 1;
+}
+
+.dropdown:hover{
   display: block;
   opacity: 1;
 }
