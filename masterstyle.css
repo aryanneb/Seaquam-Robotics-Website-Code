@@ -98,17 +98,18 @@ header ul {
   display: flex;
   justify-content: center;
   align-items: center;
-  right: 3vw;
 }
 
 header ul li {
   position: relative;
   list-style: none;
+  height: 10vh;
+  padding-top: 3.5vh;
 }
 
 header ul li a {
   position: relative;
-  margin: 0 2.5vw;
+  margin: 0 5vw 0 0;
   text-decoration: none;
   color: #fff;
   font-family: "Poppins", sans-serif;
@@ -149,6 +150,43 @@ header ul li a:hover::after{
 	transform: scaleX(1);
 }
 
+.dropdown {
+  position: relative;
+  display: none;
+  height: 10vh;
+  left: 0;
+  opacity: 0;
+  padding: 0%;
+  margin-left: 0;
+  width: auto;
+  transition: all 0.3 ease, opacity 0.5s ease;
+}
+.dropdown li {
+  position: relative;
+  list-style: none;
+  transform: translate(-2.5vw, 1vh);
+  text-align: center;
+  background-color: black;
+}
+.dropdown li a {
+  margin: 0%;
+  font-size: 1rem;
+}
+
+.history:hover + .dropdown{
+  display: block;
+  opacity: 1;
+}
+
+.dropdown:hover{
+  display: block;
+  opacity: 1;
+}
+
+.dorpdown li:hover + .dropdown{
+  display: block;
+  opacity: 1;
+}
 
 h1 {
   font-family: "Poppins", sans-serif;
