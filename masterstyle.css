@@ -117,9 +117,38 @@ header ul li a {
   transition: 0.6s;
 }
 
+header ul li a::before,
+header ul li a::after{
+	content: '';
+	position: absolute;
+	width: 100%;
+	height: 2px;
+	background-color: #ffd382;
+	left: 0;
+	transform: scaleX(0);
+	transition: all .3s;
+}
+
+
+header ul li a::before{
+	top: -0.5vh;
+	transform-origin: left;
+}
+
+header ul li a::after{
+	bottom: -0.5vh;
+	transform-origin: right;
+}
+
 header:hover {
   opacity: 1;
 }
+
+header ul li a:hover::before,
+header ul li a:hover::after{
+	transform: scaleX(1);
+}
+
 
 h1 {
   font-family: "Poppins", sans-serif;
