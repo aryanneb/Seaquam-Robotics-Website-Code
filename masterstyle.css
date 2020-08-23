@@ -175,18 +175,50 @@ header ul li a:hover::after{
   font-size: 1rem;
 }
 
+.dropdown2 {
+  position: relative;
+  visibility: hidden;
+  display: block;
+  height: 10vh;
+  opacity: 0;
+  padding: 0%;
+  width: auto;
+  transition: opacity 200ms ease-in-out;
+  z-index: 10;
+}
+.dropdown2 li {
+  position: relative;
+  list-style: none;
+  text-align: center;
+  background-color: black;
+}
+.dropdown2 li a {
+  margin: 0%;
+  font-size: 1rem;
+}
+
 
 .history:hover + .dropdown{
   visibility: visible;
   opacity: 1;
 }
 
-.teams:hover + .dropdown{
+.teams + .dropdown{
+  visibility: visible;
+  opacity: 1;
+}
+
+.seniors + .dropdown2{
   visibility: visible;
   opacity: 1;
 }
 
 .dropdown:hover{
+  visibility: visible;
+  opacity: 1;
+}
+
+.dropdown2:hover{
   visibility: visible;
   opacity: 1;
 }
