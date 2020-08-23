@@ -152,14 +152,14 @@ header ul li a:hover::after{
 
 .dropdown {
   position: relative;
-  display: none;
+  visibility: hidden;
+  display: block;
   height: 10vh;
   left: 0;
   opacity: 0;
   padding: 0%;
   margin-left: 0;
   width: auto;
-  transition: all 0.3 ease, opacity 0.5s ease;
 }
 .dropdown li {
   position: relative;
@@ -174,27 +174,27 @@ header ul li a:hover::after{
 }
 
 .history:hover + .dropdown{
-  display: block;
+  visibility: visible;
   opacity: 1;
 }
 
 .history:hover{
-  display: block;
+  visibility: visible;
   opacity: 1;
 }
 
 .history li:hover + .dropdown{
-  display: block;
+  visibility: visible;
   opacity: 1;
 }
 
 .teams:hover + .dropdown{
-  display: block;
+  visibility: visible;
   opacity: 1;
 }
 
 .dropdown:hover{
-  display: block;
+  visibility: visible;
   opacity: 1;
 }
 
