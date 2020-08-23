@@ -158,9 +158,10 @@ header ul li a:hover::after{
   left: 0;
   opacity: 0;
   padding: 0%;
+  left: 0;
   margin-left: 0;
   width: auto;
-  transition: visibility 200ms, opacity 300ms ease-in;
+  transition: opacity 200ms ease-in-out;
 }
 .dropdown li {
   position: relative;
@@ -174,17 +175,8 @@ header ul li a:hover::after{
   font-size: 1rem;
 }
 
+
 .history:hover + .dropdown{
-  visibility: visible;
-  opacity: 1;
-}
-
-.history:hover{
-  visibility: visible;
-  opacity: 1;
-}
-
-.history li:hover + .dropdown{
   visibility: visible;
   opacity: 1;
 }
@@ -198,6 +190,7 @@ header ul li a:hover::after{
   visibility: visible;
   opacity: 1;
 }
+
 
 h1 {
   font-family: "Poppins", sans-serif;
