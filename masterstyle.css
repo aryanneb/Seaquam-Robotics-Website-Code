@@ -14,10 +14,10 @@ body {
 }
 
 .classic {
- width: 15.5rem;
- height: 0.5rem;
- margin-bottom: 2vh;
- margin-top: -1vh;
+  width: 15.5rem;
+  height: 0.5rem;
+  margin-bottom: 2vh;
+  margin-top: -1vh;
 }
 
 .centered-classic {
@@ -30,7 +30,7 @@ body {
 .home {
   height: 100%;
   width: 100%;
-  display: flex; 
+  display: flex;
   flex-wrap: nowrap;
   justify-content: space-between;
 }
@@ -44,7 +44,7 @@ body {
   margin-left: 10vw;
 }
 
-.home-content{
+.home-content {
   width: 50%;
   display: flex;
   flex-direction: column;
@@ -119,26 +119,25 @@ header ul li a {
 }
 
 header ul li a::before,
-header ul li a::after{
-	content: '';
-	position: absolute;
-	width: 100%;
-	height: 2px;
-	background-color: #ffd382;
-	left: 0;
-	transform: scaleX(0);
-	transition: all .3s;
+header ul li a::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background-color: #ffd382;
+  left: 0;
+  transform: scaleX(0);
+  transition: all 0.3s;
 }
 
-
-header ul li a::before{
-	top: -0.5vh;
-	transform-origin: left;
+header ul li a::before {
+  top: -0.5vh;
+  transform-origin: left;
 }
 
-header ul li a::after{
-	bottom: -0.5vh;
-	transform-origin: right;
+header ul li a::after {
+  bottom: -0.5vh;
+  transform-origin: right;
 }
 
 header:hover {
@@ -146,8 +145,8 @@ header:hover {
 }
 
 header ul li a:hover::before,
-header ul li a:hover::after{
-	transform: scaleX(1);
+header ul li a:hover::after {
+  transform: scaleX(1);
 }
 
 .dropdown {
@@ -158,34 +157,46 @@ header ul li a:hover::after{
   left: 0;
   opacity: 0;
   padding: 0%;
-  left: 0;
   margin-left: 0;
   width: auto;
   transition: opacity 200ms ease-in-out;
+  transform: translate(-2.5vw);
 }
 .dropdown li {
   position: relative;
   list-style: none;
-  transform: translate(-2.5vw, 1vh);
   text-align: center;
   background-color: black;
+  transform: translate(0vw, 1vh);
 }
 .dropdown li a {
   margin: 0%;
   font-size: 1rem;
+}
+.seniors {
+  position: relative;
+  width: 100%;
+  height: 50%;
+}
+
+.juniors {
+  position: relative;
+  width: 100%;
+  height: 50%;
 }
 
 .dropdown2 {
   position: relative;
   visibility: hidden;
   display: block;
-  height: 10vh;
   opacity: 0;
+  left: 100%;
+  top: -7vh;
   padding: 0%;
   width: auto;
   transition: opacity 200ms ease-in-out;
-  z-index: 10;
 }
+
 .dropdown2 li {
   position: relative;
   list-style: none;
@@ -197,32 +208,34 @@ header ul li a:hover::after{
   font-size: 1rem;
 }
 
-
-.history:hover + .dropdown{
+.history:hover + .dropdown {
   visibility: visible;
   opacity: 1;
 }
 
-.teams + .dropdown{
+.teams:hover + .dropdown {
   visibility: visible;
   opacity: 1;
 }
 
-.seniors + .dropdown2{
+.seniors:hover > .dropdown2 {
   visibility: visible;
   opacity: 1;
 }
 
-.dropdown:hover{
+.juniors:hover > .dropdown2 {
+  visibility: visible;
+  opacity: 1;
+}
+.dropdown:hover {
   visibility: visible;
   opacity: 1;
 }
 
-.dropdown2:hover{
+.dropdown2:hover {
   visibility: visible;
   opacity: 1;
 }
-
 
 h1 {
   font-family: "Poppins", sans-serif;
@@ -430,7 +443,7 @@ footer {
   list-style: none;
 }
 
-.list-content ul li a{
+.list-content ul li a {
   position: relative;
   margin: 1vw;
   text-decoration: none;
@@ -452,26 +465,23 @@ footer {
 } */
 
 @media screen and (max-width: 1024px) {
-
   .home {
     flex-wrap: wrap;
   }
 
-  .home-content-with-img{
+  .home-content-with-img {
     width: 80%;
     margin: auto;
     margin-bottom: 0vh;
     margin-left: 10vw;
-
   }
-  
+
   .home-img {
     height: 35%;
     width: 70%;
     margin: auto;
     margin-top: 5vh;
   }
-
 }
 
 @media screen and (max-width: 680px) {
@@ -494,7 +504,7 @@ footer {
     width: 80%;
     margin-left: 10vw;
   }
-  
+
   .button-style {
     border: min(0.5vh, 2px) solid #ffd382;
   }
@@ -509,7 +519,7 @@ footer {
   .greeting-text {
     margin-top: 5vh;
   }
-  
+
   .grey-text-box {
     margin-top: 8vh;
   }
@@ -532,8 +542,6 @@ footer {
     width: 40vw;
   }
 }
-
-
 
 @media screen and (max-width: 320px) {
   h1 {
