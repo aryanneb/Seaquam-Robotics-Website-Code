@@ -185,6 +185,18 @@ header ul li a:hover::after {
   height: 50%;
 }
 
+.tips {
+  position: relative;
+  width: 100%;
+  height: 50%;
+}
+
+.more {
+  position: relative;
+  width: 100%;
+  height: 50%;
+}
+
 .dropdown2 {
   position: relative;
   visibility: hidden;
@@ -203,6 +215,7 @@ header ul li a:hover::after {
   text-align: center;
   background-color: black;
 }
+
 .dropdown2 li a {
   margin: 0%;
   font-size: 1rem;
@@ -227,7 +240,23 @@ header ul li a:hover::after {
   visibility: visible;
   opacity: 1;
 }
+
+.resources:hover + .dropdown {
+  visibility: visible;
+  opacity: 1;
+}
+
 .dropdown:hover {
+  visibility: visible;
+  opacity: 1;
+}
+
+.tips:hover > .dropdown2 {
+  visibility: visible;
+  opacity: 1;
+}
+
+.more:hover > .dropdown2 {
   visibility: visible;
   opacity: 1;
 }
@@ -253,6 +282,18 @@ h3 {
   font-family: "Poppings", sans-serif;
   color: white;
   font-size: 2rem;
+}
+
+h4 {
+  font-family: "Poppings", sans-serif;
+  color: white;
+  font-size: 1.5rem;
+}
+
+h5 {
+  font-family: "Poppings", sans-serif;
+  color: white;
+  font-size: 1rem;
 }
 
 p {
@@ -529,9 +570,6 @@ footer {
   .list-content {
     display: none;
     flex-basis: 0%;
-  }
-  .arrow-box-up {
-    transform: translate(-5vw, 15vh);
   }
   .main-content {
     flex-basis: 80%;
