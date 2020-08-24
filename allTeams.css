@@ -3,6 +3,15 @@ body {
   height: 100%;
 }
 
+.member {
+  display: none;
+}
+.member h3 {
+  color: #ffd382;
+  margin-bottom: 2vh;
+  opacity: 1;
+}
+
 .grey-image-container {
   width: 80%;
   margin-left: 10vw;

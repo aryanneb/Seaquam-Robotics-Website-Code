@@ -97,3 +97,24 @@ window.onclick = function (event) {
     modal5.style.display = "none";
   }
 };
+
+let names = [
+  document.getElementById("name"),
+  document.getElementById("name2"),
+  document.getElementById("name3"),
+  document.getElementById("name4"),
+  document.getElementById("name5"),
+];
+
+textChanger(0);
+
+function textChanger(i) {
+  if (names.length > i) {
+    setTimeout(function () {
+      names[i].style.display = "block";
+      textChanger(++i);
+    }, 1000);
+  } else if (names.length == i) {
+    textChanger(0);
+  }
+}
