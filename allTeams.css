@@ -1,3 +1,8 @@
+html,
+body {
+  height: 100%;
+}
+
 .grey-image-container {
   width: 80%;
   margin-left: 10vw;
@@ -16,7 +21,6 @@
   text-align: center;
   background-color: #444444;
 }
-
 .grey-image h3 {
   margin: 2vh auto 0 auto;
   font-weight: 500;
@@ -26,13 +30,11 @@
   margin: 2vh auto 0 auto;
   color: #ffd382;
   font-weight: 400;
-  cursor: pointer;
 }
 .grey-image h5 {
   margin: 2vh auto 5vh auto;
   color: #dcdcdc;
   font-weight: 500;
-  cursor: pointer;
 }
 
 .grey-image img {
@@ -43,6 +45,72 @@
   cursor: pointer;
 }
 
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+  background-color: rgba(0, 0, 0, 0.4);
+  animation: op 350ms;
+}
+
+.modal-content {
+  background-color: #464444;
+  opacity: 1;
+  width: min(60%, 900px);
+  height: 50%;
+  margin: auto;
+  display: flex;
+}
+
+.member-photo {
+  position: relative;
+  flex-basis: 45%;
+}
+
+.member-photo img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.member-text {
+  flex-basis: 50%;
+  margin: auto;
+  margin-left: 2.5%;
+}
+
+.member-text h2 {
+  color: #ffd382;
+}
+.member-text h3 {
+  font-weight: 400;
+  margin-bottom: 1vh;
+}
+
+.close {
+  flex-basis: 5%;
+}
+
+.close span {
+  font-size: 3rem;
+  cursor: pointer;
+  color: whitesmoke;
+}
+
+@keyframes op {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
 @media screen and (max-width: 1025px) {
   .grey-image-container {
     flex-wrap: wrap;
@@ -55,6 +123,22 @@
   .grey-image img {
     max-width: 100%;
     max-height: 100%;
+  }
+  .modal-content {
+    flex-direction: column-reverse;
+    height: 70%;
+  }
+  .member-photo {
+    position: relative;
+    flex-basis: 100%;
+  }
+  .close span {
+    float: right;
+  }
+  .member-photo img {
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
   }
 }
 
