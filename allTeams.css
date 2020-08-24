@@ -22,17 +22,17 @@ body {
   background-color: #444444;
 }
 .grey-image h3 {
-  margin: 2vh auto 0 auto;
+  margin: 1vh auto 0 auto;
   font-weight: 500;
   cursor: pointer;
 }
 .grey-image h4 {
-  margin: 2vh auto 0 auto;
+  margin: 1vh auto 0 auto;
   color: #ffd382;
   font-weight: 400;
 }
 .grey-image h5 {
-  margin: 2vh auto 5vh auto;
+  margin: 1vh auto 5vh auto;
   color: #dcdcdc;
   font-weight: 500;
 }
@@ -134,6 +134,7 @@ body {
   }
   .close span {
     float: right;
+    margin-right: 2vw;
   }
   .member-photo img {
     height: 100%;
