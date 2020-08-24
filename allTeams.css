@@ -3,13 +3,12 @@ body {
   height: 100%;
 }
 
-.member {
-  display: none;
-}
 .member h3 {
   color: #ffd382;
   margin-bottom: 2vh;
-  opacity: 1;
+  display: none;
+  opacity: 0;
+  transition: opacity 300ms;
 }
 
 .grey-image-container {
