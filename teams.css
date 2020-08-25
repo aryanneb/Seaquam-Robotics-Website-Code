@@ -24,6 +24,7 @@
 .parent {
   display: flex;
   flex-wrap: wrap;
+  margin: 0 auto;
   padding: 0 5vw;
   margin-bottom: 2vw;
 }
@@ -33,39 +34,52 @@
 }
 
 .photo {
-  width: 24vw;
-  height: 16vw;
+  width: 27vw;
+  height: 18vw;
   min-width: 270px;
   min-height:180px;
   display: block;
 }
 
 .text {
-  width: 18vw;
-  height: 16vw;
+  display: flex;
+  flex-direction: column;
+  text-align:left;
+  width: 15vw;
+  height: 18vw;
   min-height: 180px;
-  display: block;
+  /*display: block;*/
   text-align:center;
   /*border: 2px solid #ffd382;  for checking the text container size*/
 }
 
 .text h2 {
-  font-size: 2.5rem;
+  height: 30%;
+  font-size: calc(3vw + 8px);
 }
 
 .text p {
-  font-size: calc(1.8vw - 15px);
+  height: 50%;
+  font-size: calc(1vw);
   display: block;
 }
 
+button {
+  width: calc(10vw + 32px);
+  height: calc(2.5vw + 8px);
+  font-size: calc(1vw + 8px);
+}
+
 .button-container {
-  margin-top: calc(4vw - 30px);
+  height: 20%;
+  margin-top: 5px;
   position: relative;
 }
 
 @media screen and (max-width:1024px) {
   .tms {
     width:42vw;
+    margin-bottom: 2vw;
   }
 
   .photo {
@@ -80,20 +94,16 @@
   }
 
   .text h2{
-    height: 30%;
+
   }
 
   .text p {
-      height: 50%;
-      font-size: calc(2.2vw - 2px);
+      font-size: calc(2vw - 2px);
   }
   .button-container {
-    height: 20%;
+
     /*margin-top: calc(7vw - 30px);*/
     padding: 0 0;
-  }
-  .tms {
-    margin-bottom: 2vw;
   }
 }
 
@@ -113,16 +123,22 @@
     flex-direction: column;
   }
   .text{
-    height:auto;
+    height:30vw;
+    min-height:110px;
     text-align:center;
   }
 
   .text p {
-    font-size: 3vw;
+    font-size: calc(2vw + 2px);
   }
 
   .button-container {
     margin-top: 2vh;
     margin-bottom: 2vh;
+  }
+  button {
+    width: calc(15vw + 32px);
+    height: calc(4vw + 8px);
+    font-size: calc(1vw + 8px);
   }
 }

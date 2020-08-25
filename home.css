@@ -1,0 +1,165 @@
+.home-title {
+  margin-bottom: 2vh;
+}
+.home-desc {
+  margin-bottom: 2vh;
+}
+
+.home-button {
+  margin-top: 2vh;
+}
+.bigimg {
+  height: 100vh;
+  max-height: 1400px;
+  position: absolute;
+  opacity: 0.2;
+  z-index: -1;
+  right: 0;
+  bottom: 0;
+  user-drag: none;
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-drag: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+}
+
+.greeting {
+  width: 15.5rem;
+  height: 0.5rem;
+}
+
+.grey-img-link-content {
+  position: relative;
+  margin-top: 10vh;
+  width: 100vw;
+  height: auto;
+  background-color: #444444;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.grey-box {
+  flex-basis: 15%;
+  text-align: center;
+}
+
+.grey-box img {
+  width: min(30vw, 200px);
+}
+
+.grey-box button {
+  margin-top: 5vh;
+  margin-bottom: 5vh;
+}
+
+.seaquam-info {
+  width: 100%;
+  height: auto;
+}
+
+.seaquam-content {
+  width: 100%;
+  margin-top: 7vh;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-bottom: 10vh;
+}
+
+.seaquam-text-content {
+  position: relative;
+  margin-left: 10%;
+  flex-basis: 33%;
+}
+.seaquam-image-content {
+  position: relative;
+  margin-right: 10%;
+  flex-basis: 35%;
+  display: flex;
+  flex-direction: column;
+}
+
+.seaquam-logo img {
+  width: 44.9vh;
+}
+
+.seaquam-logo {
+  margin-top: auto;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.seaquam {
+  margin-top: 1vh;
+  margin-bottom: 2vh;
+  width: 7rem;
+  height: 0.5rem;
+}
+.seaquam-button {
+  margin-top: 2vh;
+  text-align: center;
+  margin-bottom: auto;
+}
+
+.seaquam-button button {
+  width: 18rem;
+}
+
+.seaquam-button button:hover {
+  background-color: #ffd382;
+  color: black;
+}
+
+@media screen and (max-width: 1120px) {
+
+.seaquam-image-content{
+  flex-basis: 80%;
+  margin-left: 10%;
+  margin-right: 10%;
+  margin-top: 5vh;
+}
+.seaquam-logo{
+  width: 80%;
+}
+.seaquam-logo img {
+  width: 100%;
+}
+.seaquam-text-content{
+  flex-basis: 80%;
+}
+
+}
+
+
+@media screen and (max-width: 680px) {
+  .grey-img-link-content {
+    flex-wrap: wrap;
+    margin-top: 5vh;
+  }
+  .grey-box {
+    min-width: 40vw;
+    margin-left: 10vw;
+    margin-right: 10vw;
+  }
+  .grey-text {
+    font-size: 0.9rem;
+    line-height: 2rem;
+  }
+  .grey-box button {
+    margin-bottom: 3vh;
+    margin-top: 3vh;
+  }
+  .bigimg {
+    height: 90vh;
+    object-fit: contain;
+    transform: translate(45vh, -8vh);
+  }
+  .seaquam-text-content {
+    flex-basis: 80%;
+  }
+  .seaquam-image-content {
+    margin-left: 10vw;
+    flex-basis: 80%;
+  }
+}
