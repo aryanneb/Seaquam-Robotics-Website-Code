@@ -302,10 +302,6 @@ header ul li a:hover::after {
   color: #ffd382;
 }
 
-.historyDrpDwn {
-  float: right;
-  margin-right: 10vw;
-}
 @keyframes navLinkAni {
   from {
     opacity: 0;
@@ -621,6 +617,8 @@ footer {
   }
   .mob {
     display: inline-block;
+    float: right;
+    margin-right: 10vw;
   }
   .dropdown {
     transform: translateX(100%);
