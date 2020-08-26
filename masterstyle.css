@@ -151,11 +151,11 @@ header ul li a:hover::after {
 
 .dropdown {
   position: relative;
-  visibility: visible;
+  visibility: hidden;
   display: block;
   height: 10vh;
   left: 0;
-  opacity: 1;
+  opacity: 0;
   padding: 0%;
   margin-left: 0;
   width: auto;
@@ -199,9 +199,9 @@ header ul li a:hover::after {
 
 .dropdown2 {
   position: relative;
-  visibility: visible;
+  visibility: hidden;
   display: block;
-  opacity: 1;
+  opacity: 0;
   left: 100%;
   top: -7vh;
   padding: 0%;
@@ -221,12 +221,16 @@ header ul li a:hover::after {
   font-size: 1rem;
 }
 
-.history:hover + .dropdown {
+.mob {
+  display: none;
+}
+
+.history:hover > .dropdown {
   visibility: visible;
   opacity: 1;
 }
 
-.teams:hover + .dropdown {
+.teams:hover > .dropdown {
   visibility: visible;
   opacity: 1;
 }
@@ -241,7 +245,7 @@ header ul li a:hover::after {
   opacity: 1;
 }
 
-.resources:hover + .dropdown {
+.resources:hover > .dropdown {
   visibility: visible;
   opacity: 1;
 }
@@ -293,6 +297,9 @@ header ul li a:hover::after {
   transform: rotate(45deg) translate(-5px, -6px);
 }
 
+.dropped {
+  transform: rotate(225deg);
+}
 @keyframes navLinkAni {
   from {
     opacity: 0;
@@ -595,6 +602,19 @@ footer {
     padding-left: 15vw;
   }
 
+  .dropdown li {
+    opacity: 0;
+    background-color: rgba(31, 30, 30, 0);
+  }
+  header ul li a {
+    cursor: pointer;
+  }
+  .mob {
+    display: inline-block;
+  }
+  .dropdown {
+    transform: translateX(100%);
+  }
   .grey-text {
     width: 88vw;
     font-size: 1.5rem;
