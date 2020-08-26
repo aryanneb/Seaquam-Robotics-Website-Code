@@ -159,7 +159,7 @@ header ul li a:hover::after {
   padding: 0%;
   margin-left: 0;
   width: auto;
-  transition: opacity 200ms ease-in-out;
+  transition: all 200ms ease-in-out;
   transform: translate(-2.5vw);
 }
 .dropdown li {
