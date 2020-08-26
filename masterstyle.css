@@ -302,6 +302,12 @@ header ul li a:hover::after {
   color: #ffd382;
 }
 
+.sub-link {
+  height: 7vh;
+  padding-top: 1.5vh;
+  padding-bottom: 0vh;
+  align-items: center;
+}
 @keyframes navLinkAni {
   from {
     opacity: 0;
@@ -551,6 +557,9 @@ footer {
   background-color: white;
   opacity: 0.5;
 } */
+.sub-link {
+  display: none;
+}
 
 @media screen and (max-width: 1024px) {
   .home {
@@ -610,10 +619,14 @@ footer {
   header ul li a {
     cursor: pointer;
   }
+  .sub-link {
+    display: block;
+  }
 
   .goldText a {
     color: #ffd382;
     margin-left: 3vw;
+    font-size: 1.1rem;
   }
   .mob {
     display: inline-block;

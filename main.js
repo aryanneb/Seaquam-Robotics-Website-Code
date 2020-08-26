@@ -23,7 +23,18 @@ const navSlide = () => {
         }s`;
       }
     });
+    let subLinks = document.querySelectorAll(".sub-link");
 
+    subLinks.forEach((link, index) => {
+      if (link.style.animation) {
+        link.style.animation = "";
+        link.style.opacity = "0";
+      } else {
+        link.style.animation = `navLinkAni 0.4s ease forwards ${
+          index / 7 + 0.75
+        }s`;
+      }
+    });
     burger.classList.toggle("toggle");
   });
 };
@@ -51,8 +62,8 @@ const historyDropdown = () => {
       parent.insertBefore(child2, parent.childNodes[5]);
       child1.classList.add("goldText");
       child2.classList.add("goldText");
-      child1.classList.add("main-link");
-      child2.classList.add("main-link");
+      child1.classList.add("sub-link");
+      child2.classList.add("sub-link");
       child1.style.animation = "navLinkAni 0.5s ease";
       child2.style.animation = "navLinkAni 0.5s ease";
       child1.style.opacity = "1";
@@ -63,8 +74,8 @@ const historyDropdown = () => {
       parent.insertBefore(child2, parent.childNodes[5]);
       child1.classList.add("goldText");
       child2.classList.add("goldText");
-      child1.classList.add("main-link");
-      child2.classList.add("main-link");
+      child1.classList.add("sub-link");
+      child2.classList.add("sub-link");
       child1.style.animation = "navLinkAni 0.5s ease";
       child2.style.animation = "navLinkAni 0.5s ease";
       child1.style.opacity = "1";
@@ -92,7 +103,6 @@ const teamsDropDown = () => {
 
   const numberOfJuniors =
     (document.querySelector(".juniors>ul").childNodes.length - 1) / 2;
-
   plus.addEventListener("click", () => {
     if (plus.classList.contains("dropped")) {
       parent.removeChild(seniors);
@@ -107,8 +117,8 @@ const teamsDropDown = () => {
       parent.insertBefore(juniors, resources);
       seniors.classList.add("goldText");
       juniors.classList.add("goldText");
-      seniors.classList.add("main-link");
-      juniors.classList.add("main-link");
+      seniors.classList.add("sub-link");
+      juniors.classList.add("sub-link");
       seniors.style.animation = "navLinkAni 0.5s ease";
       juniors.style.animation = "navLinkAni 0.5s ease";
       seniors.style.opacity = "1";
@@ -119,8 +129,8 @@ const teamsDropDown = () => {
       parent.insertBefore(juniors, resources);
       seniors.classList.add("goldText");
       juniors.classList.add("goldText");
-      seniors.classList.add("main-link");
-      juniors.classList.add("main-link");
+      seniors.classList.add("sub-link");
+      juniors.classList.add("sub-link");
       seniors.style.animation = "navLinkAni 0.5s ease";
       juniors.style.animation = "navLinkAni 0.5s ease";
       seniors.style.opacity = "1";
