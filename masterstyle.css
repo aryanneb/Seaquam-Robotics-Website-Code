@@ -151,11 +151,11 @@ header ul li a:hover::after {
 
 .dropdown {
   position: relative;
-  visibility: hidden;
+  visibility: visible;
   display: block;
   height: 10vh;
   left: 0;
-  opacity: 0;
+  opacity: 1;
   padding: 0%;
   margin-left: 0;
   width: auto;
@@ -199,9 +199,9 @@ header ul li a:hover::after {
 
 .dropdown2 {
   position: relative;
-  visibility: hidden;
+  visibility: visible;
   display: block;
-  opacity: 0;
+  opacity: 1;
   left: 100%;
   top: -7vh;
   padding: 0%;
