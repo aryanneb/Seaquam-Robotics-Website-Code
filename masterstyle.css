@@ -299,6 +299,12 @@ header ul li a:hover::after {
 
 .dropped {
   transform: rotate(225deg);
+  color: #ffd382;
+}
+
+.historyDrpDwn {
+  float: right;
+  margin-right: 15vw;
 }
 @keyframes navLinkAni {
   from {
@@ -574,7 +580,6 @@ footer {
   html {
     font-size: calc(0.8vh + 7px);
   }
-
   .burger {
     display: block;
   }
@@ -608,6 +613,11 @@ footer {
   }
   header ul li a {
     cursor: pointer;
+  }
+
+  .goldText a {
+    color: #ffd382;
+    margin-left: 3vw;
   }
   .mob {
     display: inline-block;

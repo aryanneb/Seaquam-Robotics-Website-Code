@@ -46,6 +46,8 @@ const historyDropdown = () => {
     } else {
       parent.insertBefore(child1, parent.childNodes[4]);
       parent.insertBefore(child2, parent.childNodes[5]);
+      child1.classList.add("goldText");
+      child2.classList.add("goldText");
       child1.style.opacity = "1";
       child2.style.opacity = "1";
       plus.classList.toggle("dropped");
