@@ -304,7 +304,7 @@ header ul li a:hover::after {
 
 .historyDrpDwn {
   float: right;
-  margin-right: 15vw;
+  margin-right: 10vw;
 }
 @keyframes navLinkAni {
   from {

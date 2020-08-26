@@ -8,14 +8,15 @@ window.addEventListener("scroll", function () {
 const navSlide = () => {
   const burger = document.querySelector(".burger");
   const nav = document.querySelector(".nav");
-  let navLinks = document.querySelectorAll(".main-link");
 
   burger.addEventListener("click", () => {
+    let navLinks = document.querySelectorAll(".main-link");
     nav.classList.toggle("nav-toggle");
 
     navLinks.forEach((link, index) => {
       if (link.style.animation) {
         link.style.animation = "";
+        link.style.opacity = "0";
       } else {
         link.style.animation = `navLinkAni 0.4s ease forwards ${
           index / 7 + 0.2
@@ -31,7 +32,6 @@ navSlide();
 
 const historyDropdown = () => {
   const parent = document.getElementsByClassName("nav")[0];
-  const reference = document.getElementsByClassName("main-links")[2];
   const plus = document.getElementsByClassName("historyDrpDwn")[0];
   const child1 = document.getElementsByClassName("history1")[0];
   const child2 = document.getElementsByClassName("history2")[0];
@@ -48,6 +48,10 @@ const historyDropdown = () => {
       parent.insertBefore(child2, parent.childNodes[5]);
       child1.classList.add("goldText");
       child2.classList.add("goldText");
+      child1.classList.add("main-link");
+      child2.classList.add("main-link");
+      child1.style.animation = "navLinkAni 0.5s ease";
+      child2.style.animation = "navLinkAni 0.5s ease";
       child1.style.opacity = "1";
       child2.style.opacity = "1";
       plus.classList.toggle("dropped");
