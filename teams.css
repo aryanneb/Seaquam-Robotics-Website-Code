@@ -1,6 +1,6 @@
 .banner {
-    top: -5vh;
-    background-image: url("http://127.0.0.1:3000/img/teams page banner.jpg");
+  top: -5vh;
+  background-image: url("img/teams page banner.jpg");
 }
 
 .parent {
@@ -19,19 +19,19 @@
   width: 27vw;
   height: 18vw;
   min-width: 270px;
-  min-height:180px;
+  min-height: 180px;
   display: block;
 }
 
 .text {
   display: flex;
   flex-direction: column;
-  text-align:left;
+  text-align: left;
   width: 15vw;
   height: 18vw;
   min-height: 180px;
   /*display: block;*/
-  text-align:center;
+  text-align: center;
   /*border: 2px solid #ffd382;  for checking the text container size*/
 }
 
@@ -58,9 +58,9 @@ button {
   position: relative;
 }
 
-@media screen and (max-width:1024px) {
+@media screen and (max-width: 1024px) {
   .tms {
-    width:42vw;
+    width: 42vw;
     margin-bottom: 2vw;
   }
 
@@ -72,42 +72,40 @@ button {
     height: 28vw;
     display: flex;
     flex-direction: column;
-    text-align:left;
+    text-align: left;
   }
 
-  .text h2{
-
+  .text h2 {
   }
 
   .text p {
-      font-size: calc(2vw - 2px);
+    font-size: calc(2vw - 2px);
   }
   .button-container {
-
     /*margin-top: calc(7vw - 30px);*/
     padding: 0 0;
   }
 }
 
-@media screen and (max-width:680px) {
+@media screen and (max-width: 680px) {
   #pg-title {
     font-size: 7vh;
   }
 
   .tms {
-    width:75vw;
+    width: 75vw;
   }
   .photo {
-    height:50vw;
+    height: 50vw;
   }
 
   .parent {
     flex-direction: column;
   }
-  .text{
-    height:30vw;
-    min-height:110px;
-    text-align:center;
+  .text {
+    height: 30vw;
+    min-height: 110px;
+    text-align: center;
   }
 
   .text p {
