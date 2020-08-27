@@ -78,7 +78,7 @@ body {
 
 .member-photo {
   position: relative;
-  flex-basis: 45%;
+  flex-basis: 100%;
 }
 
 .member-photo img {
