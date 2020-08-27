@@ -2,10 +2,13 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  overflow-x: hidden;
 }
-
+.wrapper {
+  overflow-x: hidden;
+  position: relative;
+}
 html {
+  overflow-x: hidden;
   font-size: calc(1vh + 7px);
 }
 
@@ -584,6 +587,7 @@ footer {
 @media screen and (max-width: 680px) {
   html {
     font-size: calc(0.8vh + 7px);
+    overflow-x: hidden;
   }
   .burger {
     display: block;
