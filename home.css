@@ -15,7 +15,7 @@
   opacity: 0.2;
   z-index: -1;
   right: 0;
-  bottom: 0;
+  top: 0;
   user-drag: none;
   user-select: none;
   -moz-user-select: none;
@@ -112,25 +112,22 @@
 }
 
 @media screen and (max-width: 1120px) {
-
-.seaquam-image-content{
-  flex-basis: 80%;
-  margin-left: 10%;
-  margin-right: 10%;
-  margin-top: 5vh;
+  .seaquam-image-content {
+    flex-basis: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 5vh;
+  }
+  .seaquam-logo {
+    width: 80%;
+  }
+  .seaquam-logo img {
+    width: 100%;
+  }
+  .seaquam-text-content {
+    flex-basis: 80%;
+  }
 }
-.seaquam-logo{
-  width: 80%;
-}
-.seaquam-logo img {
-  width: 100%;
-}
-.seaquam-text-content{
-  flex-basis: 80%;
-}
-
-}
-
 
 @media screen and (max-width: 680px) {
   .grey-img-link-content {
@@ -151,9 +148,9 @@
     margin-top: 3vh;
   }
   .bigimg {
-    height: 90vh;
+    height: 100vh;
     object-fit: contain;
-    transform: translate(45vh, -8vh);
+    transform: translate(45vh, 3vh);
   }
   .seaquam-text-content {
     flex-basis: 80%;
