@@ -410,12 +410,13 @@ button:active {
 
 .arrow-box {
   position: absolute;
-  bottom: 3vh;
+  top: 90vh;
   left: 0vw;
   width: 100vw;
   height: 33.94px;
   display: flex;
   justify-content: center;
+  cursor: pointer;
 }
 
 .arrow-down {
@@ -440,6 +441,7 @@ button:active {
   -webkit-transform: rotate(-135deg);
   transition: border 0.5s;
   transition: opacity 1s;
+  cursor: pointer;
 }
 
 .arrow-down:hover {
@@ -622,6 +624,7 @@ footer {
   }
   header ul li a {
     cursor: pointer;
+    font-size: 1.75rem;
   }
   .sub-link {
     display: block;
@@ -630,7 +633,7 @@ footer {
   .goldText a {
     color: #ffd382;
     margin-left: 3vw;
-    font-size: 1.1rem;
+    font-size: 1.45rem;
   }
   .mob {
     display: inline-block;
