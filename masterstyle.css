@@ -2,10 +2,10 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  overflow-x: hidden;
 }
 
 html {
-  overflow-x: hidden;
   font-size: calc(1vh + 7px);
 }
 
