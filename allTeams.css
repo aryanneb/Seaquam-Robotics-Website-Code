@@ -136,8 +136,10 @@ body {
 
 .team-photo img {
   height: 100%;
+  width: 100%;
   object-fit: contain;
 }
+
 @keyframes op {
   from {
     opacity: 0;
@@ -170,7 +172,7 @@ body {
   }
   .close span {
     float: right;
-    margin-right: 2vw;
+    padding-right: 2vw;
   }
   .member-photo img {
     display: none;
@@ -193,6 +195,7 @@ body {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    margin-top: 5vh;
   }
 }
 
