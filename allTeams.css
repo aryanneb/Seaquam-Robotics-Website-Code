@@ -169,14 +169,18 @@ body {
   .member-photo {
     position: relative;
     flex-basis: 100%;
+    display: flex;
+  }
+
+  .member-photo img {
+    max-width: 40%;
+    margin: auto;
   }
   .close span {
     float: right;
     padding-right: 2vw;
   }
-  .member-photo img {
-    display: none;
-  }
+
   .team-content {
     flex-wrap: wrap;
   }
@@ -205,6 +209,13 @@ body {
   }
   .grey-image {
     flex-basis: 50%;
+  }
+  .modal-content {
+    height: auto;
+    padding-bottom: 10vw;
+  }
+  .member-photo {
+    display: none;
   }
   .grey-image img {
     max-width: 100%;
