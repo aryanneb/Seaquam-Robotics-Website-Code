@@ -624,7 +624,7 @@ footer {
   }
   header ul li a {
     cursor: pointer;
-    font-size: 1.75rem;
+    font-size: 1.5rem;
   }
   .sub-link {
     display: block;
@@ -633,7 +633,7 @@ footer {
   .goldText a {
     color: #ffd382;
     margin-left: 3vw;
-    font-size: 1.45rem;
+    font-size: 1.15rem;
   }
   .mob {
     display: inline-block;
