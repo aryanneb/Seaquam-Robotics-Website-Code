@@ -100,4 +100,21 @@ b {
     object-fit: cover;
     margin: auto;
   }
+  .hist-container {
+    width: 80%;
+    margin-left: 10vw;
+    margin-top: 5vh;
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 680px) {
+  .hist-image {
+    flex-wrap: wrap;
+  }
+  .hist-image img {
+    max-width: 100%;
+    margin-top: 5vh;
+  }
 }
