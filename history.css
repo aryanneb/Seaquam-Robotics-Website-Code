@@ -1,6 +1,14 @@
+.history-page {
+  display: flex;
+}
+.year-holder {
+  width: 15%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
 .hist-container {
   width: 85%;
-  margin-left: 15vw;
   margin-top: 5vh;
   display: flex;
   flex-direction: column;
@@ -47,7 +55,7 @@ b {
   margin: auto;
   margin-top: 5vh;
 }
-.more h4 {
+.read h4 {
   margin-top: 3vh;
   margin-bottom: 5vh;
   color: #ffd382;
@@ -86,12 +94,34 @@ b {
   width: 80vw;
   margin-bottom: 3vh;
 }
+h6 {
+  color: black;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-size: 3rem;
+}
+
+.scroll-year {
+  position: sticky;
+  position: -webkit- sticky;
+  top: 15vh;
+  width: 80%;
+  margin-left: 10%;
+  height: 4rem;
+  background-color: #ffd382;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+}
 
 @media screen and (max-width: 1024px) {
   .hist-content {
     flex-direction: column;
   }
-
+  .year-holder {
+    display: none;
+  }
   .hist-image {
     flex-direction: row;
   }
