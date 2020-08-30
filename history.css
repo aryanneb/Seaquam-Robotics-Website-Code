@@ -57,10 +57,12 @@ b {
   margin-top: 5vh;
 }
 .read h4 {
-  margin-top: 3vh;
-  margin-bottom: 5vh;
+  margin: 3vh 0 5vh 0;
   color: #ffd382;
   cursor: pointer;
+}
+.read {
+  display: flex;
 }
 .toss {
   display: none;
@@ -130,7 +132,6 @@ h6 {
 .scroll-year:nth-child(9) {
   margin-bottom: 5vh;
 }
-
 @keyframes op {
   from {
     opacity: 0;
