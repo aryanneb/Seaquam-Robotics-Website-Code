@@ -7,6 +7,7 @@
   flex-direction: column;
   justify-content: space-between;
 }
+
 .hist-container {
   width: 85%;
   margin-top: 5vh;
@@ -114,7 +115,13 @@ h6 {
   align-items: center;
   border-radius: 10px;
 }
+.scroll-year:nth-child(1) {
+  margin-top: 10vh;
+}
 
+.scroll-year:nth-child(9) {
+  margin-bottom: 5vh;
+}
 @media screen and (max-width: 1024px) {
   .hist-content {
     flex-direction: column;
