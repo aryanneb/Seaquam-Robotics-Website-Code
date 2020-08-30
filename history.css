@@ -64,6 +64,7 @@ b {
 }
 .toss {
   display: none;
+  animation: op 350ms;
 }
 .skyrise {
   display: none;
@@ -89,32 +90,13 @@ b {
 .change {
   display: none;
 }
-#toss {
-  animation: op 250ms;
-}
-#skyrise {
-  animation: op 250ms;
+.ani {
+  display: block;
+  animation: op 350ms;
 }
 
-#net {
-  animation: op 250ms;
-}
-
-#star {
-  animation: op 250ms;
-}
-
-#zone {
-  animation: op 250ms;
-}
-#point {
-  animation: op 250ms;
-}
-#tower {
-  animation: op 250ms;
-}
-#change {
-  animation: op 250ms;
+.fade-in {
+  opacity: 1;
 }
 .division {
   height: 0.5vh;
@@ -148,6 +130,7 @@ h6 {
 .scroll-year:nth-child(9) {
   margin-bottom: 5vh;
 }
+
 @keyframes op {
   from {
     opacity: 0;
