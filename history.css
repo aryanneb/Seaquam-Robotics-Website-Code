@@ -89,7 +89,33 @@ b {
 .change {
   display: none;
 }
+#toss {
+  animation: op 250ms;
+}
+#skyrise {
+  animation: op 250ms;
+}
 
+#net {
+  animation: op 250ms;
+}
+
+#star {
+  animation: op 250ms;
+}
+
+#zone {
+  animation: op 250ms;
+}
+#point {
+  animation: op 250ms;
+}
+#tower {
+  animation: op 250ms;
+}
+#change {
+  animation: op 250ms;
+}
 .division {
   height: 0.5vh;
   width: 80vw;
@@ -121,6 +147,14 @@ h6 {
 
 .scroll-year:nth-child(9) {
   margin-bottom: 5vh;
+}
+@keyframes op {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 @media screen and (max-width: 1024px) {
   .hist-content {
