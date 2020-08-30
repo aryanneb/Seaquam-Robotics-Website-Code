@@ -4,15 +4,14 @@ document
 
 
 function readMoreToss() {
+    const changeText = document.getElementsByClassName('toss');
     if (document.getElementsByClassName('tossMore')[0].innerHTML = "Read More") {
-        while (document.getElementsByClassName('toss')[0]) {
-            document.getElementsByClassName('toss')[0].classList.remove("toss");
-        }
+        changeText.classList.toggle('toss');
         document.getElementsByClassName('tossMore')[0].innerHTML = "Read Less";
     }
 
     else {
-        document.getElementById.classList.add('toss');
+        changeText.classList.toggle("toss");
         document.getElementsByClassName('tossMore')[0].innerHTML = "Read More";
     }
 
