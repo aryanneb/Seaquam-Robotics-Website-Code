@@ -5,41 +5,79 @@
 
 .content-container {
     display: flex;
-    width: 80%;
-    margin-left: 10%;
+    width: 100%;
     flex-wrap: wrap;
 }
 
 .event {
     flex-basis: 100%;
     display: flex;
-    margin: 7vh 0 0 0;
+    margin: 7vh 0 8vh 0;
+    justify-content: center;
 }
 .description {
-    flex-basis: 35%;
-    margin-right: 5%;
+    flex-basis: 25%;    
+    display: flex;
+    flex-direction: column;
+    margin-right: 1%;
 }
 
 .appearance {
-    flex-basis: 25%;
-    margin-right: 5%;
+    margin-right: 2%;
 }
 .appearance img {
+    margin-top: 2vh;
     height: 15rem;
     object-fit: contain;
 }
 
 .map {
-    flex-basis: 30%;
+    flex-basis: 25%;
 }
 .description > h3 {
-    margin-bottom: 2vh;
+    margin: 0 0 auto 0;
 }
 .description > p {
-    margin-bottom: 2vh;
+    margin: 0 0 auto 0;
 }
 .appearance > h4 {
     font-weight: 300;
     color: #ffd382;
     opacity: 0.9;
+}
+
+@media screen and (max-width: 1024px) {
+.appearance {
+    display: none;
+}
+.description {
+    flex-basis: 45%;
+}
+
+.map {
+    flex-basis: 35%;
+}
+}
+
+@media screen and (max-width: 680px) {
+    .event {
+      flex-direction: column;
+    }
+    .description p {
+        font-size: 1.2rem;
+        margin-bottom: 1vh;
+    }
+    .description h3 {
+        margin-bottom: 2vh;
+    }
+
+    .description {
+        width: 80vw;
+        margin: 0 10vw 0 10vw;
+    }
+    .map {
+        width: 80vw; 
+        height: 35vh;
+        margin: 5vh 10vw 0 10vw;
+    }
 }
