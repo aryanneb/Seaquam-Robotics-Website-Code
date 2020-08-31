@@ -8,7 +8,18 @@
     width: 100%;
     flex-wrap: wrap;
 }
+.sorter {
+    top: 100vh;
+    left: 5vw;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+}
 
+.sorter button {
+    margin: 1vh 0 1vh 0;
+    width: 10rem;
+}
 .event {
     flex-basis: 100%;
     display: flex;
@@ -48,7 +59,9 @@
     color: #ffd382;
     opacity: 0.9;
 }
-
+button {
+    width: 12rem;
+}
 @media screen and (max-width: 1024px) {
 .appearance {
     display: none;
@@ -82,5 +95,8 @@
         width: 80vw; 
         height: 35vh;
         margin: 5vh 10vw 0 10vw;
+    }
+    .sorter {
+        top: 80vh;
     }
 }
