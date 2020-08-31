@@ -34,6 +34,9 @@
 .map {
     flex-basis: 25%;
 }
+.description > h4 {
+    margin: 0 0 auto 0;
+}
 .description > h3 {
     margin: 0 0 auto 0;
 }
@@ -67,7 +70,7 @@
         font-size: 1.2rem;
         margin-bottom: 1vh;
     }
-    .description h3 {
+    .description h3, .description h4 {
         margin-bottom: 2vh;
     }
 
