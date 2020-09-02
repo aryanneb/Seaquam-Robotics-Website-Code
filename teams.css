@@ -1,6 +1,6 @@
 .banner {
-  top: -5vh;
   background-image: url("img/teams page banner.jpg");
+  background-position: center top;
 }
 
 .parent {
@@ -80,8 +80,10 @@ button {
     font-size: calc(2vw - 2px);
   }
   .button-container {
-    /*margin-top: calc(7vw - 30px);*/
     padding: 0 0;
+  }
+  .parent{
+  margin-bottom: 0;
   }
 }
 

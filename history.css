@@ -1,6 +1,7 @@
 .banner {
-  top: -5vh;
-  background-image: url("img/teams page banner.jpg");
+  background-image: url("img/maybe2.jpg");
+  background-position: center center;
+
 }
 .history-page {
   display: flex;
@@ -176,5 +177,8 @@ h6 {
   .hist-image img {
     max-width: 100%;
     margin-top: 5vh;
+  }
+  .banner {
+    top: -10vh;
   }
 }
