@@ -112,6 +112,7 @@
 }
 
 @media screen and (max-width: 1120px) {
+
   .seaquam-image-content {
     flex-basis: 80%;
     margin-left: 10%;
@@ -128,7 +129,6 @@
     flex-basis: 80%;
   }
 }
-
 @media screen and (max-width: 680px) {
   .grey-img-link-content {
     flex-wrap: wrap;
