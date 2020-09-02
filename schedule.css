@@ -9,12 +9,11 @@
     flex-wrap: wrap;
 }
 .sorter {
-    top: 105vh;
+    top: 100vh;
     left: 5vw;
     position: absolute;
     display: flex;
     flex-direction: column;
-    display: none;
 }
 
 .sorter button {
