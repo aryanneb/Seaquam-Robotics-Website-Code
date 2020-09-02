@@ -46,6 +46,11 @@
 
 .grey-box img {
   width: min(30vw, 200px);
+  transition: all 0.2s ease-in;
+}
+
+.grey-box img:hover {
+  transform: scale(1.15);
 }
 
 .grey-box button {

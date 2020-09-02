@@ -20,7 +20,7 @@ const navSlide = () => {
       } else {
         link.style.animation = `navLinkAni 0.4s ease forwards ${
           index / 7 + 0.2
-        }s`;
+          }s`;
       }
     });
     let subLinks = document.querySelectorAll(".sub-link");
@@ -32,7 +32,7 @@ const navSlide = () => {
       } else {
         link.style.animation = `navLinkAni 0.4s ease forwards ${
           index / 7 + 0.75
-        }s`;
+          }s`;
       }
     });
     burger.classList.toggle("toggle");
@@ -142,3 +142,29 @@ const teamsDropDown = () => {
 
 historyDropdown();
 teamsDropDown();
+
+
+// arrow click scroll animation
+
+const arrowDown = document.getElementsByClassName("arrow-down")[0];
+
+arrowDown.addEventListener('click', scrollDown);
+
+function scrollDown() {
+  window.scroll({
+    top: window.innerHeight / 100 * 90,
+    left: 0,
+    behavior: 'smooth'
+  });
+}
+
+const arrowUp = document.getElementsByClassName("arrow-up")[0];
+arrowUp.addEventListener('click', scrollUp);
+
+function scrollUp() {
+  window.scroll({
+    top: 0,
+    left: 0,
+    behavior: 'smooth'
+  });
+}
