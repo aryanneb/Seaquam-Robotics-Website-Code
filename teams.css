@@ -47,9 +47,9 @@
 }
 
 button {
-  width: calc(10vw + 32px);
-  height: calc(2.5vw + 8px);
-  font-size: calc(1vw + 8px);
+  width: 11rem;
+  height: 2.5rem;
+  font-size: 1.25rem;
 }
 
 .button-container {
@@ -117,8 +117,8 @@ button {
     margin-bottom: 2vh;
   }
   button {
-    width: calc(13vw + 32px);
-    height: calc(3vw + 8px);
-    font-size: calc(1vw + 8px);
+    width: 10rem;
+    height: 2.5rem;
+    font-size: 1.25rem;
   }
 }
