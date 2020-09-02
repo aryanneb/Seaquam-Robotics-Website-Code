@@ -87,8 +87,12 @@
 
 .seaquam-logo img {
   width: 44.9vh;
+  transition: all 0.2s ease;
 }
 
+.seaquam-logo img:hover {
+  transform: scale(1.05);
+}
 .seaquam-logo {
   margin-top: auto;
   margin-left: auto;
