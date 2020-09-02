@@ -2,7 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-
+}
 .wrapper {
   overflow-x: hidden;
   position: relative;
@@ -23,13 +23,11 @@ body {
   margin-top: -1vh;
 }
 
-
 .centered-classic {
   margin-left: 40vw;
   margin-right: 40vw;
   width: 15rem;
   height: 0.5rem;
-
 }
 
 .home {
@@ -92,7 +90,6 @@ header .logo-box {
   height: 100%;
 }
 
-
 header .logo-box img {
   max-width: 90%;
   max-height: 90%;
@@ -141,7 +138,6 @@ header ul li a::before {
   transform-origin: left;
 }
 
-
 header ul li a::after {
   bottom: -0.5vh;
   transform-origin: right;
@@ -166,11 +162,9 @@ header ul li a:hover::after {
   padding: 0%;
   margin-left: 0;
   width: auto;
-
   transition: all 200ms ease-in-out;
   transform: translate(-2.5vw);
 }
-
 .dropdown li {
   position: relative;
   list-style: none;
@@ -182,8 +176,6 @@ header ul li a:hover::after {
   margin: 0%;
   font-size: 1rem;
 }
-
-
 .seniors {
   position: relative;
   width: 100%;
@@ -237,18 +229,14 @@ header ul li a:hover::after {
 }
 
 .history:hover > .dropdown {
-
   visibility: visible;
   opacity: 1;
 }
-
 
 .teams:hover > .dropdown {
-
   visibility: visible;
   opacity: 1;
 }
-
 
 .seniors:hover > .dropdown2 {
   visibility: visible;
@@ -332,89 +320,7 @@ header ul li a:hover::after {
     opacity: 1;
     transform: translateX(0px);
   }
-
 }
-
-.juniors:hover>.dropdown2 {
-  visibility: visible;
-  opacity: 1;
-}
-
-.resources:hover+.dropdown {
-  visibility: visible;
-  opacity: 1;
-}
-
-.dropdown:hover {
-  visibility: visible;
-  opacity: 1;
-}
-
-.tips:hover>.dropdown2 {
-  visibility: visible;
-  opacity: 1;
-}
-
-.more:hover>.dropdown2 {
-  visibility: visible;
-  opacity: 1;
-}
-
-.dropdown2:hover {
-  visibility: visible;
-  opacity: 1;
-}
-
-/*mayB LATR old header
-header ul {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  right: 3vw;
-}
-
-header ul a {
-  position: relative;
-  list-style: none;
-  padding: 0 1.5vw;
-  text-decoration: none;
-}
-
-.menu-icon-container {
-  display: none;
-}
-
-header ul a li {
-  position: relative;
-  height: 10vh;
-  line-height: 10vh;
-  margin: 0 2.5vw;
-  color: #fff;
-  font-family: "Poppins", sans-serif;
-  font-weight: 300;
-  font-size: 1.25rem;
-  transition: 0.6s;
-  -webkit-user-select: none;
-  -khtml-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  -o-user-select: none;
-  user-select: none;
-}
-
-/*header.sticky ul li a {
-    filter: invert(1);
-}
-
-header:hover {
-  opacity: 1;
-}
-
-header ul a:hover {
-  background-color: rgba(255, 255, 255, 0.3);
-}
-*/
 
 h1 {
   font-family: "Poppins", sans-serif;
@@ -477,7 +383,6 @@ button {
   color: #ffd382;
   border: 2px solid #ffd382;
   transition-duration: 0.2s;
-
 }
 
 .button-style2 {
@@ -503,19 +408,15 @@ button:active {
   background-color: #ffdea1 !important;
 }
 
-
 .arrow-box {
   position: absolute;
   top: 90vh;
-
   left: 0vw;
   width: 100vw;
   height: 33.94px;
   display: flex;
   justify-content: center;
-
   cursor: pointer;
-
 }
 
 .arrow-down {
@@ -540,9 +441,7 @@ button:active {
   -webkit-transform: rotate(-135deg);
   transition: border 0.5s;
   transition: opacity 1s;
-
   cursor: pointer;
-
 }
 
 .arrow-down:hover {
@@ -551,7 +450,6 @@ button:active {
   border-width: 0px 2px 2px 0px;
   height: 0px;
 }
-
 .arrow-up:hover {
   opacity: 1;
   border: solid #ffd382;
@@ -572,12 +470,10 @@ button:active {
 .grey-title-content {
   position: relative;
   width: 100vw;
-
   display: grid;
   justify-content: center;
   text-align: center;
 }
-
 
 .greeting-text {
   margin-top: 10vh;
@@ -796,9 +692,7 @@ footer {
   h1 {
     font-size: 3.9rem;
   }
-
   p {
     font-size: 0.8rem;
   }
-
 }
