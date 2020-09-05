@@ -416,6 +416,7 @@ button:active {
   height: 33.94px;
   display: flex;
   justify-content: center;
+  cursor: pointer;
 }
 
 .arrow-down {
@@ -428,7 +429,6 @@ button:active {
   -webkit-transform: rotate(45deg);
   transition: border 0.5s;
   transition: opacity 1s;
-  cursor: pointer;
 }
 
 .arrow-up {

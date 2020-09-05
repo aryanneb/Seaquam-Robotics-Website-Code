@@ -25,38 +25,21 @@
     width: 10rem;
 }
 .event {
-    width: 80%;
+    flex-basis: 100%;
     display: flex;
-    margin: 7vh 10vw 8vh 10vw;
-    border: 5px solid #ffd382;
-    border-radius: 43px;
-}
-
-.date {
-    flex-basis: 20%;
-    margin: auto 0 auto 0;
-    display: flex;
-    background-color: #ffd382;
-    height: 100%;
-    border-radius: 35px;
-}
-.date h4 {
-    font-size: 3rem;
-    margin: auto;
-    color: black;
-    text-align: center;
+    margin: 7vh 0 8vh 0;
+    justify-content: center;
 }
 .description {
-    flex-basis: 30%; 
-    margin-left: 3%;   
+    flex-basis: 25%;    
     display: flex;
     flex-direction: column;
+    margin-right: 1%;
 }
 
 .appearance {
-    flex-basis: 15%;
+    margin-right: 2%;
 }
-
 .appearance img {
     margin-top: 2vh;
     height: 15rem;
@@ -64,24 +47,24 @@
 }
 
 .map {
-    flex-basis: 30%;
+    flex-basis: 25%;
+}
+.description > h4 {
+    margin: 0 0 auto 0;
 }
 .description > h3 {
-    margin: auto 0 auto 0;
-    font-size: 3rem;
+    margin: 0 0 auto 0;
 }
 .description > p {
-    margin: auto 0 auto 0;
+    margin: 0 0 auto 0;
 }
 .appearance > h4 {
     font-weight: 300;
     color: #ffd382;
     opacity: 0.9;
-    margin-top: 2vh;
 }
 button {
     width: 12rem;
-    margin-bottom: auto;
 }
 .related-text-cont {
     width: 80%;
