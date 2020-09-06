@@ -34,8 +34,13 @@
   flex-basis: max(33%, 480px);
   margin: auto;
   margin-top: 5vh;
+  padding-right: 2vw;
 }
 
+.team p b {
+  font-size: 1.5rem;
+  color: white;
+}
 .changeUp {
   display: flex;
   flex-wrap: wrap;
