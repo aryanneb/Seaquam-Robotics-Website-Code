@@ -16,6 +16,23 @@ body {
   background-color: black;
 }
 
+::-webkit-scrollbar {
+  width: 13px;
+}
+
+::-webkit-scrollbar-track {
+  background: #d4d4d4 ;
+  border-radius: 25px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #74747499;
+  border-radius: 25px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #4d4d4d99;
+}
+
 .classic {
   width: 15.5rem;
   height: 0.5rem;
