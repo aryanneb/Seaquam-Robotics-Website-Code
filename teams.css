@@ -20,9 +20,10 @@
   width: 27vw;
   height: 18vw;
   min-width: 270px;
-  min-height: 180px;
+  min-height: 350px;
+  object-fit: cover;
   display: block;
-  margin: 0;
+  margin: auto 0 auto auto;
 }
 
 .text {
@@ -30,8 +31,6 @@
   flex-direction: column;
   text-align: left;
   width: 15vw;
-  height: 18vw;
-  min-height: 180px;
   justify-content: space-evenly;
   margin: 0;
   padding-left: 1vw;
@@ -44,9 +43,9 @@
 }
 
 button {
-  width: 11rem;
-  height: 2.5rem;
-  font-size: 1.25rem;
+  width: 8rem;
+  height: 2rem;
+  font-size: 1.2rem;
 }
 
 .button-container {
@@ -65,61 +64,51 @@ button {
   .photo {
     height: 28vw;
   }
-
+  .parent {
+    margin-bottom: 0vw;
+  }
   .text {
-    height: 28vw;
+    height: auto;
     display: flex;
     flex-direction: column;
     text-align: left;
+    padding-left: 2vw;
+    padding-right: 2vw;
   }
 
-
-  .text p {
-    font-size: calc(2vw - 2px);
-  }
   .button-container {
     padding: 0 0;
   }
-  .parent{
-  margin-bottom: 0;
-  }
+
 }
 
 @media screen and (max-width: 680px) {
   #pg-title {
     font-size: 7vh;
   }
-  .text:nth-of-type(even) {
-    background-color: none;
-  }
-  
+
   .tms {
     width: 75vw;
+    margin: auto auto auto auto;
+    margin-bottom: 25px;
+    padding-bottom: 20px;
   }
   .photo {
     height: 50vw;
+    object-fit: cover;
+    margin-bottom: 0;
+    padding-bottom: 0;
   }
 
   .parent {
     flex-direction: column;
   }
   .text {
-    height: 30vw;
-    min-height: 110px;
     text-align: center;
   }
-
-  .text p {
-    font-size: calc(2vw + 2px);
+  .text:nth-of-type(even) {
+    height: auto;
+    padding-bottom: 20px;
   }
-
-  .button-container {
-    margin-top: 2vh;
-    margin-bottom: 2vh;
-  }
-  button {
-    width: 10rem;
-    height: 2.5rem;
-    font-size: 1.25rem;
-  }
+  
 }
