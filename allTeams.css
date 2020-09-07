@@ -203,6 +203,17 @@ body {
   }
 }
 
+@keyframes namesInAni {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+
 @media screen and (max-width: 680px) {
   .grey-image-container {
     margin-top: 10vh;
