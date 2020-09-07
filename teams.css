@@ -3,6 +3,7 @@
   background-position: center top;
 }
 
+
 .parent {
   display: flex;
   flex-wrap: wrap;
@@ -21,6 +22,7 @@
   min-width: 270px;
   min-height: 180px;
   display: block;
+  margin: 0;
 }
 
 .text {
@@ -30,20 +32,15 @@
   width: 15vw;
   height: 18vw;
   min-height: 180px;
+  justify-content: space-evenly;
+  margin: 0;
+  padding-left: 1vw;
   /*display: block;*/
-  text-align: center;
   /*border: 2px solid #ffd382;  for checking the text container size*/
 }
 
-.text h2 {
-  height: 30%;
-  font-size: calc(2vw + 8px);
-}
-
-.text p {
-  height: 50%;
-  font-size: calc(1vw);
-  display: block;
+.text:nth-of-type(even) {
+  background-color: #464444;
 }
 
 button {
@@ -56,6 +53,7 @@ button {
   height: 20%;
   margin-top: 5px;
   position: relative;
+  
 }
 
 @media screen and (max-width: 1024px) {
@@ -91,7 +89,10 @@ button {
   #pg-title {
     font-size: 7vh;
   }
-
+  .text:nth-of-type(even) {
+    background-color: none;
+  }
+  
   .tms {
     width: 75vw;
   }

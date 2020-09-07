@@ -622,7 +622,7 @@ footer {
 
 @media screen and (max-width: 680px) {
   html {
-    font-size: calc(0.85vh + 7px);
+    font-size: calc(1.75vw + 7px);
     overflow-x: hidden;
   }
   .burger {
