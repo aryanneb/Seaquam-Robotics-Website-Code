@@ -1,0 +1,106 @@
+.top-content-wrapper {
+  margin-top: 10vh;
+  padding-top: 15vh;
+  width: 100vw;
+  height: 100vh;
+  padding-left: 175px;
+  background-image: url("http://127.0.0.1:3000/img/code-tips-banner.png");
+  background-size: cover;
+}
+
+.short-bar {
+  margin: 0 0;
+}
+
+.intro-text {
+  margin: 0 0;
+  padding: 5vh 0;
+  width: 40vw;
+  text-align: left;
+}
+
+.intro-text p {
+  font-size: calc(0.9vh + 0.9vw);
+}
+
+.links-container {
+  background-color: rgba(0,0,0,1);
+}
+
+.heading-links {
+  text-align: center;
+  margin-top: 3vh;
+}
+
+.links-spacer {
+  height: 10px;
+  width: 250px;
+  margin: 0 auto;
+  background-color: #FFD382;
+  border-radius: 30px;
+}
+
+.useful-links {
+  width: 100vw;
+  height: calc(100px + 28vh);
+  min-height: 200px;
+  max-height: 1500px;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  padding: 0 5vw;
+  padding-top: 2vw;
+  margin-bottom: 2vw;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  width: 28vw;
+  max-width: calc(250px + 5vw);
+  height: calc(80px + 28vh);
+  min-height: calc(150px + 5vh);
+  max-height: 1500px;
+  /*display: block;*/
+  text-align: center;
+  /*border: 2px solid #ffd382;  for checking the text container size*/
+  margin: 0 auto;
+}
+
+  .container p {
+  font-size: calc(3px + 1vh + 0.3vw);
+  }
+
+.pagename {
+  flex:auto;
+  height: 30%;
+  font-size: calc(8px + 0.6vh + 0.6vw);
+  width: 28vw;
+  max-width: calc(250px + 5vw);
+  max-height: 60px;
+  padding: 10px 0;
+}
+
+
+.text {
+  flex:auto;
+  height: 40%;
+}
+
+.button-container {
+  flex:auto;
+  width:28vw;
+  max-width: calc(250px + 5vw);
+  height: calc(25px + 0.9vw);
+  padding: 10px 0;
+
+
+}
+
+.visit {
+  height: calc(25px + 0.9vw);
+  width: calc(150px + 7vw);
+  max-width: calc(250px + 5vw);
+  font-size: calc(8px + 0.7vw);
+}
