@@ -440,6 +440,7 @@ in the individual css files,under the .banner class*/
 
 .title-top {
   position: relative;
+  margin-top: 5vh;
   bottom: 12vh;
   text-align:center;
 }
@@ -658,6 +659,14 @@ footer {
     font-size: calc(0.8vh + 7px);
   }
 
+  .title-top h1 {
+    font-size: 5.8vh;
+  }
+
+  .short-bar {
+    margin: -1vh auto 0 auto;
+  }
+
   .grey-text {
     width: 88vw;
     font-size: 1.5rem;
@@ -726,10 +735,6 @@ footer {
     display: block;
   }
 
-  #menu-button {
-
-  }
-
   .menu-icon {
     height: 5vh;
     width: 5vh;
@@ -746,6 +751,10 @@ footer {
 }
 
 @media screen and (max-width: 320px) {
+  .title-top h1 {
+    font-size: 3vh;
+  }
+
   h1 {
     font-size: 3.9rem;
   }
@@ -755,6 +764,7 @@ footer {
   }
 
   .short-bar {
-    width: 30vh;
+    margin: auto;
+    width: 18vh;
   }
 }
