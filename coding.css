@@ -3,7 +3,7 @@
   padding-top: 15vh;
   width: 100vw;
   height: 100vh;
-  padding-left: 175px;
+  padding-left: 250px;
   background-image: url("http://127.0.0.1:3000/img/code-tips-banner.png");
   background-size: cover;
 }
@@ -22,6 +22,32 @@
 .intro-text p {
   font-size: calc(0.9vh + 0.9vw);
 }
+
+.main-content-wrapper {
+  width: 100vw;
+  height: 100vh;
+}
+
+.left-menu-container {
+  width: 250px;
+  height: 100vh;
+}
+
+.search-bar-container {
+  height: 30vh;
+  width: 250px;
+  background-color: #C4C4C4
+}
+
+.drop-down-list-container {
+  height: 70vh;
+  overflow: hidden scroll;
+  background-color:#FFD382;
+}
+
+
+
+
 
 .links-container {
   background-color: rgba(0,0,0,1);
@@ -82,7 +108,6 @@
   padding: 10px 0;
 }
 
-
 .text {
   flex:auto;
   height: 40%;
@@ -94,8 +119,6 @@
   max-width: calc(250px + 5vw);
   height: calc(25px + 0.9vw);
   padding: 10px 0;
-
-
 }
 
 .visit {
