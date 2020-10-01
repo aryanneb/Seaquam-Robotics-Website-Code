@@ -19,12 +19,14 @@
 
 .content-top {
   width: 70vw;
-  padding-top: 5vh;
-  padding-bottom: 5vh;
 }
 .content-top p {
-  font-size: calc(0.6vw + 7px);
+  font-size: 1.2rem;
   text-align: center;
+}
+
+.introduction {
+  padding-bottom: 5vh;
 }
 
 .top-icons {
@@ -37,8 +39,8 @@
 .top-row {
   flex: auto;
   display: flex;
-  height: calc(6vh + 7vw);
-  width: calc(6vh + 7vw);
+  height: 10rem;
+  width: 10rem;
 }
 
 .icon-container {
@@ -46,8 +48,8 @@
 }
 
 .icon {
-  height: calc(3vh + 7vw);
-  width: calc(3vh + 7vw);
+  height: 7rem;
+  width: 7rem;
 }
 
 .clickable {
@@ -70,9 +72,9 @@
 }
 
 .tips-button {
-  height: calc(25px + 0.9vw);
-  width: calc(90px + 7vw);
-  font-size: calc(10px + 0.7vw);
+  height: 3rem;
+  width: 15rem;
+  font-size: 1.5rem;
 }
 
 .content-bottom {
@@ -92,8 +94,8 @@
 .bottom-row {
   flex: auto;
   display: flex;
-  height: calc(6vh + 7vw);
-  width: calc(6vh + 7vw);
+  height: 10rem;
+  width: 10rem;
 }
 
 .bottom-buttons {
@@ -107,13 +109,6 @@
   margin: auto;
 }
 
-.temp{
-  height: 15px;
-  width: 38vh;
-  margin: -2vh auto 0 auto;
-  background-color: #FFD382;
-  border-radius: 30px;
-}
 .heading-tips {
   text-align: center;
 }
@@ -177,7 +172,7 @@
 .useful-links {
   width: 100vw;
   max-width: 2000px;
-  height: calc(22vh + 80px);
+  height: 20rem;
   min-height: 200px;
   max-height: 1500px;
   display: flex;
@@ -194,7 +189,7 @@
   text-align: center;
   width: 28vw;
   max-width: 350px;
-  height: calc(28vh + 40px);
+  height: 18rem;
   min-height: 180px;
   max-height: 1500px;
   /*display: block;*/
@@ -248,12 +243,28 @@
   .decorations {
     max-height: 800px;
   }
+
+  .top-row {
+    width: 6rem;
+  }
+
+  .tips-button {
+    height: 2rem;
+    width: 6rem;
+    font-size: 1rem;
+  }
+
+  .icon {
+    height: 5rem;
+    width: 5rem;
+  }
+
   .pagename {
     font-size: 22px;
   }
 
   .text {
-    font-size: calc(0.70vh + 0.8vw);
+    font-size: 1rem;
   }
 
   .visit {
@@ -264,23 +275,34 @@
 }
 
 @media screen and (max-width: 680px) {
+h2 {
+  font-size: 3rem;
+}
+
 .main-content-wrapper {
   min-height: unset;
   height: auto;
 }
 
+.contents, .content-top, .content-bottom, .top-icons, .bottom-icons{
+  width: 35rem;
+}
+
 .content-top {
-  width: calc(91.5px + 50vw);
   padding-top: 2vh;
   padding-bottom: 2vh;
 }
 
+.introduction {
+
+}
+
 .alt-text-top {
-  width: calc((91.5px + 50vw) / 3);
+  width: calc(35rem / 3);
   display: block;
 }
 .alt-text-bottom {
-  width: calc((91.5px + 50vw - 8vh) / 2);
+  width: calc((35rem - 8vh) / 2); /*35rem - total width of padding split by two*/
   display: block;
 }
 
@@ -301,12 +323,11 @@
 
   .top-icons {
     padding: 0;
-    width: calc(91.5px + 50vw);
   }
 
   .clickable {
     display: block;
-    width: 58px;
+    width: 5rem;
     height: 100px;
     position: absolute;
     align-self: center;
@@ -320,23 +341,20 @@
     flex: auto;
     display: flex;
     flex-direction: column;
-    height: 100px;
-    width: 50px;
   }
 
   .icon-container {
-   border: 4px solid #ffd382;
+   border: 0.5rem solid #ffd382;
    background-color: #ffffff;
    border-radius: 5px;
   }
 
   .icon {
-    height: 50px;
-    width: 50px;
+    height: 4rem;
+    width: 4rem;
   }
 
   .content-bottom {
-    width: calc(91.5px + 50vw);
     left: 0;
   }
 
@@ -344,8 +362,6 @@
     flex: auto;
     display: flex;
     flex-direction: column;
-    height: 100px;
-    width: 50px;
   }
 
   .bottom-spacer {
@@ -365,7 +381,6 @@
   }
 
   .heading-links {
-    font-size: 35px;
     text-align: center;
     margin-top: 8vh;
   }
@@ -399,7 +414,6 @@
 
   .pagename {
     height: 5%;
-    font-size: calc(5vw + 4px);
     width: 80vw;
   }
 
