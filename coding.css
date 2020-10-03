@@ -26,55 +26,141 @@
 .main-content-wrapper {
   width: 100vw;
   height: 100vh;
+  display: flex;
 }
+
+#content, #leftmenu {
+  flex: auto;
+  flex-direction: column;
+}
+
 /* Chrome Scrollbar */
-#leftmenu::-webkit-scrollbar {
-    width: 12px;
+#upperMenuButtons::-webkit-scrollbar {
+  width: 12px;
 }
-#leftmenu::-webkit-scrollbar:horizontal {
-    height: 12px;
+
+#upperMenuButtons::-webkit-scrollbar:horizontal {
+  height: 12px;
 }
-#leftmenu::-webkit-scrollbar-track {
-    background: lemonchiffon;
+
+#upperMenuButtons::-webkit-scrollbar-track {
+  background: lemonchiffon;
 }
-#leftmenu::-webkit-scrollbar-thumb {
-    box-shadow: inset 0 0 10px transparent;
-    border-radius: 10px;
-    background: rgba(0,0,0,0.7);
+
+#upperMenuButtons::-webkit-scrollbar-thumb {
+  box-shadow: inset 0 0 10px transparent;
+  border-radius: 10px;
+  background: rgba(0, 0, 0, 0.7);
 }
-#leftmenu::-webkit-scrollbar-thumb:hover {
-    background: black;
+
+#upperMenuButtons::-webkit-scrollbar-thumb:hover {
+  background: black;
 }
+
 /*Firefox Scrollbar*/
-#leftmenu {
-    scrollbar-width: thin;
-    scrollbar-color: orange lemonchiffon;
+#upperMenuButtons {
+  scrollbar-width: thin;
+  scrollbar-color: orange lemonchiffon;
 }
 
 #leftmenu {
   width: 250px;
+  max-width: 250px;
   height: 100vh;
+  background-color: #FFD382;
+}
+
+#upperMenuButtons {
   overflow: hidden scroll;
-  background-color:#FFD382;
+  max-width: 250px;
 }
 
-.search-bar-container {
+#upperMenuButtons, .lowerMenuButtons, .lowerMenu {
+  display: flex;
+  flex-direction: column;
+}
+
+#topDecoration {
   height: 30vh;
+  min-height: 200px;
+  max-height: 300px;
   width: 250px;
-  background-color: #C4C4C4
+  background-color: #adadad;
 }
 
-.drop-down-list-container {
-  height: 70vh;
+.button-style-menu {
+  width: 250px;
+  height: 50px;
+  border-radius: 0;
+  background-color: #FFD382;
+  text-align: left;
+  line-height: 50px;
+}
 
+.button-style-menu:focus {
+  background-color: #ffdea1;
+}
+
+.upperMenu:focus, .lowerMenu:focus {
+  background-color: #FFD382;
+}
+
+.upperMenuAct:focus, .lowerMenuAct:focus {
+  background-color: #b19869;
 }
 
 
+.upperMenu {
+  font-size: 25px;
+  padding-left: 20px;
+  font-weight: 500;
+}
 
+.upperMenuAct {
+  font-size: 25px;
+  padding-left: 20px;
+  font-weight: 600;
+  background-color: #b19869;
+  border: 5px 0 black;
+}
 
+.lowerMenu {
+  font-size: 18px;
+  padding-left: 40px;
+  font-weight: 400;
+}
+
+.lowerMenuAct {
+  font-size: 18px;
+  padding-left: 40px;
+  font-weight: 500;
+  background-color: #b19869;
+  border: 2px 0 black;
+}
+
+#content {
+  padding-left: 50px;
+  padding-top: 50px;
+}
+
+#content h1 {
+  height: 6rem;
+}
+
+#two, #three, #four, #five {
+  display: none;
+}
+
+.whatsNew,.gettingStarted,.settingUp,.basics,.howToVexcode,.tempVexCode,.controlsVexcode,.troubleshootsVexcode,.howToPros,.tempPros,.controlsPros,.troubleshootsPros,.designProcess,.wayOfCoding,.documentation {
+  display: none;
+}
+
+.boldedText{
+  font-weight: 700;
+}
 
 .links-container {
-  background-color: rgba(0,0,0,1);
+  background-color: rgba(0, 0, 0, 1);
 }
 
 .heading-links {
@@ -118,12 +204,12 @@
   margin: 0 auto;
 }
 
-  .container p {
+.container p {
   font-size: calc(3px + 1vh + 0.3vw);
-  }
+}
 
 .pagename {
-  flex:auto;
+  flex: auto;
   height: 30%;
   font-size: calc(8px + 0.6vh + 0.6vw);
   width: 28vw;
@@ -133,13 +219,13 @@
 }
 
 .text {
-  flex:auto;
+  flex: auto;
   height: 40%;
 }
 
 .button-container {
-  flex:auto;
-  width:28vw;
+  flex: auto;
+  width: 28vw;
   max-width: calc(250px + 5vw);
   height: calc(25px + 0.9vw);
   padding: 10px 0;
