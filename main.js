@@ -165,3 +165,13 @@ function scrollUp() {
     behavior: 'smooth'
   });
 }
+
+
+// animate the jumping arrow
+
+anime({
+  targets: '.arrow-down',
+  rotate: 45 - 360,
+  easing: 'spring(5, 100, 100, 35)',
+  duration: 800,
+})
