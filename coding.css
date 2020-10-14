@@ -1,9 +1,16 @@
+button:focus {
+  outline: none;
+  transform: none;
+  color: black;
+}
+
+
 .top-content-wrapper {
   margin-top: 10vh;
   padding-top: 15vh;
   width: 100vw;
   height: 100vh;
-  padding-left: 250px;
+  padding-left: 15rem;
   background-image: url("http://127.0.0.1:3000/img/code-tips-banner.png");
   background-size: cover;
 }
@@ -25,8 +32,14 @@
 
 .main-content-wrapper {
   width: 100vw;
-  height: 100vh;
+  height: 120vh;
   display: flex;
+}
+
+
+#leftMenu {
+  height: 120vh;
+  background-color: #FFD382;
 }
 
 #content, #leftmenu {
@@ -34,67 +47,20 @@
   flex-direction: column;
 }
 
-/* Chrome Scrollbar */
-#upperMenuButtons::-webkit-scrollbar {
-  width: 12px;
-}
-
-#upperMenuButtons::-webkit-scrollbar:horizontal {
-  height: 12px;
-}
-
-#upperMenuButtons::-webkit-scrollbar-track {
-  background: lemonchiffon;
-}
-
-#upperMenuButtons::-webkit-scrollbar-thumb {
-  box-shadow: inset 0 0 10px transparent;
-  border-radius: 10px;
-  background: rgba(0, 0, 0, 0.7);
-}
-
-#upperMenuButtons::-webkit-scrollbar-thumb:hover {
-  background: black;
-}
-
-/*Firefox Scrollbar*/
-#upperMenuButtons {
-  scrollbar-width: thin;
-  scrollbar-color: orange lemonchiffon;
-}
-
-#leftmenu {
-  width: 250px;
-  max-width: 250px;
-  height: 100vh;
-  background-color: #FFD382;
-}
-
-#upperMenuButtons {
-  overflow: hidden scroll;
-  max-width: 250px;
-}
-
 #upperMenuButtons, .lowerMenuButtons, .lowerMenu {
   display: flex;
   flex-direction: column;
 }
 
-#topDecoration {
-  height: 30vh;
-  min-height: 200px;
-  max-height: 300px;
-  width: 250px;
-  background-color: #adadad;
+#upperMenuButtons {
+  margin-top: 20vh;
 }
 
 .button-style-menu {
-  width: 250px;
-  height: 50px;
+  width: 15rem;
   border-radius: 0;
   background-color: #FFD382;
   text-align: left;
-  line-height: 50px;
 }
 
 .button-style-menu:focus {
@@ -109,15 +75,18 @@
   background-color: #b19869;
 }
 
-
 .upperMenu {
-  font-size: 25px;
+  height: 50px;
+  line-height: 50px;
+  font-size: 2rem;
   padding-left: 20px;
   font-weight: 500;
 }
 
 .upperMenuAct {
-  font-size: 25px;
+  height: 50px;
+  line-height: 50px;
+  font-size: 2rem;
   padding-left: 20px;
   font-weight: 600;
   background-color: #b19869;
@@ -125,20 +94,30 @@
 }
 
 .lowerMenu {
-  font-size: 18px;
+  height: 25px;
+  line-height: 25px;
+  font-size: 1rem;
   padding-left: 40px;
   font-weight: 400;
 }
 
 .lowerMenuAct {
-  font-size: 18px;
+  height: 25px;
+  line-height: 25px;
+  font-size: 1rem;
   padding-left: 40px;
   font-weight: 500;
   background-color: #b19869;
   border: 2px 0 black;
 }
 
+
+#mobileIconOpen, #mobileIconClose, #mobileMenuOpen, #mobileMenuClose{
+  display: none;
+}
+
 #content {
+  background-color: #464444;
   padding-left: 50px;
   padding-top: 50px;
 }
@@ -151,15 +130,16 @@
   display: none;
 }
 
-.whatsNew,.gettingStarted,.settingUp,.basics,.howToVexcode,.tempVexCode,.controlsVexcode,.troubleshootsVexcode,.howToPros,.tempPros,.controlsPros,.troubleshootsPros,.designProcess,.wayOfCoding,.documentation {
+.whatsNew, .gettingStarted, .settingUp, .basics, .howToVexcode, .tempVexCode, .controlsVexcode, .troubleshootsVexcode, .howToPros, .tempPros, .controlsPros, .troubleshootsPros, .designProcess, .wayOfCoding, .documentation {
   display: none;
 }
 
-.boldedText{
+.boldedText {
   font-weight: 700;
 }
 
 .links-container {
+  margin-top: 10vh;
   background-color: rgba(0, 0, 0, 1);
 }
 
@@ -236,4 +216,119 @@
   width: calc(150px + 7vw);
   max-width: calc(250px + 5vw);
   font-size: calc(8px + 0.7vw);
+}
+
+@media screen and (max-width: 1024px) {}
+
+@media screen and (max-width: 680px) {
+  html {
+    font-size: calc(0.8vh + 7px);
+  }
+
+  header ul li a {
+    display: none;
+  }
+
+  h1 {
+    font-size: 4.8rem;
+  }
+
+  .menu-icon-wrapper {
+    height: 10vh;
+    padding: 2.5vh 0;
+    position: fixed;
+    right: calc(3vw + 1vh);
+  }
+
+  .menu-icon-container {
+    display: block;
+  }
+
+  .menu-icon {
+    height: 5vh;
+    width: 5vh;
+    fill: rgba(255, 255, 255, 1);
+  }
+
+  .arrow-box-up {
+    transform: translate(-5vw, 15vh);
+  }
+
+  #upperMenuButtons {
+    display: none;
+  }
+
+  #mobileMenuOpen, #mobileIconOpen{
+    display: block;
+  }
+
+  #mobileMenuOpen{
+    position: absolute;
+    height: 120vh;
+    width: 5vh;
+    background-color: #55a55a
+  }
+
+  #mobileMenuClose{
+    position: absolute;
+    left: 15rem;
+    height: 120vh;
+    width: 5vh;
+    background-color: #55a55a
+  }
+
+  #mobileIconOpen{
+    position: absolute;
+    height: 120vh;
+    width: 5vh;
+    border-radius: 0px;
+    background-color: rgba(255, 255, 255, 1);
+  }
+
+  #mobileIconClose{
+    position: absolute;
+
+    height: 120vh;
+    width: 5vh;
+    border-radius: 0px;
+    background-color: rgba(255, 255, 255, 1);
+  }
+
+  #mobileIconOpen svg{
+  /* rotating the content 90 degrees */
+  -webkit-transform:rotate(90deg);
+  -moz-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  -o-transform: rotate(90deg);
+  transform: rotate(90deg);
+  }
+
+  #mobileIconClose svg{
+  /* rotating the content 270 degrees */
+  -webkit-transform:rotate(270deg);
+  -moz-transform: rotate(270deg);
+  -ms-transform: rotate(270deg);
+  -o-transform: rotate(270deg);
+  transform: rotate(270deg);
+  }
+
+}
+
+@media screen and (max-width: 320px) {
+  .title-top h1 {
+    font-size: 3vh;
+  }
+
+  h1 {
+    font-size: 3.9rem;
+  }
+
+  p {
+    font-size: 0.8rem;
+  }
+
+  .short-bar {
+    margin: auto;
+    width: 18vh;
+  }
 }
