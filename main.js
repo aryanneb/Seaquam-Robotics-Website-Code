@@ -3,7 +3,7 @@ window.addEventListener("scroll", function () {
   header.classList.toggle("sticky", window.scrollY > 175);
 });
 
-// Navigation menu animation
+// Navigation menu animation mobile
 
 const navSlide = () => {
   const burger = document.querySelector(".burger");
@@ -18,8 +18,7 @@ const navSlide = () => {
         link.style.animation = "";
         link.style.opacity = "0";
       } else {
-        link.style.animation = `navLinkAni 0.4s ease forwards ${
-          index / 7 + 0.2
+        link.style.animation = `navLinkAni 0.4s ease forwards ${index / 7 + 0.2
           }s`;
       }
     });
@@ -30,16 +29,15 @@ const navSlide = () => {
         link.style.animation = "";
         link.style.opacity = "0";
       } else {
-        link.style.animation = `navLinkAni 0.4s ease forwards ${
-          index / 7 + 0.75
+        link.style.animation = `navLinkAni 0.4s ease forwards ${index / 7 + 0.75
           }s`;
       }
     });
     burger.classList.toggle("toggle");
   });
 };
-
 navSlide();
+
 
 const historyDropdown = () => {
   const parent = document.getElementsByClassName("nav")[0];
@@ -142,7 +140,6 @@ const teamsDropDown = () => {
 
 historyDropdown();
 teamsDropDown();
-
 
 // arrow click scroll animation
 
