@@ -33,3 +33,9 @@ anime({
     easing: 'spring(1, 80, 85, 2)',
     duration: 800,
 })
+anime({
+    targets: '.home-content',
+    translateX: [-100, 0],
+    easing: 'spring(1, 80, 85, 2)',
+    duration: 10000,
+})
