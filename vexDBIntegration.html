@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>VEX DB Integration</title>
+
+<script>
+/*
+* VEX DB Integration with HTML and JS
+* Author: Mr. Singbeil
+* 
+* This HTML sample shows how to use simple HTTP requests to talk to VEX DB's API and request information about teams.
+* The page needs to run off a webserver to facilitate the request correctly: 
+* https://developer.mozilla.org/en-US/docs/Learn/Common_questions/set_up_a_local_testing_server
+* 
+*/
+function searchTeam(){
+	var e = document.getElementById("teams");
+	var teamName = e.options[e.selectedIndex].text;
+	
+	// Fetch JSON from URL
+	//https://vexdb.io/the_data/awards
+	var request = 'https://api.vexdb.io/v1/get_awards?team='+teamName
+	
+	//alert(request);
+	
+	// Code from:
+	//https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Fetching_data
+	
+	fetch(request).then(function(response) {
+	  return response.json(); //convert to a JSON js object for use.
+	}).then(function(json) {
+	  let awards = json;
+	  initialize(awards, teamName); // call to format the web page with data.
+	}).catch(function(err) {
+	  console.log('Fetch problem: ' + err.message);
+	});
+}
+
+/*
+Parses the results from the API request and formats it for display on the page.
+@param trophies; the JSON data requested
+@param String teamName; the team the data pertains to 
+*/
+function initialize(trophies, teamName){
+	document.getElementById("team-name").innerHTML = teamName;
+	// TODO: May need to parse through each to find out more detail about each trophy.
+	
+	//Use a for-loop to genearate list elements based on the number of seasons.
+	var list = ""; // the inner HTML to append
+	var length = trophies.size; // Substitute for dynamic length;
+	var i;
+	
+	for (i = 0; i < length; i++){
+		list += "<li>" + trophies.result[i].name + "</li>";
+	}
+	
+	document.getElementById("list").innerHTML = list;
+}
+
+</script>
+
+</head>
+<body>
+
+<h1>VEX DB</h1>
+<p>Select a team from the list to view their data</p>
+
+<select name="robo-teams" id="teams">
+  <option value="a">9181A</option>
+  <option value="x">9181X</option>
+  <option value="z">9181Z</option>
+  <option value="w">9181W</option>
+  <option value="b">9181B</option>
+</select>
+
+<button onclick="searchTeam()">Search</button>
+
+<div id="results">
+	<h1 id="team-name">TEAM</h1>
+	<ul id="list">
+	</ul>
+</div>
+
+</body>
+</html>
