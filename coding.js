@@ -2,7 +2,7 @@ let active = document.getElementsByClassName("topPage")[0];
 let activeList = document.getElementById('one');
 let activeUp = document.getElementById('welcomeBtn');
 let activeLo = document.getElementById('topPageBtn');
-let activeMenu = document.getElementById('mobileMenuClose');
+let activeMenu = document.getElementById('mobileMenu');
 
 
 // mobileMenuClose button

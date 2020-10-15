@@ -112,7 +112,7 @@ button:focus {
 }
 
 
-#mobileIconOpen, #mobileIconClose, #mobileMenuOpen, #mobileMenuClose{
+#mobileIcon, #mobileMenu{
   display: none;
 }
 
@@ -258,26 +258,19 @@ button:focus {
     display: none;
   }
 
-  #mobileMenuOpen, #mobileIconOpen{
+  #mobileMenu, #mobileIcon{
     display: block;
   }
 
-  #mobileMenuOpen{
+  #mobileMenu{
     position: absolute;
     height: 120vh;
     width: 5vh;
     background-color: #55a55a
   }
 
-  #mobileMenuClose{
-    position: absolute;
-    left: 15rem;
-    height: 120vh;
-    width: 5vh;
-    background-color: #55a55a
-  }
 
-  #mobileIconOpen{
+  #mobileIcon{
     position: absolute;
     height: 120vh;
     width: 5vh;
@@ -285,31 +278,14 @@ button:focus {
     background-color: rgba(255, 255, 255, 1);
   }
 
-  #mobileIconClose{
-    position: absolute;
 
-    height: 120vh;
-    width: 5vh;
-    border-radius: 0px;
-    background-color: rgba(255, 255, 255, 1);
-  }
-
-  #mobileIconOpen svg{
+  #mobileIcon svg{
   /* rotating the content 90 degrees */
   -webkit-transform:rotate(90deg);
   -moz-transform: rotate(90deg);
   -ms-transform: rotate(90deg);
   -o-transform: rotate(90deg);
   transform: rotate(90deg);
-  }
-
-  #mobileIconClose svg{
-  /* rotating the content 270 degrees */
-  -webkit-transform:rotate(270deg);
-  -moz-transform: rotate(270deg);
-  -ms-transform: rotate(270deg);
-  -o-transform: rotate(270deg);
-  transform: rotate(270deg);
   }
 
 }
