@@ -4,44 +4,100 @@
 <title>VEX DB Integration</title>
 
 <script>
-/*
-* VEX DB Integration with HTML and JS
-* Author: Mr. Singbeil
-*
-* This HTML sample shows how to use simple HTTP requests to talk to VEX DB's API and request information about teams.
-* The page needs to run off a webserver to facilitate the request correctly:
-* https://developer.mozilla.org/en-US/docs/Learn/Common_questions/set_up_a_local_testing_server
-*
-*/
+
+var responsecache = {};
+
 function searchTeam(){
 	var teamName = document.getElementById("teams").options[document.getElementById("teams").selectedIndex].text;
 	document.getElementById("team-name").innerHTML = "Please wait...";
+	document.getElementById("teaminfo").innerHTML = "";
+	document.getElementById("awardlist").innerHTML = "";
 
+	getTeamInfo(teamName).then(function(response) {
+		document.getElementById("team-name").innerHTML = teamName;
+		let list = "<ul>";
+		list += response.name != undefined ? "<li>Name: " + response.name + "</li>" : "";
+		list += "<li>Grade: " + response.grade + "</li>";
+		list += "<li>Robot: " + response.robot_name + "</li>";
+		list += "<li>Organisation: " + response.organisation + "</li>";
+		list += "<li>Location: " + response.city + ", " + response.region + ", " + response.country + "</li>";
+		list += "</ul>";
+		document.getElementById("teaminfo").innerHTML = list;
+		if (document.getElementById("awardlist").innerHTML == "")
+			document.getElementById("awardlist").innerHTML = "<h2>Awards</h2><ul><li>Please wait...</li></ul>";
+		if (document.getElementById("eventlist").innerHTML == "")
+			document.getElementById("eventlist").innerHTML = "<h2>Events</h2><ul><li>Please wait...</li></ul>";
+	});
 	getTeamAwards(teamName).then(function(response) {
-		var list = "";
+		let list = "<h2>Awards</h2><ul>";
 		for (i = 0; i < response.length; i++) {
 			list += "<li>" + response[i] + "</li>";
 		}
-		document.getElementById("team-name").innerHTML = teamName;
-		document.getElementById("list").innerHTML = list;
+		list += "</ul>";
+		document.getElementById("awardlist").innerHTML = list;
+	});
+	getTeamEvents(teamName).then(function(response) {
+		let list = "<h2>Events</h2><ul>";
+		for (i = 0; i < response.length; i++) {
+			list += "<li><a href=\"https://robotevents.com/robot-competitions/vex-robotics-competition/" + response[i].key + ".html\">" + response[i].name + "</a></li>";
+		}
+		list += "</ul>";
+		document.getElementById("eventlist").innerHTML = list;
 	});
 	return;
 }
 
+async function getTeamInfo(name) {
+	let teamsurl = 'https://api.vexdb.io/v1/get_teams?team='+name;
+	if (responsecache[teamsurl] != undefined)
+		return responsecache[teamsurl].result[0];
+	let response = await (await fetch(teamsurl)).json();
+	if (response.status == 0 || response.size == 0)
+		return "Could not get the team info";
+	responsecache[teamsurl] = Object.assign(response);
+	return response.result[0];
+}
+
 // Returns a list of formatted awards for a given team (type string)
 async function getTeamAwards(name) {
-	var awardsurl = 'https://api.vexdb.io/v1/get_awards?team='+name;
-
-	var awards = await (await fetch(awardsurl)).json();
-	var reqlist = [];
-	var ret = [];
-	for (i = 0; i < awards.size; i++) {
-		let eventurl = "https://api.vexdb.io/v1/get_events?sku="+awards.result[i].sku;
-		reqlist.push(fetch(eventurl));
+	let awardsurl = 'https://api.vexdb.io/v1/get_awards?team='+name;
+	let response;
+	if (responsecache[awardsurl] != undefined)
+		response = responsecache[awardsurl];
+	else {
+		response = await (await fetch(awardsurl)).json();
+		responsecache[awardsurl] = Object.assign(response);
 	}
+	let reqlist = [];
+	let ret = [];
+	for (i = 0; i < response.size; i++)
+		reqlist.push(getEventInfo(response.result[i].sku));
 	for (i = 0; i < reqlist.length; i++)
-		ret.push((awards.result[i].name + " - " + (await (await reqlist[i]).json()).result[0].name).trim());
+		ret.push((response.result[i].name + " - " + (await reqlist[i]).result[0].name).trim());
 	return ret;
+}
+
+async function getTeamEvents(name) {
+	let eventsurl = "https://api.vexdb.io/v1/get_events?team="+name;
+	if (responsecache[eventsurl] != undefined)
+		return responsecache[eventsurl].result;
+
+	let response = await (await fetch(eventsurl)).json();
+	if (response.status == 0 || response.size == 0)
+		return "Could not get the team events";
+	responsecache[eventsurl] = Object.assign(response);
+	return response.result;
+}
+
+async function getEventInfo(sku) {
+	let eventurl = "https://api.vexdb.io/v1/get_events?sku="+sku;
+	if (responsecache[eventurl] != undefined)
+		return responsecache[eventurl];
+	let response = await (await fetch(eventurl)).json();
+	if (response.status == 0 || response.size == 0)
+		return "Could not get the event info";
+	responsecache[eventurl] = Object.assign(response);
+	return response;
 }
 
 </script>
@@ -66,14 +122,16 @@ async function getTeamAwards(name) {
 	<option>9181X</option>
 	<option>9181Y</option>
   <option>9181Z</option>
+	<option>7K</option>
 </select>
 
 <button onclick="searchTeam()">Search</button>
 
 <div id="results">
 	<h1 id="team-name">Please select a team</h1>
-	<ul id="list">
-	</ul>
+	<div id="teaminfo"></div>
+	<div id="awardlist"></div>
+	<div id="eventlist"></div>
 </div>
 
 </body>
