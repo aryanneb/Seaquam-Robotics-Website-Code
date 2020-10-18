@@ -5,8 +5,6 @@ let activeLo = document.getElementById('topPageBtn');
 let activeMenu = document.getElementById('mobileMenu');
 
 
-// mobileMenuClose button
-
 // upperMenu buttons
 document
   .getElementById('welcomeBtn')
@@ -289,3 +287,26 @@ function documentationVisibility() {
   activeLo = document.getElementById('documentationBtn');
   activeLo.setAttribute("class", "button-style-menu lowerMenuAct");
 }
+
+
+// mobile menu toggler
+function menuToggle() {
+      target = document.getElementById("leftMenu");
+      target2 = document.getElementById("upperMenuButtons");
+      target3 = document.getElementById("mobileMenu");
+      target4 = document.getElementById("mobileButton");
+      target5 = document.getElementById("contentMask");
+      if (target.className == null || target.className=="") {
+        target.className = "active";
+        target2.className = "active";
+        target3.className = "close";
+        target4.className = "close";
+        target5.className = "active";
+      } else {
+        target.className = "";
+        target2.className = "";
+        target3.className = "";
+        target4.className = "";
+        target5.className = "";
+      }
+    }

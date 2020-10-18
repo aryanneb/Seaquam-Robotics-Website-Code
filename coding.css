@@ -39,7 +39,9 @@ button:focus {
 
 #leftMenu {
   height: 120vh;
+  width: 15rem;
   background-color: #FFD382;
+  z-index: 888;
 }
 
 #content, #leftmenu {
@@ -112,18 +114,22 @@ button:focus {
 }
 
 
-#mobileIcon, #mobileMenu{
+#mobileButton, #mobileMenu, #contentMask{
   display: none;
 }
 
 #content {
   background-color: #464444;
-  padding-left: 50px;
-  padding-top: 50px;
 }
 
 #content h1 {
   height: 6rem;
+}
+
+.contentsMargin{
+  margin-left: 50px;
+  margin-right: 50px;
+  margin-top: 50px;
 }
 
 #two, #three, #four, #five {
@@ -221,12 +227,8 @@ button:focus {
 @media screen and (max-width: 1024px) {}
 
 @media screen and (max-width: 680px) {
-  html {
-    font-size: calc(0.8vh + 7px);
-  }
-
-  header ul li a {
-    display: none;
+  html{
+    font-size: calc(1vh + 7px);
   }
 
   h1 {
@@ -254,38 +256,86 @@ button:focus {
     transform: translate(-5vw, 15vh);
   }
 
-  #upperMenuButtons {
-    display: none;
+  #leftMenu, #upperMenuButtons, #mobileMenu, #mobileButton, #mobileButton svg{
+    z-index: 888;
+    transition: 0.6s;
   }
 
-  #mobileMenu, #mobileIcon{
+  #leftMenu{
+    position: absolute;
+    left: -15rem;
+  }
+
+  #leftMenu.active{
+    left: 0;
+  }
+
+  #upperMenuButtons {
+    left: -15rem;
+  }
+
+  #upperMenuButtons.active{
+    left: 0;
+  }
+
+  #mobileMenu, #mobileButton{
     display: block;
   }
 
   #mobileMenu{
     position: absolute;
     height: 120vh;
-    width: 5vh;
+    width: 2rem;
+    left: 0;
     background-color: #55a55a
   }
 
+  #mobileMenu.close{
+    left: 15rem;
+  }
 
-  #mobileIcon{
+  #mobileButton{
     position: absolute;
     height: 120vh;
-    width: 5vh;
+    width: 2rem;
     border-radius: 0px;
-    background-color: rgba(255, 255, 255, 1);
+    background-color: #ffd382;
+  }
+
+  #mobileButton.close{
+    background-color: #ffffff;
   }
 
 
-  #mobileIcon svg{
+  #mobileButton svg{
   /* rotating the content 90 degrees */
   -webkit-transform:rotate(90deg);
   -moz-transform: rotate(90deg);
   -ms-transform: rotate(90deg);
   -o-transform: rotate(90deg);
   transform: rotate(90deg);
+  }
+
+  #mobileButton.close svg{
+    /* rotating the content 270 degrees */
+    -webkit-transform:rotate(270deg);
+    -moz-transform: rotate(270deg);
+    -ms-transform: rotate(270deg);
+    -o-transform: rotate(270deg);
+    transform: rotate(270deg);
+  }
+  #contentMask{
+    display: block;
+    position: absolute;
+    height: 120vh;
+    width: 0;
+    background-color: rgba(0, 0, 0, 1);
+    opacity: 0.3;
+    transition: 0.3s;
+  }
+
+  #contentMask.active {
+    width: 100%;
   }
 
 }
