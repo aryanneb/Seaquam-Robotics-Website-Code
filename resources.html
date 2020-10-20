@@ -13,36 +13,30 @@
 
 <body>
   <header>
-    <a href="#" class="logo-box"><img src="img/logo.png" alt="Seaquam Robotics Logo" class="logo"></a>
-    <div class="menu-icon-wrapper">
-      <a id="menu-button" href="#">
-        <div class="menu-icon-container">
-          <svg class="menu-icon" xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24">
-            <path d="M0 0h24v24H0z" fill="none" />
-            <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z" />
-          </svg>
-        </div>
+    <div class="logo-box">
+      <a href="home.html">
+        <img src="img/logo.png" alt="Seaquam Robotics Logo" />
       </a>
     </div>
-    <ul>
-      <li><a href="#">Home</a></li>
-      <li>
-        <a class="history" href="#">History</a>
+    <ul class="nav">
+      <li class="main-link"><a href="home.html">Home</a></li>
+      <li class="main-link history">
+        <a href="history.html">History</a><a class="mob historyDrpDwn">+</a>
         <ul class="dropdown">
-          <li>
+          <li class="history1">
             <a href="awards.html">Awards</a>
           </li>
-          <li>
+          <li class="history2">
             <a href="#">Hall of Fame</a>
           </li>
         </ul>
       </li>
-      <li>
-        <a class="teams" href="#">Teams</a>
+      <li class="main-link teams">
+        <a href="teams.html">Teams</a><a class="mob teamsDrpDwn">+</a>
         <ul class="dropdown">
           <li>
             <div class="seniors">
-              <a href="#">Senior Teams</a>
+              <a href="9181c.html">Senior Teams</a>
               <ul class="dropdown2">
                 <li>
                   <a href="9181c.html">9181C</a>
@@ -95,8 +89,8 @@
           </li>
         </ul>
       </li>
-      <li>
-        <a class="resources" href="#">Resources</a>
+      <li class="main-link resources">
+        <a href="#">Resources</a>
         <ul class="dropdown">
           <li>
             <div class="tips">
@@ -129,17 +123,17 @@
           </li>
         </ul>
       </li>
-      <li>
-        <a href="#">Schedule</a>
+      <li class="main-link">
+        <a href="schedule.html">Schedule</a>
       </li>
     </ul>
+    <div class="burger">
+      <div class="line1"></div>
+      <div class="line2"></div>
+      <div class="line3"></div>
+    </div>
   </header>
-  <script type="text/javascript">
-    window.addEventListener("scroll", function () {
-      var header = document.querySelector('header');
-      header.classList.toggle("sticky", window.scrollY > 175);
-    })
-  </script>
+
   <div class="banner"></div>
   <div class="title-top">
     <h1 id="pg-title">Resources</h1>
@@ -314,20 +308,20 @@
       <p>©Seaquam Robotics 2020-2021</p>
     </div>
     <div class="arrow-box-up">
-      <a href="#">
         <div class="arrow-up"></div>
-      </a>
     </div>
     <div class="list-content">
       <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">History</a></li>
-        <li><a href="#">Teams</a></li>
+        <li><a href="home.html">Home</a></li>
+        <li><a href="history.html">History</a></li>
+        <li><a href="teams.html">Teams</a></li>
         <li><a href="#">Resources</a></li>
-        <li><a href="#">Schedule</a></li>
+        <li><a href="schedule.html">Schedule</a></li>
       </ul>
     </div>
   </footer>
+
+  <script src="main.js"></script>
 </body>
 
 </html>
