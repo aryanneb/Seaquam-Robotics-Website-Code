@@ -44,12 +44,10 @@ const historyDropdown = () => {
   const plus = document.getElementsByClassName("historyDrpDwn")[0];
   const teams = document.getElementsByClassName("teamsDrpDwn")[0];
   const child1 = document.getElementsByClassName("history1")[0].cloneNode(true);
-  const child2 = document.getElementsByClassName("history2")[0].cloneNode(true);
 
   plus.addEventListener("click", () => {
     if (plus.classList.contains("dropped")) {
       parent.removeChild(child1);
-      parent.removeChild(child2);
       plus.classList.toggle("dropped");
     } else if (teams.classList.contains("dropped")) {
       while (document.getElementsByClassName("goldText")[0]) {
@@ -57,27 +55,17 @@ const historyDropdown = () => {
       }
       teams.classList.toggle("dropped");
       parent.insertBefore(child1, parent.childNodes[4]);
-      parent.insertBefore(child2, parent.childNodes[5]);
       child1.classList.add("goldText");
-      child2.classList.add("goldText");
-      child1.classList.add("sub-link");
-      child2.classList.add("sub-link");
+      child1.classList.add("sub-link"); 
       child1.style.animation = "navLinkAni 0.5s ease";
-      child2.style.animation = "navLinkAni 0.5s ease";
-      child1.style.opacity = "1";
-      child2.style.opacity = "1";
+      child1.style.opacity = "1";  
       plus.classList.toggle("dropped");
     } else {
       parent.insertBefore(child1, parent.childNodes[4]);
-      parent.insertBefore(child2, parent.childNodes[5]);
       child1.classList.add("goldText");
-      child2.classList.add("goldText");
       child1.classList.add("sub-link");
-      child2.classList.add("sub-link");
       child1.style.animation = "navLinkAni 0.5s ease";
-      child2.style.animation = "navLinkAni 0.5s ease";
       child1.style.opacity = "1";
-      child2.style.opacity = "1";
       plus.classList.toggle("dropped");
     }
   });
