@@ -16,7 +16,7 @@ function searchTeam(){
 	getTeamInfo(teamName).then(function(response) {
 		document.getElementById("team-name").innerHTML = teamName;
 		let list = "<ul>";
-		list += response.name != undefined ? "<li>Name: " + response.name + "</li>" : "";
+		list += (response.name != undefined) ? "<li>Name: " + response.name + "</li>" : "";
 		list += "<li>Grade: " + response.grade + "</li>";
 		list += "<li>Robot: " + response.robot_name + "</li>";
 		list += "<li>Organisation: " + response.organisation + "</li>";
@@ -59,8 +59,8 @@ async function getTeamInfo(name) {
 }
 
 // Returns a list of formatted awards for a given team (type string)
-async function getTeamAwards(name) {
-	let awardsurl = 'https://api.vexdb.io/v1/get_awards?team='+name;
+async function getTeamAwards(name, season) {
+	let awardsurl = 'https://api.vexdb.io/v1/get_awards?team=' + name + (season != undefined ? "&season=" + encodeURIComponent(season) : "");
 	let response;
 	if (responsecache[awardsurl] != undefined)
 		response = responsecache[awardsurl];
@@ -68,12 +68,22 @@ async function getTeamAwards(name) {
 		response = await (await fetch(awardsurl)).json();
 		responsecache[awardsurl] = Object.assign(response);
 	}
-	let reqlist = [];
+	let reqlist = {};
+	let arranged = {};
 	let ret = [];
-	for (i = 0; i < response.size; i++)
-		reqlist.push(getEventInfo(response.result[i].sku));
-	for (i = 0; i < reqlist.length; i++)
-		ret.push((response.result[i].name + " - " + (await reqlist[i]).result[0].name).trim());
+	for (i = 0; i < response.size; i++) {
+		if (arranged[response.result[i].sku] == undefined)
+			arranged[response.result[i].sku] = [];
+		arranged[response.result[i].sku].push(response.result[i].name.replace("(VRC/VEXU)", ""));
+		if (reqlist[response.result[i].sku] == undefined)
+			reqlist[response.result[i].sku] = getEventInfo(response.result[i].sku)
+	}
+	for (var key in arranged) {
+		let str = (await reqlist[key]).result[0].name.trim() + ": ";
+		for (i = 0; i < arranged[key].length; i++)
+			str += arranged[key][i].trim() + ", ";
+		ret.push(str.replace(/,\s$/, "").trim());
+	}
 	return ret;
 }
 
