@@ -152,6 +152,8 @@
   position: relative;
 }
 
+/* useful links content */
+
 .links-container {
   background-color: rgba(0,0,0,1);
 }
@@ -229,13 +231,7 @@
   font-size: 20px;
 
 }
-
-@media screen and (min-height:1080px){
-  .text {
-    font-size: 20px;
-  }
-}
-
+/* mobile */
 @media screen and (max-width:1024px) {
   .main-content-wrapper {
     max-height: 800px;
@@ -291,10 +287,6 @@ h2 {
 .content-top {
   padding-top: 2vh;
   padding-bottom: 2vh;
-}
-
-.introduction {
-
 }
 
 .alt-text-top {

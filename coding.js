@@ -2,28 +2,8 @@ let active = document.getElementsByClassName("topPage")[0];
 let activeList = document.getElementById('one');
 let activeUp = document.getElementById('welcomeBtn');
 let activeLo = document.getElementById('topPageBtn');
-let activeMenu = document.getElementById('mobileMenu');
 
 
-// upperMenu buttons
-document
-  .getElementById('welcomeBtn')
-  .addEventListener("click" , welcomeMenuVisibility);
-document
-  .getElementById('tutorialsBtn')
-  .addEventListener("click", tutorialsMenuVisibility);
-
-document
-  .getElementById('vexcodeBtn')
-  .addEventListener("click", vexcodeMenuVisibility);
-
-document
-  .getElementById('prosBtn')
-  .addEventListener("click", prosMenuVisibility);
-
-document
-  .getElementById('designingBtn')
-  .addEventListener("click", designingMenuVisibility);
 
 // lowerMenu buttons & lower inline buttons triggers
 document
@@ -90,57 +70,6 @@ document
   .getElementById('documentationBtn')
   .addEventListener("click", documentationVisibility);
 
-// upperMenu & lowerMenuButtons visibility toggles
-
-function welcomeMenuVisibility() {
-  activeList.style.display = "none";
-  activeList = document.getElementById('one');
-  activeList.style.display = "block";
-  activeUp.setAttribute("class", "button-style-menu upperMenu");
-  activeUp = document.getElementById('welcomeBtn');
-  activeUp.setAttribute("class", "button-style-menu upperMenuAct");
-}
-
-function tutorialsMenuVisibility() {
-  activeList.style.display = "none";
-  activeList = document.getElementById('two');
-  activeList.style.display = "block";
-  activeUp.setAttribute("class", "button-style-menu upperMenu");
-  activeUp = document.getElementById('tutorialsBtn');
-  activeUp.setAttribute("class", "button-style-menu upperMenuAct");
-}
-
-
-function vexcodeMenuVisibility() {
-  activeList.style.display = "none";
-  activeList = document.getElementById('three');
-  activeList.style.display = "block";
-  activeUp.setAttribute("class", "button-style-menu upperMenu");
-  activeUp = document.getElementById('vexcodeBtn');
-  activeUp.setAttribute("class", "button-style-menu upperMenuAct");
-}
-
-function prosMenuVisibility() {
-  activeList.style.display = "none";
-  activeList = document.getElementById('four');
-  activeList.style.display = "block";
-  activeUp.setAttribute("class", "button-style-menu upperMenu");
-  activeUp = document.getElementById('prosBtn');
-  activeUp.setAttribute("class", "button-style-menu upperMenuAct");
-}
-
-
-function designingMenuVisibility() {
-  activeList.style.display = "none";
-  activeList = document.getElementById('five');
-  activeList.style.display = "block";
-  activeUp.setAttribute("class", "button-style-menu upperMenu");
-  activeUp = document.getElementById('designingBtn');
-  activeUp.setAttribute("class", "button-style-menu upperMenuAct");
-}
-
-
-
 // lowermenu button & content visibility toggles
 
 
@@ -151,6 +80,9 @@ function topPageVisibility() {
   activeLo.setAttribute("class", "button-style-menu lowerMenu");
   activeLo = document.getElementById('topPageBtn');
   activeLo.setAttribute("class", "button-style-menu lowerMenuAct");
+  activeUp.setAttribute("class", "button-style-menu upperMenu");
+  activeUp = document.getElementById('welcomeBtn');
+  activeUp.setAttribute("class", "button-style-menu upperMenuAct");
 }
 
 function whatsNewVisibility() {
@@ -160,6 +92,9 @@ function whatsNewVisibility() {
   activeLo.setAttribute("class", "button-style-menu lowerMenu");
   activeLo = document.getElementById('whatsNewBtn');
   activeLo.setAttribute("class", "button-style-menu lowerMenuAct");
+  activeUp.setAttribute("class", "button-style-menu upperMenu");
+  activeUp = document.getElementById('welcomeBtn');
+  activeUp.setAttribute("class", "button-style-menu upperMenuAct");
 }
 
 function gettingStartedVisibility() {
@@ -169,6 +104,9 @@ function gettingStartedVisibility() {
   activeLo.setAttribute("class", "button-style-menu lowerMenu");
   activeLo = document.getElementById('gettingStartedBtn');
   activeLo.setAttribute("class", "button-style-menu lowerMenuAct");
+  activeUp.setAttribute("class", "button-style-menu upperMenu");
+  activeUp = document.getElementById('tutorialsBtn');
+  activeUp.setAttribute("class", "button-style-menu upperMenuAct");
 }
 
 function settingUpVisibility() {
@@ -178,6 +116,9 @@ function settingUpVisibility() {
   activeLo.setAttribute("class", "button-style-menu lowerMenu");
   activeLo = document.getElementById('settingUpYourIDE-Btn');
   activeLo.setAttribute("class", "button-style-menu lowerMenuAct");
+  activeUp.setAttribute("class", "button-style-menu upperMenu");
+  activeUp = document.getElementById('tutorialsBtn');
+  activeUp.setAttribute("class", "button-style-menu upperMenuAct");
 }
 
 function basicsVisibility() {
@@ -187,6 +128,9 @@ function basicsVisibility() {
   activeLo.setAttribute("class", "button-style-menu lowerMenu");
   activeLo = document.getElementById('basicsOfCodingBtn');
   activeLo.setAttribute("class", "button-style-menu lowerMenuAct");
+  activeUp.setAttribute("class", "button-style-menu upperMenu");
+  activeUp = document.getElementById('tutorialsBtn');
+  activeUp.setAttribute("class", "button-style-menu upperMenuAct");
 }
 
 function howToVexcodeVisibility() {
@@ -196,6 +140,9 @@ function howToVexcodeVisibility() {
   activeLo.setAttribute("class", "button-style-menu lowerMenu");
   activeLo = document.getElementById('howToCodeVexcodeBtn');
   activeLo.setAttribute("class", "button-style-menu lowerMenuAct");
+  activeUp.setAttribute("class", "button-style-menu upperMenu");
+  activeUp = document.getElementById('vexcodeBtn');
+  activeUp.setAttribute("class", "button-style-menu upperMenuAct");
 }
 
 function tempVexcodeVisibility() {
@@ -205,6 +152,9 @@ function tempVexcodeVisibility() {
   activeLo.setAttribute("class", "button-style-menu lowerMenu");
   activeLo = document.getElementById('tempVexcodeBtn');
   activeLo.setAttribute("class", "button-style-menu lowerMenuAct");
+  activeUp.setAttribute("class", "button-style-menu upperMenu");
+  activeUp = document.getElementById('vexcodeBtn');
+  activeUp.setAttribute("class", "button-style-menu upperMenuAct");
 }
 
 function controlsVexcodeVisibility() {
@@ -214,6 +164,9 @@ function controlsVexcodeVisibility() {
   activeLo.setAttribute("class", "button-style-menu lowerMenu");
   activeLo = document.getElementById('controlsVexcodeBtn');
   activeLo.setAttribute("class", "button-style-menu lowerMenuAct");
+  activeUp.setAttribute("class", "button-style-menu upperMenu");
+  activeUp = document.getElementById('vexcodeBtn');
+  activeUp.setAttribute("class", "button-style-menu upperMenuAct");
 }
 
 function troubleshootsVexcodeVisibility() {
@@ -223,6 +176,9 @@ function troubleshootsVexcodeVisibility() {
   activeLo.setAttribute("class", "button-style-menu lowerMenu");
   activeLo = document.getElementById('troubleshootsVexcodeBtn');
   activeLo.setAttribute("class", "button-style-menu lowerMenuAct");
+  activeUp.setAttribute("class", "button-style-menu upperMenu");
+  activeUp = document.getElementById('vexcodeBtn');
+  activeUp.setAttribute("class", "button-style-menu upperMenuAct");
 }
 
 function howToProsVisibility() {
@@ -232,6 +188,9 @@ function howToProsVisibility() {
   activeLo.setAttribute("class", "button-style-menu lowerMenu");
   activeLo = document.getElementById('howToCodeProsBtn');
   activeLo.setAttribute("class", "button-style-menu lowerMenuAct");
+  activeUp.setAttribute("class", "button-style-menu upperMenu");
+  activeUp = document.getElementById('prosBtn');
+  activeUp.setAttribute("class", "button-style-menu upperMenuAct");
 }
 
 function tempProsVisibility() {
@@ -241,6 +200,9 @@ function tempProsVisibility() {
   activeLo.setAttribute("class", "button-style-menu lowerMenu");
   activeLo = document.getElementById('tempProsBtn');
   activeLo.setAttribute("class", "button-style-menu lowerMenuAct");
+  activeUp.setAttribute("class", "button-style-menu upperMenu");
+  activeUp = document.getElementById('prosBtn');
+  activeUp.setAttribute("class", "button-style-menu upperMenuAct");
 }
 
 function controlsProsVisibility() {
@@ -250,6 +212,9 @@ function controlsProsVisibility() {
   activeLo.setAttribute("class", "button-style-menu lowerMenu");
   activeLo = document.getElementById('controlsProsBtn');
   activeLo.setAttribute("class", "button-style-menu lowerMenuAct");
+  activeUp.setAttribute("class", "button-style-menu upperMenu");
+  activeUp = document.getElementById('prosBtn');
+  activeUp.setAttribute("class", "button-style-menu upperMenuAct");
 }
 
 function troubleshootsProsVisibility() {
@@ -259,6 +224,9 @@ function troubleshootsProsVisibility() {
   activeLo.setAttribute("class", "button-style-menu lowerMenu");
   activeLo = document.getElementById('troubleshootsProsBtn');
   activeLo.setAttribute("class", "button-style-menu lowerMenuAct");
+  activeUp.setAttribute("class", "button-style-menu upperMenu");
+  activeUp = document.getElementById('prosBtn');
+  activeUp.setAttribute("class", "button-style-menu upperMenuAct");
 }
 
 function designProcessVisibility() {
@@ -268,6 +236,9 @@ function designProcessVisibility() {
   activeLo.setAttribute("class", "button-style-menu lowerMenu");
   activeLo = document.getElementById('designProcessBtn');
   activeLo.setAttribute("class", "button-style-menu lowerMenuAct");
+  activeUp.setAttribute("class", "button-style-menu upperMenu");
+  activeUp = document.getElementById('designingBtn');
+  activeUp.setAttribute("class", "button-style-menu upperMenuAct");
 }
 
 function wayOfCodingVisibility() {
@@ -277,6 +248,9 @@ function wayOfCodingVisibility() {
   activeLo.setAttribute("class", "button-style-menu lowerMenu");
   activeLo = document.getElementById('wayOfCodingBtn');
   activeLo.setAttribute("class", "button-style-menu lowerMenuAct");
+  activeUp.setAttribute("class", "button-style-menu upperMenu");
+  activeUp = document.getElementById('designingBtn');
+  activeUp.setAttribute("class", "button-style-menu upperMenuAct");
 }
 
 function documentationVisibility() {
@@ -286,6 +260,9 @@ function documentationVisibility() {
   activeLo.setAttribute("class", "button-style-menu lowerMenu");
   activeLo = document.getElementById('documentationBtn');
   activeLo.setAttribute("class", "button-style-menu lowerMenuAct");
+  activeUp.setAttribute("class", "button-style-menu upperMenu");
+  activeUp = document.getElementById('designingBtn');
+  activeUp.setAttribute("class", "button-style-menu upperMenuAct");
 }
 
 
@@ -293,20 +270,17 @@ function documentationVisibility() {
 function menuToggle() {
       target = document.getElementById("leftMenu");
       target2 = document.getElementById("upperMenuButtons");
-      target3 = document.getElementById("mobileMenu");
-      target4 = document.getElementById("mobileButton");
-      target5 = document.getElementById("contentMask");
+      target3 = document.getElementById("mobileButton");
+      target4 = document.getElementById("contentMask");
       if (target.className == null || target.className=="") {
         target.className = "active";
         target2.className = "active";
         target3.className = "close";
-        target4.className = "close";
-        target5.className = "active";
+        target4.className = "active";
       } else {
         target.className = "";
         target2.className = "";
         target3.className = "";
         target4.className = "";
-        target5.className = "";
       }
     }

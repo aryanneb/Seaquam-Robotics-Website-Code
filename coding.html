@@ -147,53 +147,51 @@
   </header>
 
   <div class="top-content-wrapper">
-    <h1 id="pg-title">Coding Tips</h1>
-    <div class="short-bar"></div>
-    <div class="intro-text">
-      <p>In this section you can find tutorials, explanation, templates and tips to support sufficient coding.</p>
+    <div class="top-content-container">
+      <h1 id="pg-title">Coding Tips</h1>
+      <div class="short-bar"></div>
+      <div class="intro-text">
+        <p>In this section you can find tutorials, explanation, templates and tips to support sufficient coding.</p>
+      </div>
     </div>
   </div>
   <div class="arrow-box">
-    <a href="#">
-      <div class="arrow-down"></div>
-    </a>
+    <div class="arrow-down"></div>
   </div>
 
 
 
 
     <div class="main-content-wrapper">
-      <div id="mobileMenu">
-        <button id="mobileButton" onclick="menuToggle();"><svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 14l5-5 5 5z"/></svg></button>
-      </div>
+      <button id="mobileButton" onclick="menuToggle();"><svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 14l5-5 5 5z"/></svg></button>
       <div id="leftMenu">
         <div id="upperMenuButtons">
-          <button id="welcomeBtn" class="button-style-menu upperMenuAct">Welcome</button>
+          <div id="welcomeBtn" class="button-style-menu upperMenuAct"><h3>Welcome</h3></div>
           <div id="one" class="lowerMenuButtons">
             <button class="button-style-menu lowerMenuAct" id="topPageBtn" onclick="menuToggle();">Top</button>
             <button class="button-style-menu lowerMenu" id="whatsNewBtn" onclick="menuToggle();">What's new</button>
           </div>
-          <button id="tutorialsBtn" class="button-style-menu upperMenu">Tutorials</button>
+          <div id="tutorialsBtn" class="button-style-menu upperMenu"><h3>Tutorials</h3></div>
           <div id="two" class="lowerMenuButtons">
             <button class="button-style-menu lowerMenu" id="gettingStartedBtn" onclick="menuToggle();">Getting Started</button>
             <button class="button-style-menu lowerMenu" id="settingUpYourIDE-Btn" onclick="menuToggle();">Setting Up Your IDE</button>
             <button class="button-style-menu lowerMenu" id="basicsOfCodingBtn" onclick="menuToggle();">Basics of Coding</button>
           </div>
-          <button id="vexcodeBtn" class="button-style-menu upperMenu">Vexcode</button>
+          <div id="vexcodeBtn" class="button-style-menu upperMenu"><h3>Vexcode</h3></div>
           <div id="three" class="lowerMenuButtons">
             <button class="button-style-menu lowerMenu" id="howToCodeVexcodeBtn" onclick="menuToggle();">How to Code</button>
             <button class="button-style-menu lowerMenu" id="tempVexcodeBtn" onclick="menuToggle();">Useful Templates</button>
             <button class="button-style-menu lowerMenu" id="controlsVexcodeBtn" onclick="menuToggle();">Controls in Vexcode</button>
             <button class="button-style-menu lowerMenu" id="troubleshootsVexcodeBtn" onclick="menuToggle();">Troubleshooting</button>
           </div>
-          <button id="prosBtn" class="button-style-menu upperMenu">PROS</button>
+          <div id="prosBtn" class="button-style-menu upperMenu"><h3>PROS</h3></div>
           <div id="four" class="lowerMenuButtons">
             <button class="button-style-menu lowerMenu" id="howToCodeProsBtn" onclick="menuToggle();">How to Code</button>
             <button class="button-style-menu lowerMenu" id="tempProsBtn" onclick="menuToggle();">Useful Templates</button>
             <button class="button-style-menu lowerMenu" id="controlsProsBtn" onclick="menuToggle();">Controls in Pros</button>
             <button class="button-style-menu lowerMenu" id="troubleshootsProsBtn" onclick="menuToggle();">Troubleshooting</button>
           </div>
-          <button id="designingBtn" class="button-style-menu upperMenu">Designing</button>
+          <div id="designingBtn" class="button-style-menu upperMenu"><h3>Designing</h3></div>
           <div id="five" class="lowerMenuButtons">
             <button class="button-style-menu lowerMenu" id="designProcessBtn" onclick="menuToggle();">Design Process</button>
             <button class="button-style-menu lowerMenu" id="wayOfCodingBtn" onclick="menuToggle();">Your Way Of Coding</button>
@@ -599,25 +597,28 @@
     <h2 class="heading-links">Useful Links</h2>
     <div class="links-spacer"></div>
     <div class="useful-links">
-      <div class="container vf">
-        <h2 class="pagename">Vexcode Doxigen</h2>
-        <p class="text">An official forum provided by VEX. You can ask questions and join discussions with all of the teams registered in the forum, and also the official technicians and judges.</p>
+      <div class="container vd">
+        <h2 class="pagename">Vexcode Doxygen</h2>
+        <p class="text">A database for VEXCODE V5 Pro code, and you can find the references to the classes, API, namespace, functions, etc.</p>
         <div class="button-container">
-          <button class="button-style2 visit">Visit Vexcode Doxigen</button>
+          <button class="button-style2 visit" type="button" onclick="location.href='https://kb.vex.com'">Visit
+            Doxygen</button>
         </div>
       </div>
       <div class="container vdb">
-        <h2 class="pagename">PROS Documentation</h2>
+        <h2 class="pagename">PROS Docs</h2>
         <p class="text">Official database from PROS. You can find very much anything about PROS codes, API, issues, updates, tutorials and Q&A's. </p>
         <div class="button-container">
-          <button class="button-style2 visit">Visit PROS Docs Home</button>
+          <button class="button-style2 visit" type="button" onclick="location.href='https://kb.vex.com'">Visit
+            PROS Docs</button>
         </div>
       </div>
       <div class="container kb">
         <h2 class="pagename">Knowledge Base</h2>
         <p class="text">An official database provides various tutorials, parts overviews, tips, instructions and troubleshoots for some coding to some physical and mechanical parts.</p>
         <div class="button-container">
-          <button class="button-style2 visit">Visit KB</button>
+          <button class="button-style2 visit" type="button" onclick="location.href='https://kb.vex.com'">Visit
+            KB</button>
         </div>
       </div>
     </div>
@@ -632,9 +633,7 @@
       <p>©Seaquam Robotics 2020-2021</p>
     </div>
     <div class="arrow-box-up">
-      <a href="#">
         <div class="arrow-up"></div>
-      </a>
     </div>
     <div class="list-content">
       <ul>
