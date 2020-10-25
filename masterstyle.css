@@ -625,6 +625,10 @@ footer {
   border-radius: 30px;
 }
 
+.indented {
+  margin-left: 25px;
+}
+
 @media screen and (max-width: 1024px) {
   .home {
     flex-wrap: wrap;
