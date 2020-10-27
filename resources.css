@@ -19,11 +19,9 @@
 
 .content-top {
   width: 70vw;
-  padding-top: 5vh;
   padding-bottom: 5vh;
 }
 .content-top p {
-  font-size: calc(0.6vw + 7px);
   text-align: center;
 }
 
@@ -235,6 +233,11 @@
 
 }
 
+.introduction p {
+  margin-bottom: 3vw;
+  margin-top: 2vw;
+}
+
 @media screen and (min-height:1080px){
   .text {
     font-size: 20px;
@@ -268,10 +271,12 @@
   min-height: unset;
   height: auto;
 }
+.contents {
+  margin-top: 3vh;
+}
 
 .content-top {
   width: calc(91.5px + 50vw);
-  padding-top: 2vh;
   padding-bottom: 2vh;
 }
 
@@ -295,8 +300,9 @@
 }
 
   .introduction p{
-    font-size: 10px;
-    text-align: justify;
+    font-size: 14px;
+    text-align: center;
+    margin-bottom: 5vw;
   }
 
   .top-icons {

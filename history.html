@@ -7,110 +7,21 @@
     <link rel="stylesheet" href="masterstyle.css" />
     <link rel="stylesheet" href="history.css" />
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet" />
-    <style>
-        ::selection {
-            color: white;
-            background: #ffd382;
-        }
-
-        ::-moz-selection {
-            color: white;
-            background: #ffd382;
-        }
-    </style>
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
     <script src="anime.min.js"></script>
 </head>
 
 <body>
     <!--<div class="block"></div> -->
-    <header>
-        <div class="logo-box">
-            <a href="home.html">
-                <img src="img/logo.png" alt="Seaquam Robotics Logo" />
-            </a>
-        </div>
-        <ul class="nav">
-            <li class="main-link"><a href="home.html">Home</a></li>
-            <li class="main-link history">
-                <a href="#">History</a><a class="mob historyDrpDwn">+</a>
-                <ul class="dropdown">
-                    <li class="history1">
-                        <a href="awards.html">Awards</a>
-                    </li>
-                </ul>
-            </li>
-            <li class="main-link teams">
-                <a href="teams.html">Teams</a><a class="mob teamsDrpDwn">+</a>
-                <ul class="dropdown">
-                    <li>
-                        <div class="seniors">
-                            <a href="#">Senior Teams</a>
-                            <ul class="dropdown2">
-                                <li>
-                                    <a href="9181c.html">9181C</a>
-                                </li>
-                                <li>
-                                    <a href="#">9181D</a>
-                                </li>
-                                <li>
-                                    <a href="#">9181X</a>
-                                </li>
-                                <li>
-                                    <a href="#">9181S</a>
-                                </li>
-                                <li>
-                                    <a href="#">9181W</a>
-                                </li>
-                            </ul>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="juniors">
-                            <a href="#">Junior Teams</a>
-                            <ul class="dropdown2">
-                                <li>
-                                    <a href="#">9181A</a>
-                                </li>
-                                <li>
-                                    <a href="#">9181E</a>
-                                </li>
-                                <li>
-                                    <a href="#">9181G</a>
-                                </li>
-                                <li>
-                                    <a href="#">9181J</a>
-                                </li>
-                                <li>
-                                    <a href="#">9181K</a>
-                                </li>
-                                <li>
-                                    <a href="#">9181N</a>
-                                </li>
-                                <li>
-                                    <a href="#">9181T</a>
-                                </li>
-                                <li>
-                                    <a href="#">9181V</a>
-                                </li>
-                            </ul>
-                        </div>
-                    </li>
-                </ul>
-            </li>
-            <li class="main-link resources">
-                <a href="resources.html">Resources</a>
-            </li>
-            <li class="main-link">
-                <a href="schedule.html">Schedule</a>
-            </li>
-        </ul>
-        <div class="burger">
-            <div class="line1"></div>
-            <div class="line2"></div>
-            <div class="line3"></div>
-        </div>
+    <!-- Navbar code start-->
+    <header id="nav-placeholder">
     </header>
-
+    <script>
+      $(function(){
+        $("#nav-placeholder").load("nav.html");
+      });
+      </script>
+    <!-- Navbar code end-->
     <section class="home-page">
         <div class="banner"></div>
         <div class="title-top">

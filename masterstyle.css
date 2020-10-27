@@ -3,6 +3,16 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+::selection {
+  color: white;
+  background: #ffd382;
+}
+
+::-moz-selection {
+  color: white;
+  background: #ffd382;
+}
 .wrapper {
   overflow-x: hidden;
   position: relative;
@@ -21,7 +31,7 @@ body {
 }
 
 ::-webkit-scrollbar-track {
-  background: #d4d4d4 ;
+  background: #d4d4d4;
   border-radius: 25px;
 }
 
@@ -593,7 +603,7 @@ footer {
 .title-top {
   position: relative;
   bottom: 12vh;
-  text-align:center;
+  text-align: center;
 }
 
 .title-top h1 {
@@ -610,7 +620,7 @@ footer {
   height: 0.5rem;
   width: 38vh;
   margin: -2vh auto 0 auto;
-  background-color: #FFD382;
+  background-color: #ffd382;
   border-radius: 30px;
 }
 
@@ -737,7 +747,6 @@ footer {
     margin-right: 30vw;
     width: 40vw;
   }
-
 }
 
 @media screen and (max-width: 320px) {
