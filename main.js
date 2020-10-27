@@ -43,6 +43,7 @@ const historyDropdown = () => {
   const parent = document.getElementsByClassName("nav")[0];
   const plus = document.getElementsByClassName("historyDrpDwn")[0];
   const teams = document.getElementsByClassName("teamsDrpDwn")[0];
+  const resc = document.getElementsByClassName("resourcesDrpDwn")[0];
   const child1 = document.getElementsByClassName("history1")[0].cloneNode(true);
 
   plus.addEventListener("click", () => {
@@ -53,13 +54,26 @@ const historyDropdown = () => {
       while (document.getElementsByClassName("goldText")[0]) {
         parent.removeChild(document.getElementsByClassName("goldText")[0]);
       }
-      teams.classList.toggle("dropped");
-      parent.insertBefore(child1, parent.childNodes[4]);
-      child1.classList.add("goldText");
-      child1.classList.add("sub-link"); 
-      child1.style.animation = "navLinkAni 0.5s ease";
-      child1.style.opacity = "1";  
-      plus.classList.toggle("dropped");
+      if(teams.classList.contains("dropped")){
+        teams.classList.toggle("dropped");
+        parent.insertBefore(child1, parent.childNodes[4]);
+        child1.classList.add("goldText");
+        child1.classList.add("sub-link"); 
+        child1.style.animation = "navLinkAni 0.5s ease";
+        child1.style.opacity = "1";  
+        plus.classList.toggle("dropped");
+      }
+
+      if(resc.classList.contains("dropped")){
+        resc.classList.toggle("dropped");
+        parent.insertBefore(child1, parent.childNodes[4]);
+        child1.classList.add("goldText");
+        child1.classList.add("sub-link"); 
+        child1.style.animation = "navLinkAni 0.5s ease";
+        child1.style.opacity = "1";  
+        plus.classList.toggle("dropped");
+      }
+     
     } else {
       parent.insertBefore(child1, parent.childNodes[4]);
       child1.classList.add("goldText");
@@ -126,8 +140,98 @@ const teamsDropDown = () => {
   });
 };
 
+
+const resourcesDropDown = () => {
+  const parent = document.getElementsByClassName("nav")[0];
+  const teams = document.getElementsByClassName("teamsDrpDwn")[0];
+  const hist = document.getElementsByClassName("historyDrpDwn")[0];
+  const plus = document.getElementsByClassName("resourcesDrpDwn")[0];
+  const schedule = document.getElementsByClassName("schedule")[0];
+  const coding = document
+    .querySelector(".resources > .dropdown > li ")
+    .cloneNode(true);
+
+    const building = document
+      .querySelector(".resources > .dropdown > li ")
+      .nextElementSibling.cloneNode(true);
+
+
+    const design = document
+      .querySelector(".resources > .dropdown > li ")
+      .nextElementSibling.nextElementSibling.cloneNode(true);
+
+  plus.addEventListener("click", () => {
+    if (plus.classList.contains("dropped")) {
+      parent.removeChild(coding);
+      parent.removeChild(building);
+      parent.removeChild(design);
+      plus.classList.toggle("dropped");
+    } else if (document.getElementsByClassName("goldText")[0]) {
+      while (document.getElementsByClassName("goldText")[0]) {
+        parent.removeChild(document.getElementsByClassName("goldText")[0]);
+      }
+      if(hist.classList.contains("dropped")){
+        hist.classList.toggle("dropped");
+        parent.insertBefore(coding, schedule);
+        parent.insertBefore(building, schedule);
+        parent.insertBefore(design, schedule);
+        coding.classList.add("goldText");
+        building.classList.add("goldText");
+        design.classList.add("goldText");
+        coding.classList.add("sub-link");
+        building.classList.add("sub-link");
+        design.classList.add("sub-link");
+        coding.style.animation = "navLinkAni 0.5s ease";
+        building.style.animation = "navLinkAni 0.5s ease";
+        design.style.animation = "navLinkAni 0.5s ease";
+        coding.style.opacity = "1";
+        building.style.opacity = "1";
+        design.style.opacity = "1";
+        plus.classList.toggle("dropped");
+      }
+     if(teams.classList.contains("dropped")){
+        teams.classList.toggle("dropped");
+        parent.insertBefore(coding, schedule);
+        parent.insertBefore(building, schedule);
+        parent.insertBefore(design, schedule);
+        coding.classList.add("goldText");
+        building.classList.add("goldText");
+        design.classList.add("goldText");
+        coding.classList.add("sub-link");
+        building.classList.add("sub-link");
+        design.classList.add("sub-link");
+        coding.style.animation = "navLinkAni 0.5s ease";
+        building.style.animation = "navLinkAni 0.5s ease";
+        design.style.animation = "navLinkAni 0.5s ease";
+        coding.style.opacity = "1";
+        building.style.opacity = "1";
+        design.style.opacity = "1";
+        plus.classList.toggle("dropped");
+     }
+    } else {
+      parent.insertBefore(coding, schedule);
+      parent.insertBefore(building, schedule);
+      parent.insertBefore(design, schedule);
+      coding.classList.add("goldText");
+      building.classList.add("goldText");
+      design.classList.add("goldText");
+      coding.classList.add("sub-link");
+      building.classList.add("sub-link");
+      design.classList.add("sub-link");
+      coding.style.animation = "navLinkAni 0.5s ease";
+      building.style.animation = "navLinkAni 0.5s ease";
+      design.style.animation = "navLinkAni 0.5s ease";
+      coding.style.opacity = "1";
+      building.style.opacity = "1";
+      design.style.opacity = "1";
+      plus.classList.toggle("dropped");
+    }
+  });
+};
+
 historyDropdown();
 teamsDropDown();
+resourcesDropDown();
 
 // arrow click scroll animation
 
