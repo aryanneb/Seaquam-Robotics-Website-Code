@@ -18,8 +18,9 @@ const navSlide = () => {
         link.style.animation = "";
         link.style.opacity = "0";
       } else {
-        link.style.animation = `navLinkAni 0.4s ease forwards ${index / 7 + 0.2
-          }s`;
+        link.style.animation = `navLinkAni 0.4s ease forwards ${
+          index / 7 + 0.2
+        }s`;
       }
     });
     let subLinks = document.querySelectorAll(".sub-link");
@@ -29,15 +30,15 @@ const navSlide = () => {
         link.style.animation = "";
         link.style.opacity = "0";
       } else {
-        link.style.animation = `navLinkAni 0.4s ease forwards ${index / 7 + 0.75
-          }s`;
+        link.style.animation = `navLinkAni 0.4s ease forwards ${
+          index / 7 + 0.75
+        }s`;
       }
     });
     burger.classList.toggle("toggle");
   });
 };
 navSlide();
-
 
 const historyDropdown = () => {
   const parent = document.getElementsByClassName("nav")[0];
@@ -50,30 +51,29 @@ const historyDropdown = () => {
     if (plus.classList.contains("dropped")) {
       parent.removeChild(child1);
       plus.classList.toggle("dropped");
-    } else if (teams.classList.contains("dropped")) {
+    } else if (document.getElementsByClassName("goldText")[0]) {
       while (document.getElementsByClassName("goldText")[0]) {
         parent.removeChild(document.getElementsByClassName("goldText")[0]);
       }
-      if(teams.classList.contains("dropped")){
+      if (teams.classList.contains("dropped")) {
         teams.classList.toggle("dropped");
         parent.insertBefore(child1, parent.childNodes[4]);
         child1.classList.add("goldText");
-        child1.classList.add("sub-link"); 
+        child1.classList.add("sub-link");
         child1.style.animation = "navLinkAni 0.5s ease";
-        child1.style.opacity = "1";  
+        child1.style.opacity = "1";
         plus.classList.toggle("dropped");
       }
 
-      if(resc.classList.contains("dropped")){
+      if (resc.classList.contains("dropped")) {
         resc.classList.toggle("dropped");
         parent.insertBefore(child1, parent.childNodes[4]);
         child1.classList.add("goldText");
-        child1.classList.add("sub-link"); 
+        child1.classList.add("sub-link");
         child1.style.animation = "navLinkAni 0.5s ease";
-        child1.style.opacity = "1";  
+        child1.style.opacity = "1";
         plus.classList.toggle("dropped");
       }
-     
     } else {
       parent.insertBefore(child1, parent.childNodes[4]);
       child1.classList.add("goldText");
@@ -89,6 +89,7 @@ const teamsDropDown = () => {
   const parent = document.getElementsByClassName("nav")[0];
   const plus = document.getElementsByClassName("teamsDrpDwn")[0];
   const hist = document.getElementsByClassName("historyDrpDwn")[0];
+  const resc = document.getElementsByClassName("resourcesDrpDwn")[0];
   const resources = document.getElementsByClassName("resources")[0];
   const seniors = document
     .querySelector(".teams > .dropdown > li ")
@@ -98,11 +99,6 @@ const teamsDropDown = () => {
     .querySelector(".teams > .dropdown > li ")
     .nextElementSibling.cloneNode(true);
 
-  const numberOfSeniors =
-    (document.querySelector(".seniors>ul").childNodes.length - 1) / 2;
-
-  const numberOfJuniors =
-    (document.querySelector(".juniors>ul").childNodes.length - 1) / 2;
   plus.addEventListener("click", () => {
     if (plus.classList.contains("dropped")) {
       parent.removeChild(seniors);
@@ -112,18 +108,34 @@ const teamsDropDown = () => {
       while (document.getElementsByClassName("goldText")[0]) {
         parent.removeChild(document.getElementsByClassName("goldText")[0]);
       }
-      hist.classList.toggle("dropped");
-      parent.insertBefore(seniors, resources);
-      parent.insertBefore(juniors, resources);
-      seniors.classList.add("goldText");
-      juniors.classList.add("goldText");
-      seniors.classList.add("sub-link");
-      juniors.classList.add("sub-link");
-      seniors.style.animation = "navLinkAni 0.5s ease";
-      juniors.style.animation = "navLinkAni 0.5s ease";
-      seniors.style.opacity = "1";
-      juniors.style.opacity = "1";
-      plus.classList.toggle("dropped");
+      if (hist.classList.contains("dropped")) {
+        hist.classList.toggle("dropped");
+        parent.insertBefore(seniors, resources);
+        parent.insertBefore(juniors, resources);
+        seniors.classList.add("goldText");
+        juniors.classList.add("goldText");
+        seniors.classList.add("sub-link");
+        juniors.classList.add("sub-link");
+        seniors.style.animation = "navLinkAni 0.5s ease";
+        juniors.style.animation = "navLinkAni 0.5s ease";
+        seniors.style.opacity = "1";
+        juniors.style.opacity = "1";
+        plus.classList.toggle("dropped");
+      }
+      if (resc.classList.contains("dropped")) {
+        resc.classList.toggle("dropped");
+        parent.insertBefore(seniors, resources);
+        parent.insertBefore(juniors, resources);
+        seniors.classList.add("goldText");
+        juniors.classList.add("goldText");
+        seniors.classList.add("sub-link");
+        juniors.classList.add("sub-link");
+        seniors.style.animation = "navLinkAni 0.5s ease";
+        juniors.style.animation = "navLinkAni 0.5s ease";
+        seniors.style.opacity = "1";
+        juniors.style.opacity = "1";
+        plus.classList.toggle("dropped");
+      }
     } else {
       parent.insertBefore(seniors, resources);
       parent.insertBefore(juniors, resources);
@@ -140,7 +152,6 @@ const teamsDropDown = () => {
   });
 };
 
-
 const resourcesDropDown = () => {
   const parent = document.getElementsByClassName("nav")[0];
   const teams = document.getElementsByClassName("teamsDrpDwn")[0];
@@ -151,14 +162,13 @@ const resourcesDropDown = () => {
     .querySelector(".resources > .dropdown > li ")
     .cloneNode(true);
 
-    const building = document
-      .querySelector(".resources > .dropdown > li ")
-      .nextElementSibling.cloneNode(true);
+  const building = document
+    .querySelector(".resources > .dropdown > li ")
+    .nextElementSibling.cloneNode(true);
 
-
-    const design = document
-      .querySelector(".resources > .dropdown > li ")
-      .nextElementSibling.nextElementSibling.cloneNode(true);
+  const design = document
+    .querySelector(".resources > .dropdown > li ")
+    .nextElementSibling.nextElementSibling.cloneNode(true);
 
   plus.addEventListener("click", () => {
     if (plus.classList.contains("dropped")) {
@@ -170,7 +180,7 @@ const resourcesDropDown = () => {
       while (document.getElementsByClassName("goldText")[0]) {
         parent.removeChild(document.getElementsByClassName("goldText")[0]);
       }
-      if(hist.classList.contains("dropped")){
+      if (hist.classList.contains("dropped")) {
         hist.classList.toggle("dropped");
         parent.insertBefore(coding, schedule);
         parent.insertBefore(building, schedule);
@@ -189,7 +199,7 @@ const resourcesDropDown = () => {
         design.style.opacity = "1";
         plus.classList.toggle("dropped");
       }
-     if(teams.classList.contains("dropped")){
+      if (teams.classList.contains("dropped")) {
         teams.classList.toggle("dropped");
         parent.insertBefore(coding, schedule);
         parent.insertBefore(building, schedule);
@@ -207,7 +217,7 @@ const resourcesDropDown = () => {
         building.style.opacity = "1";
         design.style.opacity = "1";
         plus.classList.toggle("dropped");
-     }
+      }
     } else {
       parent.insertBefore(coding, schedule);
       parent.insertBefore(building, schedule);
@@ -237,33 +247,32 @@ resourcesDropDown();
 
 const arrowDown = document.getElementsByClassName("arrow-down")[0];
 
-arrowDown.addEventListener('click', scrollDown);
+arrowDown.addEventListener("click", scrollDown);
 
 function scrollDown() {
   window.scroll({
-    top: window.innerHeight / 100 * 90,
+    top: (window.innerHeight / 100) * 90,
     left: 0,
-    behavior: 'smooth'
+    behavior: "smooth",
   });
 }
 
 const arrowUp = document.getElementsByClassName("arrow-up")[0];
-arrowUp.addEventListener('click', scrollUp);
+arrowUp.addEventListener("click", scrollUp);
 
 function scrollUp() {
   window.scroll({
     top: 0,
     left: 0,
-    behavior: 'smooth'
+    behavior: "smooth",
   });
 }
-
 
 // animate the jumping arrow
 
 anime({
-  targets: '.arrow-down',
+  targets: ".arrow-down",
   rotate: 45 - 360,
-  easing: 'spring(5, 100, 100, 35)',
+  easing: "spring(5, 100, 100, 35)",
   duration: 800,
-})
+});
