@@ -3,6 +3,8 @@ window.addEventListener("scroll", function () {
   header.classList.toggle("sticky", window.scrollY > 175);
 });
 
+responsecache = {};
+
 // Navigation menu animation mobile
 
 const navSlide = () => {
@@ -36,8 +38,6 @@ const navSlide = () => {
     burger.classList.toggle("toggle");
   });
 };
-navSlide();
-
 
 const historyDropdown = () => {
   const parent = document.getElementsByClassName("nav")[0];
@@ -138,14 +138,9 @@ const teamsDropDown = () => {
   });
 };
 
+navSlide();
 historyDropdown();
 teamsDropDown();
-
-// arrow click scroll animation
-
-const arrowDown = document.getElementsByClassName("arrow-down")[0];
-
-arrowDown.addEventListener('click', scrollDown);
 
 function scrollDown() {
   window.scroll({
@@ -154,9 +149,9 @@ function scrollDown() {
     behavior: 'smooth'
   });
 }
+const arrowDown = document.getElementsByClassName("arrow-down")[0];
+arrowDown.addEventListener('click', scrollDown);
 
-const arrowUp = document.getElementsByClassName("arrow-up")[0];
-arrowUp.addEventListener('click', scrollUp);
 
 function scrollUp() {
   window.scroll({
@@ -165,9 +160,8 @@ function scrollUp() {
     behavior: 'smooth'
   });
 }
-
-
-// animate the jumping arrow
+const arrowUp = document.getElementsByClassName("arrow-up")[0];
+arrowUp.addEventListener('click', scrollUp);
 
 anime({
   targets: '.arrow-down',
@@ -175,3 +169,123 @@ anime({
   easing: 'spring(5, 100, 100, 35)',
   duration: 800,
 })
+
+// VexDB Integration
+
+async function searchSeaquam() {
+	let teamsurl = "https://api.vexdb.io/v1/get_teams?organisation=Seaquam%20Secondary";
+	if (responsecache[teamsurl] != undefined)
+		return responsecache[teamsurl].result;
+	let response = await (await fetch(teamsurl)).json();
+	responsecache[teamsurl] = Object.assign(response);
+	return response.result;
+}
+
+async function getTeamInfo(name) {
+	let teamsurl = 'https://api.vexdb.io/v1/get_teams?team='+name;
+	if (responsecache[teamsurl] != undefined)
+		return responsecache[teamsurl].result[0];
+	let response = await (await fetch(teamsurl)).json();
+	responsecache[teamsurl] = Object.assign(response);
+	return response.result[0];
+}
+
+// Returns a list of formatted awards for a given team (type string)
+async function getTeamAwards(name, season) {
+	let awardsurl = 'https://api.vexdb.io/v1/get_awards?team=' + name + (season != undefined ? "&season=" + encodeURIComponent(season) : "");
+	let response;
+	if (responsecache[awardsurl] != undefined)
+		response = responsecache[awardsurl];
+	else {
+		response = await (await fetch(awardsurl)).json();
+		responsecache[awardsurl] = Object.assign(response);
+	}
+	let reqlist = {};
+	let arranged = {};
+	let ret = [];
+	for (i = 0; i < response.size; i++) {
+		if (arranged[response.result[i].sku] == undefined)
+			arranged[response.result[i].sku] = [];
+		arranged[response.result[i].sku].push(response.result[i].name.replace("(VRC/VEXU)", ""));
+		if (reqlist[response.result[i].sku] == undefined)
+			reqlist[response.result[i].sku] = getEventInfo(response.result[i].sku)
+	}
+	for (var key in arranged) {
+		let str = (await reqlist[key]).name.trim() + ": ";
+		for (i = 0; i < arranged[key].length; i++)
+			str += arranged[key][i].trim() + ", ";
+		ret.push(str.replace(/,\s$/, "").trim());
+	}
+	return ret;
+}
+
+async function getTeamEvents(name) {
+	let eventsurl = "https://api.vexdb.io/v1/get_events?team="+name;
+	if (responsecache[eventsurl] != undefined)
+		return responsecache[eventsurl].result;
+
+	let response = await (await fetch(eventsurl)).json();
+	responsecache[eventsurl] = Object.assign(response);
+	return response.result;
+}
+
+async function getTeamEventsAwards(name, eventsonly = false, ignoreawardless = false, season = undefined) {
+	let i = 0;
+
+	// Prepare the awards fetch
+	let awardsurl = 'https://api.vexdb.io/v1/get_awards?team=' + name + (season != undefined ? "&season=" + encodeURIComponent(season) : "");
+	let awardsfetch = fetch(awardsurl);
+	let awardsResponse = undefined;
+	if (responsecache[awardsurl] != undefined) {
+		awardsResponse = responsecache[awardsurl].result;
+	}
+
+	// Get team events
+	let eventsurl = "https://api.vexdb.io/v1/get_events?team=" + name + (season != undefined ? "&season=" + encodeURIComponent(season) : "");
+	let eventsResponse;
+	if (responsecache[eventsurl] != undefined) {
+		eventsResponse = responsecache[eventsurl].result;
+	} else {
+		eventsResponse = await (await fetch(eventsurl)).json();
+		responsecache[eventsurl] = Object.assign(eventsResponse);
+	}
+
+	// Populate an object
+	let events = {};
+	let eventNames = {};
+	for (i = 0; i < eventsResponse.length; i++) {
+		events[eventsResponse[i].sku] = [];
+		eventNames[eventsResponse[i].sku] = getEventInfo(eventsResponse[i].sku);
+	}
+
+	if (awardsResponse == undefined) {
+		awardsResponse = (await (await awardsfetch).json()).result;
+		responsecache[awardsurl] = Object.assign(awardsResponse);
+	}
+	for (i = 0; i < awardsResponse.length; i++) {
+		if (events[awardsResponse[i].sku] == undefined) {
+			events[awardsResponse[i].sku] = [];
+			eventNames[awardsResponse[i].sku] = getEventInfo(awardsResponse[i].sku)
+		}
+		events[awardsResponse[i].sku].push(awardsResponse[i].name.replace("(VRC/VEXU)", "").trim());
+	}
+
+	// Construct return
+	let ret = {};
+	for (var key in events) {
+		ret[(await eventNames[key]).sku] = {};
+		ret[(await eventNames[key]).sku].name = (await eventNames[key]).name.trim();
+		ret[(await eventNames[key]).sku].link = "https://robotevents.com/robot-competitions/vex-robotics-competition/" + (await eventNames[key]).key + ".html";
+		ret[(await eventNames[key]).sku].awards = events[key];
+	}
+	return ret;
+}
+
+async function getEventInfo(sku) {
+	let eventurl = "https://api.vexdb.io/v1/get_events?sku="+sku;
+	if (responsecache[eventurl] != undefined)
+		return responsecache[eventurl].result[0];
+	let response = await (await fetch(eventurl)).json();
+	responsecache[eventurl] = Object.assign(response);
+	return response.result[0];
+}
