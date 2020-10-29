@@ -37,22 +37,6 @@
         <div class="arrow-down"></div>
       </div>
 
-
-      <style>
-        .construction {
-          width: 100%;
-          height: 100%;
-          display: flex;
-          justify-content: center;
-          background-color: black;
-
-        }
-
-        .construction h3 {
-          margin: auto 10vw;
-        }
-      </style>
-
     </section>
     <section class="grey-page">
       <div class="grey-title-content">
@@ -173,31 +157,14 @@
       </div>
     </section>
 
-    <footer>
-      <div class="main-content">
-        <h3>
-          Seaquam Robotics
-        </h3>
-        <img src="img/insta.png" alt="instagram logo" />
-        <img src="img/gold f.png" alt="facebook logo" />
-        <p>©Seaquam Robotics 2020-2021</p>
-      </div>
-      <div class="up">
-        <div class="arrow-box-up">
-          <div class="arrow-up"></div>
-        </div>
-      </div>
-      <div class="list-content">
-        <ul>
-          <li><a href="home.html">Home</a></li>
-          <li><a href="history.html">History</a></li>
-          <li><a href="teams/home.html">Teams</a></li>
-          <li><a href="#">Resources</a></li>
-          <li><a href="#">Schedule</a></li>
-          </li>
-        </ul>
-      </div>
+    <footer id="footer-placeholder">
+      <script>
+        $(function() {
+          $("#footer-placeholder").load("footer.html");
+        });
+      </script>
     </footer>
+
     <script src="main.js"></script>
     <script src="schedule.js"></script>
   </div>

@@ -559,31 +559,14 @@
       </div>
 
   </section>
-  <footer>
-    <div class="main-content">
-      <h3>
-        Seaquam Robotics
-      </h3>
-      <img src="img/insta.png" alt="instagram logo" />
-      <img src="img/gold f.png" alt="facebook logo" />
-      <p>©Seaquam Robotics 2020-2021</p>
-    </div>
-    <div class="up">
-      <div class="arrow-box-up">
-        <div class="arrow-up"></div>
-      </div>
-    </div>
-    <div class="list-content">
-      <ul>
-        <li><a href="home.html">Home</a></li>
-        <li><a href="#">History</a></li>
-        <li><a href="teams/home.html">Teams</a></li>
-        <li><a href="resources.html">Resources</a></li>
-        <li><a href="schedule.html">Schedule</a></li>
-        </li>
-      </ul>
-    </div>
+  <footer id="footer-placeholder">
+    <script>
+      $(function() {
+        $("#footer-placeholder").load("footer.html");
+      });
+    </script>
   </footer>
+
   <script src="main.js"></script>
   <script src="history.js"></script>
 </body>
