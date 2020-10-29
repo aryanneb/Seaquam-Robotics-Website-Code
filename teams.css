@@ -3,7 +3,6 @@
   background-position: center top;
 }
 
-
 .parent {
   display: flex;
   flex-wrap: wrap;
@@ -52,7 +51,6 @@ button {
   height: 20%;
   margin-top: 5px;
   position: relative;
-  
 }
 
 @media screen and (max-width: 1024px) {
@@ -64,9 +62,11 @@ button {
   .photo {
     height: 28vw;
   }
+
   .parent {
     margin-bottom: 0vw;
   }
+
   .text {
     height: auto;
     display: flex;
@@ -79,7 +79,6 @@ button {
   .button-container {
     padding: 0 0;
   }
-
 }
 
 @media screen and (max-width: 680px) {
@@ -93,6 +92,7 @@ button {
     margin-bottom: 25px;
     padding-bottom: 20px;
   }
+
   .photo {
     height: 50vw;
     object-fit: cover;
@@ -103,12 +103,13 @@ button {
   .parent {
     flex-direction: column;
   }
+
   .text {
     text-align: center;
   }
+
   .text:nth-of-type(even) {
     height: auto;
     padding-bottom: 20px;
   }
-  
 }

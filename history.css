@@ -1,11 +1,12 @@
 .banner {
   background-image: url("img/maybe2.jpg");
   background-position: center center;
-
 }
+
 .history-page {
   display: flex;
 }
+
 .year-holder {
   width: 15%;
   display: flex;
@@ -23,9 +24,11 @@
 .year {
   width: 100%;
 }
+
 b {
   color: white;
 }
+
 .hist-content {
   display: flex;
   flex-wrap: wrap;
@@ -61,18 +64,22 @@ b {
   margin: auto;
   margin-top: 5vh;
 }
+
 .read h4 {
   margin: 3vh 0 5vh 0;
   color: #ffd382;
   cursor: pointer;
 }
+
 .read {
   display: flex;
 }
+
 .toss {
   display: none;
   animation: op 350ms;
 }
+
 .skyrise {
   display: none;
 }
@@ -88,15 +95,19 @@ b {
 .zone {
   display: none;
 }
+
 .point {
   display: none;
 }
+
 .tower {
   display: none;
 }
+
 .change {
   display: none;
 }
+
 .ani {
   display: block;
   animation: op 350ms;
@@ -105,11 +116,13 @@ b {
 .fade-in {
   opacity: 1;
 }
+
 .division {
   height: 0.5vh;
   width: 80vw;
   margin-bottom: 3vh;
 }
+
 h6 {
   color: black;
   font-family: "Poppins", sans-serif;
@@ -130,6 +143,7 @@ h6 {
   align-items: center;
   border-radius: 10px;
 }
+
 .scroll-year:nth-child(1) {
   margin-top: 10vh;
 }
@@ -137,30 +151,37 @@ h6 {
 .scroll-year:nth-child(9) {
   margin-bottom: 5vh;
 }
+
 @keyframes op {
   from {
     opacity: 0;
   }
+
   to {
     opacity: 1;
   }
 }
+
 @media screen and (max-width: 1024px) {
   .hist-content {
     flex-direction: column;
   }
+
   .year-holder {
     display: none;
   }
+
   .hist-image {
     flex-direction: row;
   }
+
   .hist-image img {
     max-width: 45%;
     height: auto;
     object-fit: cover;
     margin: auto;
   }
+
   .hist-container {
     width: 80%;
     margin-left: 10vw;
@@ -174,10 +195,12 @@ h6 {
   .hist-image {
     flex-wrap: wrap;
   }
+
   .hist-image img {
     max-width: 100%;
     margin-top: 5vh;
   }
+
   .banner {
     top: -10vh;
   }

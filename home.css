@@ -1,6 +1,7 @@
 .home-title {
   margin-bottom: 2vh;
 }
+
 .home-desc {
   margin-bottom: 2vh;
 }
@@ -8,6 +9,7 @@
 .home-button {
   margin-top: 2vh;
 }
+
 .bigimg {
   height: 100vh;
   max-height: 1400px;
@@ -77,6 +79,7 @@
   margin-left: 10%;
   flex-basis: 33%;
 }
+
 .seaquam-image-content {
   position: relative;
   margin-right: 10%;
@@ -93,6 +96,7 @@
 .seaquam-logo img:hover {
   transform: scale(1.05);
 }
+
 .seaquam-logo {
   margin-top: auto;
   margin-left: auto;
@@ -105,6 +109,7 @@
   width: 7rem;
   height: 0.5rem;
 }
+
 .seaquam-button {
   margin-top: 2vh;
   text-align: center;
@@ -127,12 +132,15 @@
     margin-right: 10%;
     margin-top: 5vh;
   }
+
   .seaquam-logo {
     width: 80%;
   }
+
   .seaquam-logo img {
     width: 100%;
   }
+
   .seaquam-text-content {
     flex-basis: 80%;
   }
@@ -143,27 +151,33 @@
     flex-wrap: wrap;
     margin-top: 5vh;
   }
+
   .grey-box {
     min-width: 40vw;
     margin-left: 10vw;
     margin-right: 10vw;
   }
+
   .grey-text {
     font-size: 1rem;
     line-height: 2rem;
   }
+
   .grey-box button {
     margin-bottom: 3vh;
     margin-top: 3vh;
   }
+
   .bigimg {
     height: 100vh;
     object-fit: contain;
     transform: translate(45vh, 3vh);
   }
+
   .seaquam-text-content {
     flex-basis: 80%;
   }
+
   .seaquam-image-content {
     margin-left: 10vw;
     flex-basis: 80%;

@@ -4,7 +4,6 @@ button:focus {
   color: black;
 }
 
-
 .top-content-wrapper {
   margin-top: 10vh;
   padding-top: 15vh;
@@ -32,14 +31,11 @@ button:focus {
 
 .main-content-wrapper {
   width: 100vw;
-    min-height: 900px;
-
+  min-height: 900px;
   display: flex;
 }
 
-
 #leftMenu {
-
   min-height: 900px;
   width: 15rem;
   background-color: #FFD382;
@@ -67,8 +63,8 @@ button:focus {
   text-align: left;
 }
 
-.button-style-menu h3{
-    color: black;
+.button-style-menu h3 {
+  color: black;
 }
 
 .button-style-menu:focus {
@@ -119,8 +115,7 @@ button:focus {
   border: 2px 0 black;
 }
 
-
-#mobileButton, #mobileMenu, #contentMask{
+#mobileButton, #mobileMenu, #contentMask {
   display: none;
 }
 
@@ -133,14 +128,14 @@ button:focus {
   height: 6rem;
 }
 
-.contentsMargin{
+.contentsMargin {
   margin-left: 50px;
   margin-right: 50px;
   margin-top: 50px;
   padding-bottom: 50px;
 }
 
-.contentsMargin div p{
+.contentsMargin div p {
   font-size: 1.5rem;
 }
 
@@ -155,9 +150,10 @@ button:focus {
 .boldedText {
   font-weight: 700;
 }
+
 .links-container {
   min-height: 600px;
-  background-color: rgba(0,0,0,1);
+  background-color: rgba(0, 0, 0, 1);
 }
 
 .heading-links {
@@ -210,20 +206,16 @@ button:focus {
   padding: 10px 0;
 }
 
-
 .text {
   height: 60%;
   margin-bottom: 5%;
-
 }
 
 .button-container {
-  width:28vw;
+  width: 28vw;
   max-width: 350px;
   height: 60px;
   padding: 10px 0;
-
-
 }
 
 .visit {
@@ -233,9 +225,8 @@ button:focus {
 }
 
 @media screen and (max-width: 1024px) {
-
-  .main-content-wrapper{
-    height:1200px;
+  .main-content-wrapper {
+    height: 1200px;
   }
 
   .top-content-wrapper {
@@ -247,29 +238,28 @@ button:focus {
     background-size: cover;
   }
 
-  .top-content-wrapper div{
-    text-align:center;
+  .top-content-wrapper div {
+    text-align: center;
     margin: 0 auto;
     width: 640px;
   }
 
-  .intro-text p{
+  .intro-text p {
     font-size: 1.5rem;
   }
 
-  #leftMenu, #upperMenuButtons, #mobileMenu, #mobileButton, #mobileButton svg{
+  #leftMenu, #upperMenuButtons, #mobileMenu, #mobileButton, #mobileButton svg {
     z-index: 888;
     transition: 0.6s;
   }
 
-  #leftMenu{
+  #leftMenu {
     position: absolute;
     left: -15rem;
     min-height: 1200px;
-
   }
 
-  #leftMenu.active{
+  #leftMenu.active {
     left: 0;
     min-height: 1200px;
   }
@@ -278,16 +268,16 @@ button:focus {
     left: -15rem;
   }
 
-  #upperMenuButtons.active{
+  #upperMenuButtons.active {
     left: 0;
   }
 
-  #mobileMenu, #mobileButton{
+  #mobileMenu, #mobileButton {
     display: block;
     height: 1200px;
   }
 
-  #mobileMenu{
+  #mobileMenu {
     position: absolute;
     min-height: 1200px;
     width: 2rem;
@@ -295,11 +285,11 @@ button:focus {
     background-color: #55a55a
   }
 
-  #mobileMenu.close{
+  #mobileMenu.close {
     left: -15rem;
   }
 
-  #mobileButton{
+  #mobileButton {
     position: absolute;
     left: 0;
     transition: 0.6s;
@@ -309,30 +299,30 @@ button:focus {
     background-color: #ffd382;
   }
 
-  #mobileButton.close{
+  #mobileButton.close {
     background-color: #fff;
     left: 15rem;
   }
 
-
-  #mobileButton svg{
-  /* rotating the content 90 degrees */
-  -webkit-transform:rotate(90deg);
-  -moz-transform: rotate(90deg);
-  -ms-transform: rotate(90deg);
-  -o-transform: rotate(90deg);
-  transform: rotate(90deg);
+  #mobileButton svg {
+    /* rotating the content 90 degrees */
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+    transform: rotate(90deg);
   }
 
-  #mobileButton.close svg{
+  #mobileButton.close svg {
     /* rotating the content 270 degrees */
-    -webkit-transform:rotate(270deg);
+    -webkit-transform: rotate(270deg);
     -moz-transform: rotate(270deg);
     -ms-transform: rotate(270deg);
     -o-transform: rotate(270deg);
     transform: rotate(270deg);
   }
-  #contentMask{
+
+  #contentMask {
     display: block;
     position: absolute;
     min-height: 1200px;
@@ -346,7 +336,7 @@ button:focus {
     width: 100%;
   }
 
-  .contentsMargin div p{
+  .contentsMargin div p {
     font-size: 0.8rem;
   }
 
@@ -355,48 +345,48 @@ button:focus {
     line-height: 25px;
   }
 
-  .links-container{
+  .links-container {
     min-height: 500px;
   }
 
-  .pagename{
-    font-size:20px;
+  .pagename {
+    font-size: 20px;
   }
 
-  .text{
-    font-size:15px;
+  .text {
+    font-size: 15px;
   }
 
   .useful-links, .container {
-    height:270px;
+    height: 270px;
   }
-
 }
 
-@media screen and (min-width: 3000px){
-  html{
+@media screen and (min-width: 3000px) {
+  html {
     font-size: 20px;
   }
 }
 
 @media screen and (max-width: 680px) {
-  html{
-    font-size: calc(1vh + 7px);/*override masterstyle*/
+  html {
+    font-size: calc(1vh + 7px);
+    /*override masterstyle*/
   }
 
   h1 {
     font-size: 3.5rem;
   }
 
-  .top-content-wrapper div{
+  .top-content-wrapper div {
     width: 300px;
   }
 
-  .intro-text p{
+  .intro-text p {
     font-size: 1.2rem;
   }
 
-  .main-content-wrapper{
+  .main-content-wrapper {
     min-height: 900px;
   }
 
@@ -421,8 +411,6 @@ button:focus {
     transform: translate(-5vw, 15vh);
   }
 
-
-
   .heading-links {
     text-align: center;
     margin-top: 8vh;
@@ -436,16 +424,13 @@ button:focus {
     border-radius: 30px;
   }
 
-
-
-  .useful-links{
-    height:auto;
+  .useful-links {
+    height: auto;
     flex-direction: column;
   }
 
-
   .container {
-    height:auto;
+    height: auto;
     display: flex;
     flex-direction: column;
     text-align: center;
@@ -474,6 +459,7 @@ button:focus {
     margin-top: 10px;
     position: relative;
   }
+
   .visit {
     width: 150px;
     height: 25px;
@@ -494,13 +480,13 @@ button:focus {
     font-size: 0.8rem;
   }
 
-  .top-content-wrapper div{
-    text-align:center;
+  .top-content-wrapper div {
+    text-align: center;
     margin: 0 auto;
     width: 200px;
   }
 
-  .intro-text p{
+  .intro-text p {
     font-size: 1.2rem;
   }
 

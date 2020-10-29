@@ -268,19 +268,19 @@ function documentationVisibility() {
 
 // mobile menu toggler
 function menuToggle() {
-      target = document.getElementById("leftMenu");
-      target2 = document.getElementById("upperMenuButtons");
-      target3 = document.getElementById("mobileButton");
-      target4 = document.getElementById("contentMask");
-      if (target.className == null || target.className=="") {
-        target.className = "active";
-        target2.className = "active";
-        target3.className = "close";
-        target4.className = "active";
-      } else {
-        target.className = "";
-        target2.className = "";
-        target3.className = "";
-        target4.className = "";
-      }
-    }
+  target = document.getElementById("leftMenu");
+  target2 = document.getElementById("upperMenuButtons");
+  target3 = document.getElementById("mobileButton");
+  target4 = document.getElementById("contentMask");
+  if (target.className == null || target.className == "") {
+    target.className = "active";
+    target2.className = "active";
+    target3.className = "close";
+    target4.className = "active";
+  } else {
+    target.className = "";
+    target2.className = "";
+    target3.className = "";
+    target4.className = "";
+  }
+}

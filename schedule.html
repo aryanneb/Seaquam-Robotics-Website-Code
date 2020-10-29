@@ -2,206 +2,206 @@
 
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Schedule</title>
-    <link rel="stylesheet" href="masterstyle.css" />
-    <link rel="stylesheet" href="schedule.css" />
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet" />
-    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
-    <script src="anime.min.js"></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Schedule</title>
+  <link rel="stylesheet" href="masterstyle.css" />
+  <link rel="stylesheet" href="schedule.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+  <script src="anime.min.js"></script>
 </head>
 
 <body>
-    <div class="wrapper">
-        <!--<div class="block"></div> -->
-        <!-- Navbar code start-->
+  <div class="wrapper">
+    <!--<div class="block"></div> -->
+    <!-- Navbar code start-->
     <header id="nav-header">
     </header>
     <script>
-      $(function(){
+      $(function() {
         $("#nav-header").load("header.html");
       });
-      </script>
+    </script>
     <!-- Navbar code end-->
-        <section class="home-page">
-            <div class="banner"></div>
-            <div class="title-top">
-                <h1 id="pg-title">Schedule</h1>
-                <div class="short-bar"></div>
-                <div class="intro-text">
-                    <p> In this section you can see our tournament and event schedules!</p>
-                </div>
-            </div>
-            <div class="arrow-box">
-                <div class="arrow-down"></div>
-            </div>
+    <section class="home-page">
+      <div class="banner"></div>
+      <div class="title-top">
+        <h1 id="pg-title">Schedule</h1>
+        <div class="short-bar"></div>
+        <div class="intro-text">
+          <p> In this section you can see our tournament and event schedules!</p>
+        </div>
+      </div>
+      <div class="arrow-box">
+        <div class="arrow-down"></div>
+      </div>
 
 
-            <style>
-                .construction {
-                    width: 100%;
-                    height: 100%;
-                    display: flex;
-                    justify-content: center;
-                    background-color: black;
+      <style>
+        .construction {
+          width: 100%;
+          height: 100%;
+          display: flex;
+          justify-content: center;
+          background-color: black;
 
-                }
+        }
 
-                .construction h3 {
-                    margin: auto 10vw;
-                }
-            </style>
+        .construction h3 {
+          margin: auto 10vw;
+        }
+      </style>
 
-        </section>
-        <section class="grey-page">
-            <div class="grey-title-content">
-                <div class="greeting-text">
-                    <h2>Events</h2>
-                </div>
-                <div class="centered-classic rect"></div>
-            </div>
-            <div class="sorter">
-                <button id="short" class="button-style2">First To Last</button>
-                <button id="long" class="button-style">Last To First</button>
-            </div>
-            <div class="content-container">
-                <div class="event">
-                    <div class="description">
-                        <h3><u>Seaquam Tournament</u></h3>
-                        <h4>Date - Sept. 3rd, 2020</h4>
-                        <p>Location - Whatever Highschool, Somewhere, Canada
-                            <br><b>Time Schedule -</b>
-                            <br>Doors open : 7:30
-                            <br>Opening ceremony : 9:00
-                            <br>Ends estimated: 17:00</p>
-                        <button class="button-style2">More Details</button>
-                    </div>
-                    <div class="appearance">
-                        <h4>Venue appearance:</h4>
-                        <img src="img/seaquamOutside.jpg">
-                    </div>
-                    <div class="map">
-                        <iframe
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2610.892336145405!2d-122.90413418431612!3d49.12667987931467!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5485d957ff878263%3A0x6026f192dbb74891!2sSeaquam%20Secondary%20School!5e0!3m2!1sen!2sca!4v1598853889848!5m2!1sen!2sca"
-                            width="100%" height="100%" frameborder="0" style="border:0;" allowfullscreen=""
-                            aria-hidden="false" tabindex="0"></iframe>
-                    </div>
-                </div>
-                <div class="event">
-                    <div class="description">
-                        <h3><u> Enver Creek Tournament</u></h3>
-                        <h4>Date - October 22nd, 2020</h4>
-                        <p>
-                            Location - Whatever Highschool, Somewhere, Canada
-                            <br><b>Time Schedule -</b>
-                            <br>Doors open : 7:30
-                            <br>Opening ceremony : 9:00
-                            <br>Ends estimated: 17:00</p>
-                        <button class="button-style2">More Details</button>
-                    </div>
-                    <div class="appearance">
-                        <h4>Venue appearance:</h4>
-                        <img src="img/enver.jpg">
-                    </div>
-                    <div class="map">
-                        <iframe
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2609.30575673737!2d-122.82244918431503!3d49.156804379317876!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5485d9f828dbfabb%3A0xe56d809d0a777a01!2sEnver%20Creek%20Secondary%20School!5e0!3m2!1sen!2sca!4v1598854418665!5m2!1sen!2sca"
-                            width="100%" height="100%" frameborder="0" style="border:0;" allowfullscreen=""
-                            aria-hidden="false" tabindex="0"></iframe>
-                    </div>
-                </div>
-                <div class="event">
-                    <div class="description">
-                        <h3><u>Shawnigan Tournament</u></h3>
-                        <h4>Date - Novermber 12th, 2020</h4>
-                        <p>Location - Whatever Highschool, Somewhere, Canada
-                            <br><b>Time Schedule -</b>
-                            <br>Doors open : 7:30
-                            <br>Opening ceremony : 9:00
-                            <br>Ends estimated: 17:00</p>
-                        <button class="button-style2">More Details</button>
-                    </div>
-                    <div class="appearance">
-                        <h4>Venue appearance:</h4>
-                        <img src="img/Shawnigan_Lake_School.jpg">
-                    </div>
-                    <div class="map">
-                        <iframe
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2635.6141420730546!2d-123.63930738433268!3d48.65549637926808!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x548f41af295f6da5%3A0x2b6a030f81e5c921!2sShawnigan%20Lake%20School!5e0!3m2!1sen!2sca!4v1598855271764!5m2!1sen!2sca"
-                            width="100%" height="100%" frameborder="0" style="border:0;" allowfullscreen=""
-                            aria-hidden="false" tabindex="0"></iframe>
-                    </div>
-                </div>
-            </div>
-        </section>
+    </section>
+    <section class="grey-page">
+      <div class="grey-title-content">
+        <div class="greeting-text">
+          <h2>Events</h2>
+        </div>
+        <div class="centered-classic rect"></div>
+      </div>
+      <div class="sorter">
+        <button id="short" class="button-style2">First To Last</button>
+        <button id="long" class="button-style">Last To First</button>
+      </div>
+      <div class="content-container">
+        <div class="event">
+          <div class="description">
+            <h3><u>Seaquam Tournament</u></h3>
+            <h4>Date - Sept. 3rd, 2020</h4>
+            <p>Location - Whatever Highschool, Somewhere, Canada
+              <br><b>Time Schedule -</b>
+              <br>Doors open : 7:30
+              <br>Opening ceremony : 9:00
+              <br>Ends estimated: 17:00
+            </p>
+            <button class="button-style2">More Details</button>
+          </div>
+          <div class="appearance">
+            <h4>Venue appearance:</h4>
+            <img src="img/seaquamOutside.jpg">
+          </div>
+          <div class="map">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2610.892336145405!2d-122.90413418431612!3d49.12667987931467!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5485d957ff878263%3A0x6026f192dbb74891!2sSeaquam%20Secondary%20School!5e0!3m2!1sen!2sca!4v1598853889848!5m2!1sen!2sca"
+              width="100%" height="100%" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+          </div>
+        </div>
+        <div class="event">
+          <div class="description">
+            <h3><u> Enver Creek Tournament</u></h3>
+            <h4>Date - October 22nd, 2020</h4>
+            <p>
+              Location - Whatever Highschool, Somewhere, Canada
+              <br><b>Time Schedule -</b>
+              <br>Doors open : 7:30
+              <br>Opening ceremony : 9:00
+              <br>Ends estimated: 17:00
+            </p>
+            <button class="button-style2">More Details</button>
+          </div>
+          <div class="appearance">
+            <h4>Venue appearance:</h4>
+            <img src="img/enver.jpg">
+          </div>
+          <div class="map">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2609.30575673737!2d-122.82244918431503!3d49.156804379317876!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5485d9f828dbfabb%3A0xe56d809d0a777a01!2sEnver%20Creek%20Secondary%20School!5e0!3m2!1sen!2sca!4v1598854418665!5m2!1sen!2sca"
+              width="100%" height="100%" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+          </div>
+        </div>
+        <div class="event">
+          <div class="description">
+            <h3><u>Shawnigan Tournament</u></h3>
+            <h4>Date - Novermber 12th, 2020</h4>
+            <p>Location - Whatever Highschool, Somewhere, Canada
+              <br><b>Time Schedule -</b>
+              <br>Doors open : 7:30
+              <br>Opening ceremony : 9:00
+              <br>Ends estimated: 17:00
+            </p>
+            <button class="button-style2">More Details</button>
+          </div>
+          <div class="appearance">
+            <h4>Venue appearance:</h4>
+            <img src="img/Shawnigan_Lake_School.jpg">
+          </div>
+          <div class="map">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2635.6141420730546!2d-123.63930738433268!3d48.65549637926808!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x548f41af295f6da5%3A0x2b6a030f81e5c921!2sShawnigan%20Lake%20School!5e0!3m2!1sen!2sca!4v1598855271764!5m2!1sen!2sca"
+              width="100%" height="100%" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+          </div>
+        </div>
+      </div>
+    </section>
 
-        <section class="related-info">
-            <div class="related-content">
-                <div class="grey-title-content">
-                    <div class="greeting-text">
-                        <h2>Related Links</h2>
-                    </div>
-                    <div class="centered-classic rect"></div>
-                </div>
-                <div class="related-text-cont">
-                    <div class="related-text">
-                        <h3><u>robotevents.com</u></h3>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi non facere quos molestiae
-                            quam.
-                            Distinctio illo aliquid molestias cupiditate velit accusamus, hic error eligendi quas sit
-                            autem
-                            est illum consectetur delectus possimus nesciunt reiciendis ipsa! Tempore, illo est?
-                            Pariatur
-                            provident perspiciatis fugiat cupiditate, illo consectetur quae exercitationem ducimus saepe
-                            non.</p>
-                        <button class="button-style2">Visit robotevents.com</button>
-                    </div>
-                    <div class="related-text">
-                        <h3><u>Vexdb.io</u></h3>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi non facere quos molestiae
-                            quam.
-                            Distinctio illo aliquid molestias cupiditate velit accusamus, hic error eligendi quas sit
-                            autem
-                            est illum consectetur delectus possimus nesciunt reiciendis ipsa! Tempore, illo est?
-                            Pariatur
-                            provident perspiciatis fugiat cupiditate, illo consectetur quae exercitationem ducimus saepe
-                            non.</p>
-                        <button class="button-style2">Visit Vexdb.io</button>
-                    </div>
-                </div>
-            </div>
-        </section>
+    <section class="related-info">
+      <div class="related-content">
+        <div class="grey-title-content">
+          <div class="greeting-text">
+            <h2>Related Links</h2>
+          </div>
+          <div class="centered-classic rect"></div>
+        </div>
+        <div class="related-text-cont">
+          <div class="related-text">
+            <h3><u>robotevents.com</u></h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi non facere quos molestiae
+              quam.
+              Distinctio illo aliquid molestias cupiditate velit accusamus, hic error eligendi quas sit
+              autem
+              est illum consectetur delectus possimus nesciunt reiciendis ipsa! Tempore, illo est?
+              Pariatur
+              provident perspiciatis fugiat cupiditate, illo consectetur quae exercitationem ducimus saepe
+              non.</p>
+            <button class="button-style2">Visit robotevents.com</button>
+          </div>
+          <div class="related-text">
+            <h3><u>Vexdb.io</u></h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi non facere quos molestiae
+              quam.
+              Distinctio illo aliquid molestias cupiditate velit accusamus, hic error eligendi quas sit
+              autem
+              est illum consectetur delectus possimus nesciunt reiciendis ipsa! Tempore, illo est?
+              Pariatur
+              provident perspiciatis fugiat cupiditate, illo consectetur quae exercitationem ducimus saepe
+              non.</p>
+            <button class="button-style2">Visit Vexdb.io</button>
+          </div>
+        </div>
+      </div>
+    </section>
 
-        <footer>
-            <div class="main-content">
-                <h3>
-                    Seaquam Robotics
-                </h3>
-                <img src="img/insta.png" alt="instagram logo" />
-                <img src="img/gold f.png" alt="facebook logo" />
-                <p>©Seaquam Robotics 2020-2021</p>
-            </div>
-            <div class="up">
-                <div class="arrow-box-up">
-                    <div class="arrow-up"></div>
-                </div>
-            </div>
-            <div class="list-content">
-                <ul>
-                    <li><a href="home.html">Home</a></li>
-                    <li><a href="history.html">History</a></li>
-                    <li><a href="teams.html">Teams</a></li>
-                    <li><a href="#">Resources</a></li>
-                    <li><a href="#">Schedule</a></li>
-                    </li>
-                </ul>
-            </div>
-        </footer>
-        <script src="main.js"></script>
-        <script src="schedule.js"></script>
-    </div>
-    </div>
+    <footer>
+      <div class="main-content">
+        <h3>
+          Seaquam Robotics
+        </h3>
+        <img src="img/insta.png" alt="instagram logo" />
+        <img src="img/gold f.png" alt="facebook logo" />
+        <p>©Seaquam Robotics 2020-2021</p>
+      </div>
+      <div class="up">
+        <div class="arrow-box-up">
+          <div class="arrow-up"></div>
+        </div>
+      </div>
+      <div class="list-content">
+        <ul>
+          <li><a href="home.html">Home</a></li>
+          <li><a href="history.html">History</a></li>
+          <li><a href="teams.html">Teams</a></li>
+          <li><a href="#">Resources</a></li>
+          <li><a href="#">Schedule</a></li>
+          </li>
+        </ul>
+      </div>
+    </footer>
+    <script src="main.js"></script>
+    <script src="schedule.js"></script>
+  </div>
+  </div>
 </body>
 
 </html>

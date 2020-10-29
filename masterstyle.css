@@ -13,10 +13,12 @@
   color: white;
   background: #ffd382;
 }
+
 .wrapper {
   overflow-x: hidden;
   position: relative;
 }
+
 html {
   overflow-x: hidden;
   font-size: calc(1vh + 7px);
@@ -39,6 +41,7 @@ body {
   background: #74747499;
   border-radius: 25px;
 }
+
 ::-webkit-scrollbar-thumb:hover {
   background: #4d4d4d99;
 }
@@ -82,6 +85,7 @@ body {
   margin: auto;
   margin-left: 10vw;
 }
+
 .home-content-with-img h2 {
   font-size: 4rem;
 }
@@ -192,6 +196,7 @@ header ul li a:hover::after {
   transition: all 200ms ease-in-out;
   transform: translate(-2.5vw);
 }
+
 .dropdown li {
   position: relative;
   list-style: none;
@@ -199,10 +204,12 @@ header ul li a:hover::after {
   background-color: black;
   transform: translate(0vw, 1vh);
 }
+
 .dropdown li a {
   margin: 0%;
   font-size: 1rem;
 }
+
 .seniors {
   position: relative;
   width: 100%;
@@ -255,27 +262,27 @@ header ul li a:hover::after {
   display: none;
 }
 
-.history:hover > .dropdown {
+.history:hover>.dropdown {
   visibility: visible;
   opacity: 1;
 }
 
-.teams:hover > .dropdown {
+.teams:hover>.dropdown {
   visibility: visible;
   opacity: 1;
 }
 
-.seniors:hover > .dropdown2 {
+.seniors:hover>.dropdown2 {
   visibility: visible;
   opacity: 1;
 }
 
-.juniors:hover > .dropdown2 {
+.juniors:hover>.dropdown2 {
   visibility: visible;
   opacity: 1;
 }
 
-.resources:hover > .dropdown {
+.resources:hover>.dropdown {
   visibility: visible;
   opacity: 1;
 }
@@ -285,12 +292,12 @@ header ul li a:hover::after {
   opacity: 1;
 }
 
-.tips:hover > .dropdown2 {
+.tips:hover>.dropdown2 {
   visibility: visible;
   opacity: 1;
 }
 
-.more:hover > .dropdown2 {
+.more:hover>.dropdown2 {
   visibility: visible;
   opacity: 1;
 }
@@ -317,12 +324,15 @@ header ul li a:hover::after {
 .nav-toggle {
   transform: translateX(0%);
 }
+
 .toggle .line1 {
   transform: rotate(-45deg) translate(-5px, 6px);
 }
+
 .toggle .line2 {
   opacity: 0;
 }
+
 .toggle .line3 {
   transform: rotate(45deg) translate(-5px, -6px);
 }
@@ -338,11 +348,13 @@ header ul li a:hover::after {
   padding-bottom: 0vh;
   align-items: center;
 }
+
 @keyframes navLinkAni {
   from {
     opacity: 0;
     transform: translateX(50px);
   }
+
   to {
     opacity: 1;
     transform: translateX(0px);
@@ -477,6 +489,7 @@ button:active {
   border-width: 0px 2px 2px 0px;
   height: 0px;
 }
+
 .arrow-up:hover {
   opacity: 1;
   border: solid #ffd382;
@@ -560,6 +573,7 @@ footer {
   display: flex;
   flex-direction: row;
 }
+
 .list-content ul {
   margin: auto;
   display: flex;
@@ -579,6 +593,7 @@ footer {
   font-size: 1.2rem;
   transition: 0.6s;
 }
+
 /* center-aligner
 .block {
   position: absolute;
@@ -642,6 +657,7 @@ footer {
     margin: auto;
     margin-top: 5vh;
   }
+
   .short-bar {
     width: 30vh;
   }
@@ -652,6 +668,7 @@ footer {
     font-size: calc(1.75vw + 7px);
     overflow-x: hidden;
   }
+
   .burger {
     display: block;
   }
@@ -673,6 +690,7 @@ footer {
     transform: translateX(100%);
     transition: transform 0.3s ease-in;
   }
+
   header ul li {
     opacity: 0;
     width: 100%;
@@ -683,10 +701,12 @@ footer {
     opacity: 0;
     background-color: rgba(31, 30, 30, 0);
   }
+
   header ul li a {
     cursor: pointer;
     font-size: 1.5rem;
   }
+
   .sub-link {
     display: block;
   }
@@ -696,14 +716,17 @@ footer {
     margin-left: 3vw;
     font-size: 1.15rem;
   }
+
   .mob {
     display: inline-block;
     float: right;
     margin-right: 10vw;
   }
+
   .dropdown {
     transform: translateX(100%);
   }
+
   .grey-text {
     width: 88vw;
     font-size: 1rem;
@@ -712,6 +735,7 @@ footer {
   .home-content-with-img {
     width: 80%;
   }
+
   .home-content {
     width: 100%;
   }
@@ -732,16 +756,20 @@ footer {
   .grey-text-box {
     margin-top: 8vh;
   }
+
   h1 {
     font-size: 4.8rem;
   }
+
   .list-content {
     display: none;
     flex-basis: 0%;
   }
+
   .main-content {
     flex-basis: 80%;
   }
+
   .centered-classic {
     margin-left: 30vw;
     margin-right: 30vw;
@@ -753,6 +781,7 @@ footer {
   h1 {
     font-size: 3.9rem;
   }
+
   p {
     font-size: 0.8rem;
   }

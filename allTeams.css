@@ -29,16 +29,19 @@ body {
   text-align: center;
   background-color: #444444;
 }
+
 .grey-image h3 {
   margin: 1vh auto 0 auto;
   font-weight: 500;
   cursor: pointer;
 }
+
 .grey-image h4 {
   margin: 1vh auto 0 auto;
   color: #ffd382;
   font-weight: 400;
 }
+
 .grey-image h5 {
   margin: 1vh auto 5vh auto;
   color: #dcdcdc;
@@ -98,6 +101,7 @@ body {
 .member-text h2 {
   color: #ffd382;
 }
+
 .member-text h3 {
   font-weight: 400;
   margin-bottom: 1vh;
@@ -144,6 +148,7 @@ body {
   from {
     opacity: 0;
   }
+
   to {
     opacity: 1;
   }
@@ -158,14 +163,17 @@ body {
     flex-basis: 33%;
     margin-top: 5vh;
   }
+
   .grey-image img {
     max-width: 100%;
     max-height: 100%;
   }
+
   .modal-content {
     flex-direction: column-reverse;
     height: 70%;
   }
+
   .member-photo {
     position: relative;
     flex-basis: 100%;
@@ -176,6 +184,7 @@ body {
     max-width: 40%;
     margin: auto;
   }
+
   .close span {
     float: right;
     padding-right: 2vw;
@@ -208,6 +217,7 @@ body {
     opacity: 0;
     transform: translateX(50px);
   }
+
   to {
     opacity: 1;
     transform: translateX(0px);
@@ -218,16 +228,20 @@ body {
   .grey-image-container {
     margin-top: 10vh;
   }
+
   .grey-image {
     flex-basis: 50%;
   }
+
   .modal-content {
     height: auto;
     padding-bottom: 10vw;
   }
+
   .member-photo {
     display: none;
   }
+
   .grey-image img {
     max-width: 100%;
     max-height: 100%;
