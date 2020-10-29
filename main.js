@@ -38,7 +38,6 @@ const navSlide = () => {
     burger.classList.toggle("toggle");
   });
 };
-navSlide();
 
 const historyDropdown = () => {
   const parent = document.getElementsByClassName("nav")[0];
@@ -239,9 +238,12 @@ const resourcesDropDown = () => {
   });
 };
 
-historyDropdown();
-teamsDropDown();
-resourcesDropDown();
+setTimeout(function() {
+  navSlide();
+  historyDropdown();
+  teamsDropDown();
+  resourcesDropDown();
+}, 100);
 
 // arrow click scroll animation
 
