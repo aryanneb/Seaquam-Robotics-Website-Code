@@ -16,7 +16,7 @@
     <!-- Navbar code start-->
     <header id="nav-header">
     </header>
-    
+
     <!-- Navbar code end-->
     <section class="home-page">
       <div class="home">
@@ -122,18 +122,18 @@
     </section>
 
     <footer id="footer-placeholder">
-      <script>
-        $(function() {
+      <script> $(function () {
           $("#footer-placeholder").load("footer.html");
-        });
-      </script>
+        });</script>
     </footer>
-
     <script src="home.js"></script>
+
     <script>
-      $(function() {
-        $("#nav-header").load("header.html");
-      });
+      window.onload = function () {
+        $(function () {
+          $("#nav-header").load("header.html");
+        });
+      }
     </script>
   </div>
 </body>

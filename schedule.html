@@ -24,6 +24,7 @@
       });
     </script>
     <!-- Navbar code end-->
+
     <section class="home-page">
       <div class="banner"></div>
       <div class="title-top">
@@ -39,12 +40,14 @@
 
     </section>
     <section class="grey-page">
+      
       <div class="grey-title-content">
         <div class="greeting-text">
           <h2>Events</h2>
         </div>
         <div class="centered-classic rect"></div>
       </div>
+      <!--
       <div class="sorter">
         <button id="short" class="button-style2">First To Last</button>
         <button id="long" class="button-style">Last To First</button>
@@ -118,6 +121,24 @@
           </div>
         </div>
       </div>
+      -->
+      <div class="important-COVID">
+        <h3>Due to the COVID-19 pandemic, there have been cancellations to many tournaments. As a result, 
+          Seaquam Robotics will solely participate in online events. Please check with Mr. Singbeil to determine
+        which tournaments you would like to participate in.</h3>
+      </div>
+      <style>
+        .important-COVID{
+          width: 100%;
+          display: flex;
+          justify-content: center;
+          padding: 0 10vw 10vw 10vw;
+          margin: 10vw 0 0 0;
+        }
+        h3{ 
+          text-align: center;
+        }
+      </style>
     </section>
 
     <section class="related-info">
@@ -164,8 +185,13 @@
         });
       </script>
     </footer>
-
-    <script src="main.js"></script>
+    <script>
+      window.onload = function () {
+        $(function () {
+          $("#nav-header").load("header.html");
+        });
+      }
+     </script>
     <script src="schedule.js"></script>
   </div>
   </div>

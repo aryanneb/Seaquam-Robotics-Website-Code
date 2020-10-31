@@ -249,13 +249,19 @@
     </section>
 
     <footer id="footer-placeholder">
-      <script>
-        $(function() {
-          $("#footer-placeholder").load("footer.html");
-        });
-      </script>
     </footer>
-    <script src="main.js"></script>
+    <script>
+      $(function () {
+        $("#footer-placeholder").load("footer.html");
+      });
+    </script>
+    <script>
+    window.onload = function () {
+      $(function () {
+        $("#nav-header").load("header.html");
+      });
+    }
+   </script>
     <script src="teams/teampages.js"></script>
     <script src="teams/9181c.js"></script>
   </div>

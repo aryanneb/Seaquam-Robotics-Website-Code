@@ -17,11 +17,6 @@
   <body>
     <!-- Navbar code start-->
     <header id="nav-header"></header>
-    <script>
-      $(function () {
-        $("#nav-header").load("header.html");
-      });
-    </script>
     <!-- Navbar code end-->
 
     <section class="home-page">
@@ -201,7 +196,13 @@
         });
       </script>
     </footer>
-
+    <script>
+      window.onload = function () {
+        $(function () {
+          $("#nav-header").load("header.html");
+        });
+      };
+    </script>
     <script src="main.js"></script>
   </body>
 </html>

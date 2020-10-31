@@ -17,11 +17,6 @@
   <body>
     <!-- Navbar code start-->
     <header id="nav-header"></header>
-    <script>
-      $(function () {
-        $("#nav-header").load("header.html");
-      });
-    </script>
     <!-- Navbar code end-->
     <div class="banner"></div>
     <div class="title-top">
@@ -290,7 +285,12 @@
         });
       </script>
     </footer>
-
-    <script src="main.js"></script>
+    <script>
+      window.onload = function () {
+        $(function () {
+          $("#nav-header").load("header.html");
+        });
+      };
+    </script>
   </body>
 </html>
