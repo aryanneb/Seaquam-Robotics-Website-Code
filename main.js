@@ -1,4 +1,4 @@
-window.addEventListener("scroll", function() {
+window.addEventListener("scroll", function () {
   var header = document.querySelector("header");
   header.classList.toggle("sticky", window.scrollY > 175);
 });
@@ -150,7 +150,6 @@ const teamsDropDown = () => {
     }
   });
 };
-
 const resourcesDropDown = () => {
   const parent = document.getElementsByClassName("nav")[0];
   const teams = document.getElementsByClassName("teamsDrpDwn")[0];
@@ -238,12 +237,10 @@ const resourcesDropDown = () => {
   });
 };
 
-setTimeout(function() {
-  navSlide();
-  historyDropdown();
-  teamsDropDown();
-  resourcesDropDown();
-}, 100);
+navSlide();
+historyDropdown();
+teamsDropDown();
+resourcesDropDown();
 
 // arrow click scroll animation
 
