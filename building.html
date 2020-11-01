@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Seaquam Robotics</title>
+    <link rel="stylesheet" href="masterstyle.css" />
+    <link rel="stylesheet" href="resourcespages.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="anime.min.js"></script>
+  </head>
+
+  <body>
+    <!--<div class="block"></div> -->
+    <!-- Navbar code start-->
+    <header id="nav-header"></header>
+    <!-- Navbar code end-->
+
+    <div class="top-content-wrapper">
+      <div class="top-content-container">
+        <h1 id="pg-title">Building Tips</h1>
+        <div class="short-bar"></div>
+        <div class="intro-text">
+          <p>
+            In this section you can find tutorials, explanation, templates and
+            tips to support sufficient Building.
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="arrow-box">
+      <div class="arrow-down"></div>
+    </div>
+
+    <div class="main-content-wrapper">
+      <button id="mobileButton" onclick="menuToggle();">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          height="24"
+          viewBox="0 0 24 24"
+          width="24"
+        >
+          <path d="M0 0h24v24H0z" fill="none" />
+          <path d="M7 14l5-5 5 5z" />
+        </svg>
+      </button>
+      <div id="leftMenu">
+        <div id="upperMenuButtons">
+          <div id="welcomeBtn" class="button-style-menu upperMenuAct">
+            <h3>Welcome</h3>
+          </div>
+          <div id="one" class="lowerMenuButtons">
+            <button
+              class="button-style-menu lowerMenuAct"
+              id="welcomeSub1"
+              onclick="menuToggle();"
+            >
+              Top
+            </button>
+            <button
+              class="button-style-menu lowerMenu"
+              id="welcomeSub2"
+              onclick="menuToggle();"
+            >
+              What's new
+            </button>
+          </div>
+          <div id="tutorialsBtn" class="button-style-menu upperMenu">
+            <h3>Tutorials</h3>
+          </div>
+          <div id="two" class="lowerMenuButtons">
+            <button
+              class="button-style-menu lowerMenu"
+              id="twoSub1"
+              onclick="menuToggle();"
+            >
+              Getting Started
+            </button>
+            <button
+              class="button-style-menu lowerMenu"
+              id="twoSub2"
+              onclick="menuToggle();"
+            >
+              Setting Up Your IDE
+            </button>
+            <button
+              class="button-style-menu lowerMenu"
+              id="twoSub3"
+              onclick="menuToggle();"
+            >
+              Basics of Building
+            </button>
+          </div>
+          <div id="vexcodeBtn" class="button-style-menu upperMenu">
+            <h3>Vexcode</h3>
+          </div>
+          <div id="three" class="lowerMenuButtons">
+            <button
+              class="button-style-menu lowerMenu"
+              id="threeSub1"
+              onclick="menuToggle();"
+            >
+              How to Code
+            </button>
+            <button
+              class="button-style-menu lowerMenu"
+              id="threeSub2"
+              onclick="menuToggle();"
+            >
+              Useful Templates
+            </button>
+            <button
+              class="button-style-menu lowerMenu"
+              id="threeSub3"
+              onclick="menuToggle();"
+            >
+              Controls in Vexcode
+            </button>
+            <button
+              class="button-style-menu lowerMenu"
+              id="threeSub4"
+              onclick="menuToggle();"
+            >
+              Troubleshooting
+            </button>
+          </div>
+          <div id="prosBtn" class="button-style-menu upperMenu">
+            <h3>PROS</h3>
+          </div>
+          <div id="four" class="lowerMenuButtons">
+            <button
+              class="button-style-menu lowerMenu"
+              id="fourSub1"
+              onclick="menuToggle();"
+            >
+              How to Code
+            </button>
+            <button
+              class="button-style-menu lowerMenu"
+              id="fourSub2"
+              onclick="menuToggle();"
+            >
+              Useful Templates
+            </button>
+            <button
+              class="button-style-menu lowerMenu"
+              id="fourSub3"
+              onclick="menuToggle();"
+            >
+              Controls in Pros
+            </button>
+            <button
+              class="button-style-menu lowerMenu"
+              id="fourSub4"
+              onclick="menuToggle();"
+            >
+              Troubleshooting
+            </button>
+          </div>
+          <div id="designingBtn" class="button-style-menu upperMenu">
+            <h3>Designing</h3>
+          </div>
+          <div id="five" class="lowerMenuButtons">
+            <button
+              class="button-style-menu lowerMenu"
+              id="fiveSub1"
+              onclick="menuToggle();"
+            >
+              Design Process
+            </button>
+            <button
+              class="button-style-menu lowerMenu"
+              id="fiveSub2"
+              onclick="menuToggle();"
+            >
+              Your Way Of Building
+            </button>
+            <button
+              class="button-style-menu lowerMenu"
+              id="fiveSub3"
+              onclick="menuToggle();"
+            >
+              Documentation
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div id="content">
+        <div id="contentMask" onclick="menuToggle();"></div>
+        <div class="contentsMargin">
+          <div class="welcome_1">
+            <h1>Welcome</h1>
+            <p>
+              <br />Welcome to the top page of the Seaquam Building Database!
+              <br />Please feel free to search up and navigate yourself through
+              the menu on the left.
+              <br />
+              <br />
+              <br />
+              <br />If you are new to VEX, and if you want to kick off with
+              Building, <br />our
+              <span class="boldedText">Getting Started</span> page in the
+              Tutorials section will help you a lot!
+              <br />
+              <br />If you want to know about how to make a specific function,
+              go to the <span class="boldedText">templates page</span> in each
+              of the programming IDE sections.
+              <br />
+              <br />
+              <br />
+              <br />If you want to know how we think and come up with ideas of
+              code, <br />go to the
+              <span class="boldedText">Design Process</span> page in the
+              Designing section.
+              <br />
+              <br />
+              <br />If you want to check and keep up with our new posts and
+              updates here, <br />go to the
+              <span class="boldedText">What's New?</span> page in the Welcome
+              section.
+            </p>
+          </div>
+          <div class="welcome_2">
+            <h1>Welcome</h1>
+            <p>
+              <br />Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+              do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              <br />Nisl suscipit adipiscing bibendum est ultricies integer quis
+              auctor.
+              <br />
+              <br />
+              <br />
+              <br />Erat velit scelerisque in dictum. <br />Tristique senectus
+              et netus et malesuada fames ac. <br />Turpis in eu mi bibendum
+              neque. <br />Adipiscing diam donec adipiscing tristique risus nec
+              feugiat.
+              <br />
+              <br />
+              <br />
+              <br />
+              <br />Id donec ultrices tincidunt arcu non sodales neque sodales.
+              <br />Imperdiet proin fermentum leo vel orci porta. Sodales ut eu
+              sem integer vitae justo eget magna fermentum.
+              <br />
+              <br />
+            </p>
+          </div>
+          <div class="two_1">
+            <h1>Tutorials</h1>
+            <p>
+              <br />Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+              do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              <br />Nisl suscipit adipiscing bibendum est ultricies integer quis
+              auctor.
+              <br />
+              <br />
+              <br />
+              <br />Erat velit scelerisque in dictum. <br />Tristique senectus
+              et netus et malesuada fames ac. <br />Turpis in eu mi bibendum
+              neque. <br />Adipiscing diam donec adipiscing tristique risus nec
+              feugiat.
+              <br />
+              <br />
+              <br />
+              <br />
+            </p>
+          </div>
+          <div class="two_2">
+            <h1>Tutorials</h1>
+            <p>
+              <br />Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+              do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              <br />Nisl suscipit adipiscing bibendum est ultricies integer quis
+              auctor.
+              <br />
+              <br />
+              <br />
+            </p>
+          </div>
+          <div class="two_3">
+            <h1>Tutorials</h1>
+            <p>
+              <br />Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+              do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              <br />Nisl suscipit adipiscing bibendum est ultricies integer quis
+              auctor.
+              <br />
+              <br />
+              <br />
+              <br />Erat velit scelerisque in dictum. <br />Tristique senectus
+              et netus et malesuada fames ac. <br />Turpis in eu mi bibendum
+              neque. <br />Adipiscing diam donec adipiscing tristique risus nec
+              feugiat.
+              <br />
+              <br />
+              <br />
+              <br />
+              <br />Id donec ultrices tincidunt arcu non sodales neque sodales.
+              <br />Imperdiet proin fermentum leo vel orci porta. Sodales ut eu
+              sem integer vitae justo eget magna fermentum.
+              <br />
+              <br />
+            </p>
+          </div>
+          <div class="three_1">
+            <h1>Vexcode</h1>
+            <p>
+              <br />Erat velit scelerisque in dictum. <br />Tristique senectus
+              et netus et malesuada fames ac. <br />Turpis in eu mi bibendum
+              neque. <br />Adipiscing diam donec adipiscing tristique risus nec
+              feugiat.
+              <br />
+              <br />
+              <br />
+              <br />
+              <br />Id donec ultrices tincidunt arcu non sodales neque sodales.
+              <br />Imperdiet proin fermentum leo vel orci porta. Sodales ut eu
+              sem integer vitae justo eget magna fermentum.
+              <br />
+              <br />
+              <br />Mi bibendum neque egestas congue quisque. <br />Elementum
+              nibh tellus molestie nunc non blandit.
+            </p>
+          </div>
+          <div class="three_2">
+            <h1>Vexcode</h1>
+            <p>
+              <br />Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+              do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              <br />Nisl suscipit adipiscing bibendum est ultricies integer quis
+              auctor.
+              <br />
+              <br />
+              <br />
+              <br />Erat velit scelerisque in dictum. <br />Tristique senectus e
+            </p>
+          </div>
+          <div class="three_3">
+            <h1>Vexcode</h1>
+            <p>
+              <br />Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+              do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              <br />Nisl suscipit adipiscing bibendum est ultricies integer quis
+              auctor.
+              <br />
+              <br />
+              <br />
+              <br />Erat velit scelerisque in dictum. <br />Tristique senectus
+              et netus et malesuada fames ac. <br />Turpis in eu mi bibendum
+              neque. <br />Adipiscing diam donec adipiscing tristique risus nec
+              feugiat.
+              <br />
+              <br />
+              <br />
+              <br />
+              <br />Id donec ultrices tincidunt arcu non sodales neque sodales.
+              <br />Imperdiet proin fermentum leo vel orci porta. Sodales ut eu
+              sem integer vitae justo eget magna fermentum.
+              <br />
+              <br />
+            </p>
+          </div>
+          <div class="three_4">
+            <h1>Vexcode</h1>
+            <p>
+              <br />Mi bibendum neque egestas congue quisque. <br />Elementum
+              nibh tellus molestie nunc non blandit.
+            </p>
+          </div>
+          <div class="four_1">
+            <h1>PROS</h1>
+            <p>
+              <br />Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+              do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              <br />Nisl suscipit adipiscing bibendum est ultricies integer quis
+              auctor.
+              <br />
+              <br />
+              <br />
+              leo vel orci porta. Sodales ut eu sem integer vitae justo eget
+              magna fermentum.
+              <br />
+              <br />
+              <br />Mi bibendum neque egestas congue quisque. <br />Elementum
+              nibh tellus molestie nunc non blandit.
+            </p>
+          </div>
+          <div class="four_2">
+            <h1>PROS</h1>
+            <p>
+              <br />Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+
+              <br />
+              <br />
+              tum leo vel orci porta. Sodales ut eu sem integer vitae justo eget
+              magna fermentum.
+              <br />
+              <br />
+              <br />Mi bibendum neque egestas congue quisque. <br />Elementum
+              nibh tellus molestie nunc non blandit.
+            </p>
+          </div>
+          <div class="four_3">
+            <h1>PROS</h1>
+            <p>
+              <br />Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+              do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              <br />Nisl suscipit adipiscing bibendum est ultricies integer quis
+
+              <br />
+              <br />Mi bibendum neque egestas congue quisque. <br />Elementum
+              nibh tellus molestie nunc non blandit.
+            </p>
+          </div>
+          <div class="four_4">
+            <h1>PROS</h1>
+            <p>
+              <br />Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+              do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              <br />
+              <br />
+              <br />
+              <br />
+              <br />
+              <br />Id donec ultrices tincidunt arcu non sodales neque sodales.
+              <br />Imperdiet proin fermentum leo vel orci porta. Sodales ut eu
+              sem integer vitae justo eget magna fermentum.
+              <br />
+              <br />
+              <br />Mi bibendum neque egestas congue quisque. <br />Elementum
+              nibh tellus molestie nunc non blandit.
+            </p>
+          </div>
+          <div class="five_1">
+            <h1>Design</h1>
+            <p>
+              <br />Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+              do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              <br />Nisl suscipit adipiscing bibendum est ultricies integer quis
+              auctor.
+              <br />
+              <br />
+
+              nibh tellus molestie nunc non blandit.
+            </p>
+          </div>
+          <div class="five_2">
+            <h1>Design</h1>
+            <p>
+              <br />Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+              do eiusmod tempor in feugiat.
+              <br />
+              <br />
+              <br />
+              <br />
+              <br />Id donec ultrices tincidunt arcu non sodales neque sodales.
+              <br />Imperdiet proin fermentum leo vel orci porta. Sodales ut eu
+              sem integer vitae justo eget magna fermentum.
+              <br />
+              <br />
+              <br />Mi bibendum neque egestas congue quisque. <br />Elementum
+              nibh tellus molestie nunc non blandit.
+            </p>
+          </div>
+          <div class="five_3">
+            <h1>Design</h1>
+            <p>isque. <br />Elementum nibh tellus molestie nunc non blandit.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="links-container">
+      <h2 class="heading-links">Useful Links</h2>
+      <div class="links-spacer"></div>
+      <div class="useful-links">
+        <div class="container vd">
+          <h2 class="pagename">Vexcode Doxygen</h2>
+          <p class="text">
+            A database for VEXCODE V5 Pro code, and you can find the references
+            to the classes, API, namespace, functions, etc.
+          </p>
+          <div class="button-container">
+            <button
+              class="button-style2 visit"
+              type="button"
+              onclick="location.href='https://kb.vex.com'"
+            >
+              Visit Doxygen
+            </button>
+          </div>
+        </div>
+        <div class="container vdb">
+          <h2 class="pagename">PROS Docs</h2>
+          <p class="text">
+            Official database from PROS. You can find very much anything about
+            PROS codes, API, issues, updates, tutorials and Q&A's.
+          </p>
+          <div class="button-container">
+            <button
+              class="button-style2 visit"
+              type="button"
+              onclick="location.href='https://kb.vex.com'"
+            >
+              Visit PROS Docs
+            </button>
+          </div>
+        </div>
+        <div class="container kb">
+          <h2 class="pagename">Knowledge Base</h2>
+          <p class="text">
+            An official database provides various tutorials, parts overviews,
+            tips, instructions and troubleshoots for some Building to some
+            physical and mechanical parts.
+          </p>
+          <div class="button-container">
+            <button
+              class="button-style2 visit"
+              type="button"
+              onclick="location.href='https://kb.vex.com'"
+            >
+              Visit KB
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer id="footer-placeholder">
+      <script>
+        $(function () {
+          $("#footer-placeholder").load("footer.html");
+        });
+      </script>
+    </footer>
+    <script>
+      setTimeout(
+        $(function () {
+          $("#nav-header").load("header.html");
+        }),
+        500
+      );
+    </script>
+    <script src="resourcespages.js"></script>
+  </body>
+</html>
