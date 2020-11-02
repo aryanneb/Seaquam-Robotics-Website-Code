@@ -41,7 +41,7 @@ async function awardsVisibilityChange(newPage, season) {
   activeBtn = document.getElementById(newPage + 'Btn');
   activeBtn.setAttribute("class", "button-style2 award");
   active.style.display = "none";
-  active = document.getElementsByClassName(newPage)[0];
+  active = document.getElementById(newPage + "Awards");
   active.style.display = "flex";
   if (active.classList.contains("livecontent")) {
     active.innerHTML = "<p>Updating content...</p>";
@@ -51,6 +51,6 @@ async function awardsVisibilityChange(newPage, season) {
 }
 
 // Make the default visibility Change Up
-let active = document.getElementsByClassName("changeUp")[0];
+let active = document.getElementById("changeUpAwards");
 let activeBtn = document.getElementById('changeUpBtn');
 awardsVisibilityChange("changeUp", "Change Up")
