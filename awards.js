@@ -1,110 +1,56 @@
 let active = document.getElementsByClassName("changeUp")[0];
 let activeBtn = document.getElementById('changeUpBtn');
 
-document
-  .getElementById('towerTakeoverBtn')
-  .addEventListener("click", towerTakeoverVisibility);
-document
-  .getElementById('changeUpBtn')
-  .addEventListener("click", changeUpVisibility);
-
-  document
-  .getElementById('turningPointBtn')
-  .addEventListener("click", turningPointVisibility);
-
-  document
-  .getElementById('inTheZoneBtn')
-  .addEventListener("click", inTheZoneVisibility);
-
-  document
-  .getElementById('starstruckBtn')
-  .addEventListener("click", starstruckVisibility);
-
-  document
-  .getElementById('nothingButNetBtn')
-  .addEventListener("click", nothingButNetVisibility);
-
-  document
-  .getElementById('skyriseBtn')
-  .addEventListener("click", skyriseVisibility);
-
-  document
-  .getElementById('tossUpBtn')
-  .addEventListener("click", tossUpVisibility);
-
-
-
-
-function towerTakeoverVisibility() {
-  active.style.display = "none";
-  active = document.getElementsByClassName("towerTakeover")[0];
-  active.style.display = "flex";
-  activeBtn.setAttribute("class", "button-style award");
-  activeBtn = document.getElementById('towerTakeoverBtn');
-  activeBtn.setAttribute("class", "button-style2 award");
+// Formats awards for a team. Use in conjunction with getTeamEventsAwards()
+async function formatTeamAwards(teamName, eventsAwards) {
+  let list = [];
+  for (var key in eventsAwards) {
+    list.push(eventsAwards[key].name + "<br><i class=\"indented\"></i>" + eventsAwards[key].awards.join("<br><i class=\"indented\"></i>"));
+  }
+  let ret = "<div class=\"team\"><p><b>" + teamName + ":</b><br>" + (list.length > 0 ? list.join("<br>") : "Nothing to see here") + "</p></div>";
+  return ret;
 }
 
-function changeUpVisibility() {
-  active.style.display = "none";
-  active = document.getElementsByClassName("changeUp")[0];
-  active.style.display = "flex";
-  activeBtn.setAttribute("class", "button-style award");
-  activeBtn = document.getElementById('changeUpBtn');
-  activeBtn.setAttribute("class", "button-style2 award");
+// Looks up and formats all teams in a given season. Use undefined for all seasons
+async function teamAwardsLookupFormatted(season) {
+  let i;
+
+  let seaquamTeams = await searchSeaquam();
+  let awardsFormatted = {};
+  let list = [];
+  for (i = 0; i < seaquamTeams.length; i++) {
+    let number = seaquamTeams[i].number;
+    awardsFormatted[number] = getTeamEventsAwards(number, season, true).then(async function(value) {
+      if (Object.keys(value).length != 0)
+        return await formatTeamAwards(number, value);
+      else return undefined;
+    });
+  }
+
+  for (var key in awardsFormatted)
+    if (awardsFormatted[key] != undefined)
+      list.push(await awardsFormatted[key]);
+
+  list.sort((a, b) => {
+    return (b.length - a.length)
+  });
+
+  return list.join("");
 }
 
-
-function turningPointVisibility() {
-    active.style.display = "none";
-    active = document.getElementsByClassName("turningPoint")[0];
-    active.style.display = "flex";
-    activeBtn.setAttribute("class", "button-style award");
-    activeBtn = document.getElementById('turningPointBtn');
-    activeBtn.setAttribute("class", "button-style2 award");
+// Change the visibility of pages in the awards section
+async function awardsVisibilityChange(newPage, season) {
+  activeBtn.setAttribute("class", "button-style award");
+  activeBtn = document.getElementById(newPage + 'Btn');
+  activeBtn.setAttribute("class", "button-style2 award");
+  active.style.display = "none";
+  active = document.getElementsByClassName(newPage)[0];
+  active.style.display = "flex";
+  if (active.classList.contains("livecontent")) {
+    active.innerHTML = "<p>Updating content...</p>";
+    active.innerHTML = await teamAwardsLookupFormatted(season);
+    if (active.innerHTML == "") active.innerHTML = "<p>Nothing is here 😞</p>";
   }
+}
 
-function inTheZoneVisibility() {
-    active.style.display = "none";
-    active = document.getElementsByClassName("inTheZone")[0];
-    active.style.display = "flex";
-    activeBtn.setAttribute("class", "button-style award");
-    activeBtn = document.getElementById('inTheZoneBtn');
-    activeBtn.setAttribute("class", "button-style2 award");
-  }
-
-  
-function starstruckVisibility() {
-    active.style.display = "none";
-    active = document.getElementsByClassName("starstruck")[0];
-    active.style.display = "flex";
-    activeBtn.setAttribute("class", "button-style award");
-    activeBtn = document.getElementById('starstruckBtn');
-    activeBtn.setAttribute("class", "button-style2 award");
-  }
-
-  function nothingButNetVisibility() {
-    active.style.display = "none";
-    active = document.getElementsByClassName("nothingButNet")[0];
-    active.style.display = "flex";
-    activeBtn.setAttribute("class", "button-style award");
-    activeBtn = document.getElementById('nothingButNetBtn');
-    activeBtn.setAttribute("class", "button-style2 award");
-  }
-
-  function skyriseVisibility() {
-    active.style.display = "none";
-    active = document.getElementsByClassName("skyrise")[0];
-    active.style.display = "flex";
-    activeBtn.setAttribute("class", "button-style award");
-    activeBtn = document.getElementById('skyriseBtn');
-    activeBtn.setAttribute("class", "button-style2 award");
-  }
-
-  function tossUpVisibility() {
-    active.style.display = "none";
-    active = document.getElementsByClassName("tossUp")[0];
-    active.style.display = "flex";
-    activeBtn.setAttribute("class", "button-style award");
-    activeBtn = document.getElementById('tossUpBtn');
-    activeBtn.setAttribute("class", "button-style2 award");
-  }
+awardsVisibilityChange("changeUp", "Change Up")
