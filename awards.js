@@ -65,4 +65,6 @@ async function awardsVisibilityChange(newPage, season) {
 // Make the default visibility Change Up
 let active = document.getElementById("changeUpAwards");
 let activeBtn = document.getElementById("changeUpBtn");
-awardsVisibilityChange("changeUp", "Change Up");
+window.setTimeout(() => {
+  awardsVisibilityChange("changeUp", "Change Up");
+}, 200);
