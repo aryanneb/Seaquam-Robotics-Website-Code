@@ -3,10 +3,10 @@ async function formatTeamAwards(teamName, eventsAwards) {
   let list = [];
   for (var key in eventsAwards) {
     list.push(
-      "<u>" +
-        eventsAwards[key].name +
-        '</u><br><i class="indented"></i>' +
-        eventsAwards[key].awards.join('<br><i class="indented"></i>')
+      "<u><a href=" + eventsAwards[key].link + ">" +
+      eventsAwards[key].name +
+      '</a></u><br><i class="indented"></i>' +
+      eventsAwards[key].awards.join('<br><i class="indented"></i>')
     );
   }
   let ret =
@@ -28,7 +28,7 @@ async function teamAwardsLookupFormatted(season) {
   for (i = 0; i < seaquamTeams.length; i++) {
     let number = seaquamTeams[i].number;
     awardsFormatted[number] = getTeamEventsAwards(number, season, true).then(
-      async function (value) {
+      async function(value) {
         if (Object.keys(value).length != 0)
           return await formatTeamAwards(number, value);
         else return undefined;
