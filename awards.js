@@ -1,6 +1,3 @@
-let active = document.getElementsByClassName("changeUp")[0];
-let activeBtn = document.getElementById('changeUpBtn');
-
 // Formats awards for a team. Use in conjunction with getTeamEventsAwards()
 async function formatTeamAwards(teamName, eventsAwards) {
   let list = [];
@@ -53,4 +50,7 @@ async function awardsVisibilityChange(newPage, season) {
   }
 }
 
+// Make the default visibility Change Up
+let active = document.getElementsByClassName("changeUp")[0];
+let activeBtn = document.getElementById('changeUpBtn');
 awardsVisibilityChange("changeUp", "Change Up")

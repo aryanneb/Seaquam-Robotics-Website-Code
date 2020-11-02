@@ -6,7 +6,6 @@ window.addEventListener("scroll", function() {
 responsecache = {};
 
 // Navigation menu animation mobile
-
 const navSlide = () => {
   const burger = document.querySelector(".burger");
   const nav = document.querySelector(".nav");
@@ -39,6 +38,7 @@ const navSlide = () => {
   });
 };
 
+// Navigation history menu drop down
 const historyDropdown = () => {
   const parent = document.getElementsByClassName("nav")[0];
   const plus = document.getElementsByClassName("historyDrpDwn")[0];
@@ -83,6 +83,7 @@ const historyDropdown = () => {
   });
 };
 
+// Navigation teams menu drop down
 const teamsDropDown = () => {
   const parent = document.getElementsByClassName("nav")[0];
   const plus = document.getElementsByClassName("teamsDrpDwn")[0];
@@ -172,6 +173,7 @@ anime({
 
 // VexDB Integration
 
+// Returns a list of all Seaquam Teams
 async function searchSeaquam() {
   let teamsurl = "https://api.vexdb.io/v1/get_teams?organisation=Seaquam%20Secondary";
   if (responsecache[teamsurl] != undefined)
@@ -181,6 +183,7 @@ async function searchSeaquam() {
   return response.result;
 }
 
+// Gets a specific team's information
 async function getTeamInfo(name) {
   let teamsurl = 'https://api.vexdb.io/v1/get_teams?team=' + name;
   if (responsecache[teamsurl] != undefined)
@@ -190,7 +193,7 @@ async function getTeamInfo(name) {
   return response.result[0];
 }
 
-// Returns a list of formatted awards for a given team (type string)
+// Returns a list of formatted awards for a given team
 async function getTeamAwards(name, season) {
   let awardsurl = 'https://api.vexdb.io/v1/get_awards?team=' + name + (season != undefined ? "&season=" + encodeURIComponent(season) : "");
   let response;
@@ -219,6 +222,7 @@ async function getTeamAwards(name, season) {
   return ret;
 }
 
+// Gets a list of events a team attended
 async function getTeamEvents(name) {
   let eventsurl = "https://api.vexdb.io/v1/get_events?team=" + name;
   if (responsecache[eventsurl] != undefined)
@@ -229,6 +233,7 @@ async function getTeamEvents(name) {
   return response.result;
 }
 
+// Gets a list of events (and any awards they earned) for a given team and season
 async function getTeamEventsAwards(name, season = undefined, ignoreawardless = false, eventsonly = false) {
   let i = 0;
 
@@ -284,6 +289,7 @@ async function getTeamEventsAwards(name, season = undefined, ignoreawardless = f
   return ret;
 }
 
+// Gets information for a specific event sku
 async function getEventInfo(sku) {
   let eventurl = "https://api.vexdb.io/v1/get_events?sku=" + sku;
   if (responsecache[eventurl] != undefined)
