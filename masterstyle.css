@@ -4,6 +4,11 @@
   box-sizing: border-box;
 }
 
+.wrapper {
+  overflow-x: hidden;
+  position: relative;
+}
+
 ::selection {
   color: white;
   background: #ffd382;
@@ -12,11 +17,6 @@
 ::-moz-selection {
   color: white;
   background: #ffd382;
-}
-
-.wrapper {
-  overflow-x: hidden;
-  position: relative;
 }
 
 html {
@@ -262,27 +262,27 @@ header ul li a:hover::after {
   display: none;
 }
 
-.history:hover > .dropdown {
+.history:hover>.dropdown {
   visibility: visible;
   opacity: 1;
 }
 
-.teams:hover > .dropdown {
+.teams:hover>.dropdown {
   visibility: visible;
   opacity: 1;
 }
 
-.seniors:hover > .dropdown2 {
+.seniors:hover>.dropdown2 {
   visibility: visible;
   opacity: 1;
 }
 
-.juniors:hover > .dropdown2 {
+.juniors:hover>.dropdown2 {
   visibility: visible;
   opacity: 1;
 }
 
-.resources:hover > .dropdown {
+.resources:hover>.dropdown {
   visibility: visible;
   opacity: 1;
 }
@@ -292,12 +292,12 @@ header ul li a:hover::after {
   opacity: 1;
 }
 
-.tips:hover > .dropdown2 {
+.tips:hover>.dropdown2 {
   visibility: visible;
   opacity: 1;
 }
 
-.more:hover > .dropdown2 {
+.more:hover>.dropdown2 {
   visibility: visible;
   opacity: 1;
 }
@@ -637,6 +637,14 @@ footer {
   margin: -2vh auto 0 auto;
   background-color: #ffd382;
   border-radius: 30px;
+}
+
+.indented {
+  margin-left: 25px;
+}
+
+a {
+  color: inherit;
 }
 
 @media screen and (max-width: 1024px) {

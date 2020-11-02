@@ -34,7 +34,7 @@
 }
 
 .team {
-  flex-basis: max(33%, 480px);
+  flex-basis: max(33%, 520px);
   margin: auto;
   margin-top: 5vh;
   padding-right: 2vw;
@@ -46,91 +46,14 @@
   color: white;
 }
 
-.changeUp {
+.allSeasons {
   display: flex;
   flex-wrap: wrap;
-  width: 80%;
-  margin-left: 10%;
+  width: 90%;
+  margin-left: 5%;
   justify-content: center;
   margin-bottom: 10vh;
   transition: 0.2s;
-  animation: op 350ms;
-}
-
-.towerTakeover {
-  display: flex;
-  flex-wrap: wrap;
-  width: 80%;
-  margin-left: 10%;
-  justify-content: center;
-  margin-bottom: 10vh;
-  display: none;
-  animation: op 350ms;
-}
-
-.turningPoint {
-  display: flex;
-  flex-wrap: wrap;
-  width: 80%;
-  margin-left: 10%;
-  justify-content: center;
-  margin-bottom: 10vh;
-  display: none;
-  animation: op 350ms;
-}
-
-.inTheZone {
-  display: flex;
-  flex-wrap: wrap;
-  width: 80%;
-  margin-left: 10%;
-  justify-content: center;
-  margin-bottom: 10vh;
-  display: none;
-  animation: op 350ms;
-}
-
-.nothingButNet {
-  display: flex;
-  flex-wrap: wrap;
-  width: 80%;
-  margin-left: 10%;
-  justify-content: center;
-  margin-bottom: 10vh;
-  display: none;
-  animation: op 350ms;
-}
-
-.starstruck {
-  display: flex;
-  flex-wrap: wrap;
-  width: 80%;
-  margin-left: 10%;
-  justify-content: center;
-  margin-bottom: 10vh;
-  display: none;
-  animation: op 350ms;
-}
-
-.skyrise {
-  display: flex;
-  flex-wrap: wrap;
-  width: 80%;
-  margin-left: 10%;
-  justify-content: center;
-  margin-bottom: 10vh;
-  display: none;
-  animation: op 350ms;
-}
-
-.tossUp {
-  display: flex;
-  flex-wrap: wrap;
-  width: 80%;
-  margin-left: 10%;
-  justify-content: center;
-  margin-bottom: 10vh;
-  display: none;
   animation: op 350ms;
 }
 
