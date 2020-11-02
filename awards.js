@@ -2,9 +2,19 @@
 async function formatTeamAwards(teamName, eventsAwards) {
   let list = [];
   for (var key in eventsAwards) {
-    list.push(eventsAwards[key].name + "<br><i class=\"indented\"></i>" + eventsAwards[key].awards.join("<br><i class=\"indented\"></i>"));
+    list.push(
+      "<u>" +
+        eventsAwards[key].name +
+        '</u><br><i class="indented"></i>' +
+        eventsAwards[key].awards.join('<br><i class="indented"></i>')
+    );
   }
-  let ret = "<div class=\"team\"><p><b>" + teamName + ":</b><br>" + (list.length > 0 ? list.join("<br>") : "Nothing to see here") + "</p></div>";
+  let ret =
+    '<div class="team"><p><b>' +
+    teamName +
+    ":</b><br>" +
+    (list.length > 0 ? list.join("<br>") : "Nothing to see here") +
+    "</p></div>";
   return ret;
 }
 
@@ -17,11 +27,13 @@ async function teamAwardsLookupFormatted(season) {
   let list = [];
   for (i = 0; i < seaquamTeams.length; i++) {
     let number = seaquamTeams[i].number;
-    awardsFormatted[number] = getTeamEventsAwards(number, season, true).then(async function(value) {
-      if (Object.keys(value).length != 0)
-        return await formatTeamAwards(number, value);
-      else return undefined;
-    });
+    awardsFormatted[number] = getTeamEventsAwards(number, season, true).then(
+      async function (value) {
+        if (Object.keys(value).length != 0)
+          return await formatTeamAwards(number, value);
+        else return undefined;
+      }
+    );
   }
 
   for (var key in awardsFormatted)
@@ -29,7 +41,7 @@ async function teamAwardsLookupFormatted(season) {
       list.push(await awardsFormatted[key]);
 
   list.sort((a, b) => {
-    return (b.length - a.length)
+    return b.length - a.length;
   });
 
   return list.join("");
@@ -38,7 +50,7 @@ async function teamAwardsLookupFormatted(season) {
 // Change the visibility of pages in the awards section
 async function awardsVisibilityChange(newPage, season) {
   activeBtn.setAttribute("class", "button-style award");
-  activeBtn = document.getElementById(newPage + 'Btn');
+  activeBtn = document.getElementById(newPage + "Btn");
   activeBtn.setAttribute("class", "button-style2 award");
   active.style.display = "none";
   active = document.getElementById(newPage + "Awards");
@@ -52,5 +64,5 @@ async function awardsVisibilityChange(newPage, season) {
 
 // Make the default visibility Change Up
 let active = document.getElementById("changeUpAwards");
-let activeBtn = document.getElementById('changeUpBtn');
-awardsVisibilityChange("changeUp", "Change Up")
+let activeBtn = document.getElementById("changeUpBtn");
+awardsVisibilityChange("changeUp", "Change Up");
