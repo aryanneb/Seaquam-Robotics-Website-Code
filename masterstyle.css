@@ -210,6 +210,10 @@ header ul li a:hover::after {
   font-size: 1rem;
 }
 
+.clickpointer {
+  cursor: pointer;
+}
+
 .seniors {
   position: relative;
   width: 100%;

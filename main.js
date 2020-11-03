@@ -254,7 +254,7 @@ function scrollDown() {
 }
 
 const arrowDown = document.getElementsByClassName("arrow-down")[0];
-arrowDown.addEventListener('click', scrollDown);
+arrowDown.addEventListener("click", scrollDown);
 
 function scrollUp() {
   window.scroll({
@@ -265,7 +265,7 @@ function scrollUp() {
 }
 
 const arrowUp = document.getElementsByClassName("arrow-up")[0];
-arrowUp.addEventListener('click', scrollUp);
+arrowUp.addEventListener("click", scrollUp);
 
 anime({
   targets: ".arrow-down",
@@ -276,36 +276,34 @@ anime({
 
 // VexDB Integration
 
+async function vexDBJSONRequest(url, cachetime = 3600) {
+  if (url == undefined) return {};
+  if (responsecache[url] != undefined)
+    return responsecache[url];
+  let response = await (await fetch(url)).json();
+  responsecache[url] = Object.assign(response);
+  setTimeout(() => {
+    responsecache[url] = undefined;
+  }, cachetime * 1000);
+  return response;
+}
+
 // Returns a list of all Seaquam Teams
 async function searchSeaquam() {
   let teamsurl = "https://api.vexdb.io/v1/get_teams?organisation=Seaquam%20Secondary";
-  if (responsecache[teamsurl] != undefined)
-    return responsecache[teamsurl].result;
-  let response = await (await fetch(teamsurl)).json();
-  responsecache[teamsurl] = Object.assign(response);
-  return response.result;
+  return (await vexDBJSONRequest(teamsurl)).result;
 }
 
-// Gets a specific team's information
+// Gets a specific team"s information
 async function getTeamInfo(name) {
-  let teamsurl = 'https://api.vexdb.io/v1/get_teams?team=' + name;
-  if (responsecache[teamsurl] != undefined)
-    return responsecache[teamsurl].result[0];
-  let response = await (await fetch(teamsurl)).json();
-  responsecache[teamsurl] = Object.assign(response);
-  return response.result[0];
+  let teamsurl = "https://api.vexdb.io/v1/get_teams?team=" + name;
+  return (await vexDBJSONRequest(teamsurl)).result[0];
 }
 
 // Returns a list of formatted awards for a given team
 async function getTeamAwards(name, season) {
-  let awardsurl = 'https://api.vexdb.io/v1/get_awards?team=' + name + (season != undefined ? "&season=" + encodeURIComponent(season) : "");
-  let response;
-  if (responsecache[awardsurl] != undefined)
-    response = responsecache[awardsurl];
-  else {
-    response = await (await fetch(awardsurl)).json();
-    responsecache[awardsurl] = Object.assign(response);
-  }
+  let awardsurl = "https://api.vexdb.io/v1/get_awards?team=" + name + (season != undefined ? "&season=" + encodeURIComponent(season) : "");
+  let response = await vexDBJSONRequest(awardsurl);
   let reqlist = {};
   let arranged = {};
   let ret = [];
@@ -328,12 +326,7 @@ async function getTeamAwards(name, season) {
 // Gets a list of events a team attended
 async function getTeamEvents(name) {
   let eventsurl = "https://api.vexdb.io/v1/get_events?team=" + name;
-  if (responsecache[eventsurl] != undefined)
-    return responsecache[eventsurl].result;
-
-  let response = await (await fetch(eventsurl)).json();
-  responsecache[eventsurl] = Object.assign(response);
-  return response.result;
+  return (await vexDBJSONRequest(eventsurl)).result;
 }
 
 // Gets a list of events (and any awards they earned) for a given team and season
@@ -341,23 +334,12 @@ async function getTeamEventsAwards(name, season = undefined, ignoreawardless = f
   let i = 0;
 
   // Prepare the awards fetch
-  let awardsurl = 'https://api.vexdb.io/v1/get_awards?team=' + name + (season != undefined ? "&season=" + encodeURIComponent(season) : "");
-  let awardsfetch = fetch(awardsurl);
-  let awardsResponse = undefined;
-  if (responsecache[awardsurl] != undefined) {
-    awardsResponse = responsecache[awardsurl].result;
-  }
+  let awardsurl = "https://api.vexdb.io/v1/get_awards?team=" + name + (season != undefined ? "&season=" + encodeURIComponent(season) : "");
+  let awardsfetch = vexDBJSONRequest(awardsurl);
 
   // Get team events
   let eventsurl = "https://api.vexdb.io/v1/get_events?team=" + name + (season != undefined ? "&season=" + encodeURIComponent(season) : "");
-  let eventsResponse;
-  if (responsecache[eventsurl] != undefined) {
-    eventsResponse = responsecache[eventsurl].result;
-  } else {
-    eventsResponse = await (await fetch(eventsurl)).json();
-    responsecache[eventsurl] = Object.assign(eventsResponse);
-    eventsResponse = eventsResponse.result;
-  }
+  let eventsResponse = (await vexDBJSONRequest(eventsurl)).result;
 
   // Populate an object
   let events = {};
@@ -367,11 +349,7 @@ async function getTeamEventsAwards(name, season = undefined, ignoreawardless = f
     eventNames[eventsResponse[i].sku] = getEventInfo(eventsResponse[i].sku);
   }
 
-  if (awardsResponse == undefined) {
-    awardsResponse = await (await awardsfetch).json();
-    responsecache[awardsurl] = Object.assign(awardsResponse);
-    awardsResponse = awardsResponse.result;
-  }
+  let awardsResponse = (await awardsfetch).result;
   for (i = 0; i < awardsResponse.length; i++) {
     if (events[awardsResponse[i].sku] == undefined) {
       events[awardsResponse[i].sku] = [];
@@ -395,9 +373,5 @@ async function getTeamEventsAwards(name, season = undefined, ignoreawardless = f
 // Gets information for a specific event sku
 async function getEventInfo(sku) {
   let eventurl = "https://api.vexdb.io/v1/get_events?sku=" + sku;
-  if (responsecache[eventurl] != undefined)
-    return responsecache[eventurl].result[0];
-  let response = await (await fetch(eventurl)).json();
-  responsecache[eventurl] = Object.assign(response);
-  return response.result[0];
+  return (await vexDBJSONRequest(eventurl)).result[0];
 }
