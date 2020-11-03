@@ -5,8 +5,9 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Schedule</title>
+  <base href="../">
   <link rel="stylesheet" href="masterstyle.css" />
-  <link rel="stylesheet" href="schedule.css" />
+  <link rel="stylesheet" href="schedule/home.css" />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet" />
   <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
   <script src="anime.min.js"></script>
@@ -16,7 +17,7 @@
   <div class="wrapper">
     <header id="nav-header"></header>
     <section class="home-page">
-      <div class="banner"></div>
+      <div class="banner" style="background-image: url('img/Seaquam_Exterior_1-1280x570.jpg');"></div>
       <div class="title-top">
         <h1 id="pg-title">Schedule</h1>
         <div class="short-bar"></div>
@@ -143,17 +144,17 @@
         </div>
         <div class="related-text-cont">
           <div class="related-text">
-            <h3><u>robotevents.com</u></h3>
+            <h3><u>RobotEvents</u></h3>
             <p>This is where you can find all the information about anything robotics.
               Tournaments, teams, and skills standings are available here in a comfortable and intuitive portal, go take a look!</p>
-            <button class="button-style2">Visit robotevents.com</button>
+            <button class="button-style2" onclick="location.href='https://robotevents.com'">Visit RobotEvents</a></button>
           </div>
           <div class="related-text">
-            <h3><u>Vexdb.io</u></h3>
+            <h3><u>VEX DB</u></h3>
             <p>You a stats person?
               You can find in-depth information about every tournament, game and team that has ever played.
               We get live information from this website!</p>
-            <button class="button-style2">Visit Vexdb.io</button>
+            <button class="button-style2" onclick="location.href='https://vexdb.io'">Visit VEX DB</a></button>
           </div>
         </div>
       </div>
@@ -175,7 +176,7 @@
       }
 
     </script>
-    <script src="schedule.js"></script>
+    <script src="schedule/home.js"></script>
   </div>
   </div>
 </body>

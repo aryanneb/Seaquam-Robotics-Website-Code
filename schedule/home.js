@@ -1,5 +1,6 @@
-const event = document.getElementsByClassName('event');
-const parent = document.getElementsByClassName('event')[0].parentNode;
+// No events are being listed
+// const event = document.getElementsByClassName('event');
+// const parent = document.getElementsByClassName('event')[0].parentNode;
 
 const short = document.querySelector('#short');
 const long = document.querySelector('#long');
@@ -34,6 +35,6 @@ function lastToFirst() {
   }
 }
 
-
-short.addEventListener('click', firstToLast);
-long.addEventListener('click', lastToFirst);
+// No events are being listed
+// short.addEventListener('click', firstToLast);
+// long.addEventListener('click', lastToFirst);
