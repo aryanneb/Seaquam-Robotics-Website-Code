@@ -52,6 +52,10 @@ button {
   position: relative;
 }
 
+.notVisible {
+  visibility: hidden;
+}
+
 @media screen and (max-width: 1024px) {
   .tms {
     width: 42vw;
@@ -110,5 +114,8 @@ button {
   .text:nth-of-type(even) {
     height: auto;
     padding-bottom: 20px;
+  }
+  .notVisible {
+    display: none;
   }
 }

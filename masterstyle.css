@@ -706,7 +706,7 @@ a {
   header ul li {
     opacity: 0;
     width: 100%;
-    padding-left: 15vw;
+    padding-left: 7.5vw;
   }
 
   .dropdown li {
@@ -717,6 +717,7 @@ a {
   header ul li a {
     cursor: pointer;
     font-size: 1.5rem;
+    margin-right: 0;
   }
 
   .sub-link {
