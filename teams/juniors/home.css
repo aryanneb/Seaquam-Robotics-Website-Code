@@ -81,6 +81,9 @@ button {
   .button-container {
     padding: 0 0;
   }
+  .notVisible {
+    display: none;
+  }
 }
 
 @media screen and (max-width: 680px) {
