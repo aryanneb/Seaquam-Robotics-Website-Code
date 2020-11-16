@@ -132,7 +132,6 @@ body {
 .team {
   width: 8rem;
   height: 0.5rem;
-  margin-bottom: 1vw;
 }
 
 .team-image-content {
@@ -144,33 +143,7 @@ body {
   width: 100%;
   object-fit: contain;
 }
-.recent-awards {
-  padding-bottom: 5vw;
-  padding-left: 15vw;
-}
-.awards-content{
-  display: flex;
-  flex-direction: column;
-}
 
-.awards {
-  width: 8rem;
-  height: 0.5rem;
-}
-
-.awards-desc {
-  width: 75%;
-  margin: auto;
-  text-align: center;
-}
-.team-awards-content {
- width: 75%;
- margin-top: 1vw ;
-}
-
-.team-awards-content p {
-  color: #f8f8f8;
-}
 @keyframes op {
   from {
     opacity: 0;

@@ -169,9 +169,12 @@
       </script>
     </footer>
     <script>
-       $(function () {
-        $("#nav-header").load("header.html");
-      });
+      window.onload = function() {
+        $(function() {
+          $("#nav-header").load("header.html");
+        });
+      }
+
     </script>
     <script src="schedule/home.js"></script>
   </div>
