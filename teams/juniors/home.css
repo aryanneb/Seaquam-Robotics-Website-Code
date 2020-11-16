@@ -55,7 +55,7 @@ button {
   position: relative;
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1250px) {
   .tms {
     width: 42vw;
     margin-bottom: 2vw;
@@ -80,6 +80,9 @@ button {
 
   .button-container {
     padding: 0 0;
+  }
+  .notVisible {
+    display: none;
   }
 }
 
