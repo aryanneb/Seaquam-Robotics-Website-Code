@@ -149,6 +149,7 @@ body {
 .recent-awards {
   padding-bottom: 5vw;
   padding-left: 15vw;
+  margin-top: 2vw;
 }
 .awards-content {
   display: flex;
