@@ -11,6 +11,7 @@ body {
   transition: opacity 300ms;
 }
 
+
 .grey-image-container {
   width: 80%;
   margin-left: 10vw;
@@ -244,10 +245,6 @@ body {
     margin-top: 5vh;
   }
 }
-
-  .notVisible {
-    display: none;
-  }
 @keyframes namesInAni {
   from {
     opacity: 0;
@@ -287,6 +284,14 @@ body {
   }
   .home-img {
     margin-top: 0!important;
+  }
+
+  .home-page{
+    min-height: 110vh !important;
+    height: unset;
+  }
+  .home-content-with-img{
+    margin-top: 5vw !important;
   }
 }
 
