@@ -75,7 +75,7 @@ body {
   background-color: #464444;
   opacity: 1;
   width: min(60%, 900px);
-  height: 50%;
+  min-height: 50%;
   margin: auto;
   display: flex;
   cursor: default;
@@ -118,7 +118,7 @@ body {
 }
 
 .team-content {
-  margin: 10vh 5vw 10vh 5vw;
+  padding: 10vh 5vw 10vh 5vw;
   display: flex;
 }
 
@@ -127,6 +127,8 @@ body {
   margin: auto;
   margin-left: 10vw;
   margin-top: 5vh;
+  margin-right: 5vw;
+  padding: 8vh 0 8vh 0;
 }
 
 .team {
@@ -199,7 +201,7 @@ body {
 
   .modal-content {
     flex-direction: column-reverse;
-    height: 70%;
+    min-height: 70%;
   }
 
   .member-photo {
@@ -220,10 +222,13 @@ body {
 
   .team-content {
     flex-wrap: wrap;
+    margin: 10vh 5vw 10vh 5vw;
+    padding: 0;
   }
 
   .text-content {
     flex-basis: 80%;
+    padding: 0;
   }
 
   .team-image-content {
@@ -240,6 +245,9 @@ body {
   }
 }
 
+  .notVisible {
+    display: none;
+  }
 @keyframes namesInAni {
   from {
     opacity: 0;
