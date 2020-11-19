@@ -22,67 +22,67 @@ let close3 = document.getElementById("close3");
 let close4 = document.getElementById("close4");
 let close5 = document.getElementById("close5");
 
-img.onclick = function() {
+img.onclick = function () {
   modal.style.display = "flex";
 };
 
-txt.onclick = function() {
+txt.onclick = function () {
   modal.style.display = "flex";
 };
 
-img2.onclick = function() {
+img2.onclick = function () {
   modal2.style.display = "flex";
 };
 
-txt2.onclick = function() {
+txt2.onclick = function () {
   modal2.style.display = "flex";
 };
 
-img3.onclick = function() {
+img3.onclick = function () {
   modal3.style.display = "flex";
 };
 
-txt3.onclick = function() {
+txt3.onclick = function () {
   modal3.style.display = "flex";
 };
 
-img4.onclick = function() {
+img4.onclick = function () {
   modal4.style.display = "flex";
 };
 
-txt4.onclick = function() {
+txt4.onclick = function () {
   modal4.style.display = "flex";
 };
 
-img5.onclick = function() {
+img5.onclick = function () {
   modal5.style.display = "flex";
 };
 
-txt5.onclick = function() {
+txt5.onclick = function () {
   modal5.style.display = "flex";
 };
 
-close.onclick = function() {
+close.onclick = function () {
   modal.style.display = "none";
 };
 
-close2.onclick = function() {
+close2.onclick = function () {
   modal2.style.display = "none";
 };
 
-close3.onclick = function() {
+close3.onclick = function () {
   modal3.style.display = "none";
 };
 
-close4.onclick = function() {
+close4.onclick = function () {
   modal4.style.display = "none";
 };
 
-close5.onclick = function() {
+close5.onclick = function () {
   modal5.style.display = "none";
 };
 
-window.onclick = function(event) {
+window.onclick = function (event) {
   if (
     event.target == modal ||
     event.target == modal2 ||
@@ -97,3 +97,36 @@ window.onclick = function(event) {
     modal5.style.display = "none";
   }
 };
+
+// Formats awards for a team. Use in conjunction with getTeamEventsAwards()
+async function formatTeamAwards(number) {
+  let list = [];
+  let eventsAwards = await getTeamEventsAwards(number, undefined, true);
+  let limit = 0;
+  for (var key in eventsAwards) {
+    if (limit > 9) break;
+    list.push(
+      "<p><a href=" +
+        eventsAwards[key].link +
+        ' target="_blank"><u>' +
+        eventsAwards[key].name +
+        "</u></a>: <i>" +
+        eventsAwards[key].awards.join(", ") +
+        "</i></p>"
+    );
+    limit++;
+  }
+  return list.length > 0 ? list.join("") : "<p>Nothing to see here</p>";
+}
+
+// Add team awards to the first instance of the class 'team-awards-content'
+setTimeout(async function () {
+  document.getElementsByClassName(
+    "team-awards-content"
+  )[0].innerHTML = await formatTeamAwards(
+    window.location.pathname.substring(
+      window.location.pathname.indexOf("/", 2) + 1,
+      window.location.pathname.lastIndexOf("/")
+    )
+  ); // Attempts to get the team name from the path
+}, 200);
