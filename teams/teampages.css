@@ -176,6 +176,11 @@ body {
   color: #f8f8f8;
 }
 
+.grey-image img:hover, .grey-image h3:hover {
+  transition: all 0.2s;
+  transform: scale(1.04);
+}
+
 @keyframes op {
   from {
     opacity: 0;
