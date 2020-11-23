@@ -116,7 +116,9 @@ async function formatTeamAwards(number) {
     );
     limit++;
   }
-  return list.length > 0 ? list.join("") : "<p>Nothing to see here</p>";
+  return list.length > 0
+    ? list.join("")
+    : "<p>We haven't won any awards yet, emphasis on the yet 😃</p>";
 }
 
 // Add team awards to the first instance of the class 'team-awards-content'
