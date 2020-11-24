@@ -256,6 +256,10 @@ button:focus {
   max-height: 45%;
 }
 
+button:focus {
+  transform: scale(1.0) !important;
+}
+
 
 @media screen and (max-width: 1024px) {
   .main-content-wrapper {
@@ -308,7 +312,6 @@ button:focus {
   #mobileMenu,
   #mobileButton {
     display: block;
-    height: 1200px;
   }
 
   #mobileMenu {
@@ -331,10 +334,13 @@ button:focus {
     width: 2rem;
     border-radius: 0px;
     background-color: #ffd382;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
   }
 
   #mobileButton.close {
-    background-color: #fff;
+    background-color: #ffd382;
     left: 15rem;
   }
 
