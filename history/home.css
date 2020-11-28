@@ -4,6 +4,7 @@
 
 .history-page {
   display: flex;
+  margin-bottom: 4vw;
 }
 
 .year-holder {
@@ -62,8 +63,15 @@ b {
   max-width: 100%;
   margin: auto;
   margin-top: 5vh;
+  margin-bottom: 2vw;
 }
 
+.hist-image iframe {
+  max-width: 100%;
+  margin: auto;
+  margin-top: 5vh;
+  margin-bottom: 2vw;
+}
 .read h4 {
   margin: 3vh 0 5vh 0;
   color: #ffd382;
@@ -161,6 +169,9 @@ h6 {
   }
 }
 
+.gold {
+  color: #ffd382;
+}
 @media screen and (max-width: 1024px) {
   .hist-content {
     flex-direction: column;
@@ -175,6 +186,12 @@ h6 {
   }
 
   .hist-image img {
+    max-width: 45%;
+    height: auto;
+    object-fit: cover;
+    margin: auto;
+  }
+  .hist-image iframe {
     max-width: 45%;
     height: auto;
     object-fit: cover;
@@ -199,6 +216,11 @@ h6 {
     max-width: 100%;
     margin-top: 5vh;
   }
+  .hist-image iframe {
+    max-width: 100%;
+    margin-top: 5vh;
+  }
+
 
   .banner {
     top: -10vh;
