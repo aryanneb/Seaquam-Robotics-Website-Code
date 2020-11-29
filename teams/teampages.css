@@ -75,7 +75,7 @@ body {
 .modal-content {
   background-color: #464444;
   opacity: 1;
-  width: min(60%, 900px);
+  width: min(65%, 1200px);
   min-height: 50%;
   margin: auto;
   display: flex;
@@ -181,6 +181,13 @@ body {
   transform: scale(1.04);
 }
 
+.info-text {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  padding: 0 20px 0 20px;
+}
 @keyframes op {
   from {
     opacity: 0;
@@ -263,6 +270,8 @@ body {
 }
 
 @media screen and (max-width: 680px) {
+ 
+
   .grey-image-container {
     margin-top: 10vh;
   }
@@ -274,6 +283,7 @@ body {
   .modal-content {
     height: auto;
     padding-bottom: 10vw;
+    width: 75%;
   }
 
   .member-photo {
@@ -297,6 +307,12 @@ body {
   }
   .home-content-with-img{
     margin-top: 5vw !important;
+  }
+  .arrow-box {
+    display: none !important;
+  }
+  .home {
+    display: block !important;
   }
 }
 
