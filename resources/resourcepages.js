@@ -260,3 +260,82 @@ function menuToggle() {
     target4.className = "";
   }
 }
+
+//scroll to top of the "content" section
+
+function scrollToContentTop() {
+  window.scrollTo({ top: window.innerHeight * 1.18, behavior: "smooth" });
+  // window.scrollBy(0, window.innerHeight*1.2);
+}
+
+//triggers scrollToContentTop
+
+[].forEach.call(document.getElementsByClassName("jump-button"), function (x) {
+  x.addEventListener("click", scrollToContentTop);
+});
+
+// get elements by second class of "jump-button" and triggers corresponding visibility
+// avoids onclick="xxx_xVisibility" on the "jump-buttons"
+[].forEach.call(document.getElementsByClassName("w-1"), function (x) {
+  x.addEventListener("click", welcome_1Visibility);
+});
+
+[].forEach.call(document.getElementsByClassName("w-2"), function (x) {
+  x.addEventListener("click", welcome_2Visibility);
+});
+
+[].forEach.call(document.getElementsByClassName("two-1"), function (x) {
+  x.addEventListener("click", two_1Visibility);
+});
+
+[].forEach.call(document.getElementsByClassName("two-2"), function (x) {
+  x.addEventListener("click", two_2Visibility);
+});
+
+[].forEach.call(document.getElementsByClassName("two-3"), function (x) {
+  x.addEventListener("click", two_3Visibility);
+});
+
+[].forEach.call(document.getElementsByClassName("three-1"), function (x) {
+  x.addEventListener("click", three_1Visibility);
+});
+
+[].forEach.call(document.getElementsByClassName("three-2"), function (x) {
+  x.addEventListener("click", three_2Visibility);
+});
+
+[].forEach.call(document.getElementsByClassName("three-3"), function (x) {
+  x.addEventListener("click", three_3Visibility);
+});
+
+[].forEach.call(document.getElementsByClassName("three-4"), function (x) {
+  x.addEventListener("click", three_4Visibility);
+});
+
+[].forEach.call(document.getElementsByClassName("four-1"), function (x) {
+  x.addEventListener("click", four_1Visibility);
+});
+
+[].forEach.call(document.getElementsByClassName("four-2"), function (x) {
+  x.addEventListener("click", four_2Visibility);
+});
+
+[].forEach.call(document.getElementsByClassName("four-3"), function (x) {
+  x.addEventListener("click", four_3Visibility);
+});
+
+[].forEach.call(document.getElementsByClassName("four-4"), function (x) {
+  x.addEventListener("click", four_4Visibility);
+});
+
+[].forEach.call(document.getElementsByClassName("five-1"), function (x) {
+  x.addEventListener("click", five_1Visibility);
+});
+
+[].forEach.call(document.getElementsByClassName("five-2"), function (x) {
+  x.addEventListener("click", five_2Visibility);
+});
+
+[].forEach.call(document.getElementsByClassName("five-3"), function (x) {
+  x.addEventListener("click", five_3Visibility);
+});

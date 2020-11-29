@@ -10,16 +10,20 @@ button:focus {
   display: flex;
   justify-content: center;
 }
+
 .top-content-container {
   margin: auto;
 }
+
 .top-content-container h1 {
   margin-bottom: 2vh;
   text-align: center;
 }
+
 .short-bar {
   width: 100% !important;
 }
+
 .intro-text {
   width: 100%;
   text-align: center;
@@ -202,7 +206,7 @@ button:focus {
   flex-wrap: wrap;
   margin: 0 auto;
   margin-bottom: 2vw;
-  padding:0 5vw;
+  padding: 0 5vw;
 }
 
 .container {
@@ -260,10 +264,29 @@ button:focus {
   transform: scale(1.0) !important;
 }
 
+.jump-button {
+  background-color: transparent;
+  font-size: 1.5rem;
+  color: #adadad;
+  width: auto;
+  text-decoration: underline;
+}
+.jump-button:focus {
+  background-color: transparent;
+  transform: none;
+  color:#ffd382;
+}
+
+.jump-button:active{
+    background-color: transparent !important;
+}
 
 @media screen and (max-width: 1024px) {
   .main-content-wrapper {
     min-height: 1200px;
+  }
+  .jump-button {
+    font-size: 1rem;  
   }
 
   .top-content-wrapper {
@@ -375,6 +398,7 @@ button:focus {
   #contentMask.active {
     width: 100%;
   }
+
   .lowerMenu,
   .lowerMenuAct {
     height: 25px;
@@ -400,13 +424,14 @@ button:focus {
 }
 
 @media screen and (max-width: 680px) {
-
   h1 {
     font-size: 3.5rem;
   }
+
   p {
     font-size: 0.6rem;
   }
+
   .top-content-wrapper div {
     width: 300px;
   }
