@@ -262,6 +262,7 @@ button:focus {
 
 button:focus {
   transform: scale(1.0) !important;
+  transition: 0.6s;
 }
 
 .jump-button {
