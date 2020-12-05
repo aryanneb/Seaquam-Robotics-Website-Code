@@ -1,4 +1,4 @@
-window.addEventListener("scroll", function() {
+window.addEventListener("scroll", function () {
   var header = document.querySelector("header");
   header.classList.toggle("sticky", window.scrollY > 175);
 });
@@ -47,10 +47,12 @@ const historyDropdown = () => {
   const teams = document.getElementsByClassName("teamsDrpDwn")[0];
   const resc = document.getElementsByClassName("resourcesDrpDwn")[0];
   const child1 = document.getElementsByClassName("history1")[0].cloneNode(true);
+  const child2 = document.getElementsByClassName("history2")[0].cloneNode(true);
 
   plus.addEventListener("click", () => {
     if (plus.classList.contains("dropped")) {
       parent.removeChild(child1);
+      parent.removeChild(child2);
       plus.classList.toggle("dropped");
     } else if (document.getElementsByClassName("goldText")[0]) {
       while (document.getElementsByClassName("goldText")[0]) {
@@ -59,28 +61,43 @@ const historyDropdown = () => {
       if (teams.classList.contains("dropped")) {
         teams.classList.toggle("dropped");
         parent.insertBefore(child1, parent.childNodes[4]);
+        parent.insertBefore(child2, parent.childNodes[5]);
         child1.classList.add("goldText");
         child1.classList.add("sub-link");
         child1.style.animation = "navLinkAni 0.5s ease";
         child1.style.opacity = "1";
+        child2.classList.add("goldText");
+        child2.classList.add("sub-link");
+        child2.style.animation = "navLinkAni 0.5s ease";
+        child2.style.opacity = "1";
         plus.classList.toggle("dropped");
       }
 
       if (resc.classList.contains("dropped")) {
         resc.classList.toggle("dropped");
         parent.insertBefore(child1, parent.childNodes[4]);
+        parent.insertBefore(child2, parent.childNodes[5]);
         child1.classList.add("goldText");
         child1.classList.add("sub-link");
         child1.style.animation = "navLinkAni 0.5s ease";
         child1.style.opacity = "1";
+        child2.classList.add("goldText");
+        child2.classList.add("sub-link");
+        child2.style.animation = "navLinkAni 0.5s ease";
+        child2.style.opacity = "1";
         plus.classList.toggle("dropped");
       }
     } else {
       parent.insertBefore(child1, parent.childNodes[4]);
+      parent.insertBefore(child2, parent.childNodes[5]);
       child1.classList.add("goldText");
+      child2.classList.add("goldText");
       child1.classList.add("sub-link");
+      child2.classList.add("sub-link");
       child1.style.animation = "navLinkAni 0.5s ease";
+      child2.style.animation = "navLinkAni 0.5s ease";
       child1.style.opacity = "1";
+      child2.style.opacity = "1";
       plus.classList.toggle("dropped");
     }
   });
@@ -278,8 +295,7 @@ anime({
 
 async function vexDBJSONRequest(url, cachetime = 3600) {
   if (url == undefined) return {};
-  if (responsecache[url] != undefined)
-    return responsecache[url];
+  if (responsecache[url] != undefined) return responsecache[url];
   let response = await (await fetch(url)).json();
   responsecache[url] = Object.assign(response);
   setTimeout(() => {
@@ -290,7 +306,8 @@ async function vexDBJSONRequest(url, cachetime = 3600) {
 
 // Returns a list of all Seaquam Teams
 async function searchSeaquam() {
-  let teamsurl = "https://api.vexdb.io/v1/get_teams?organisation=Seaquam%20Secondary";
+  let teamsurl =
+    "https://api.vexdb.io/v1/get_teams?organisation=Seaquam%20Secondary";
   return (await vexDBJSONRequest(teamsurl)).result;
 }
 
@@ -302,7 +319,10 @@ async function getTeamInfo(name) {
 
 // Returns a list of formatted awards for a given team
 async function getTeamAwards(name, season) {
-  let awardsurl = "https://api.vexdb.io/v1/get_awards?team=" + name + (season != undefined ? "&season=" + encodeURIComponent(season) : "");
+  let awardsurl =
+    "https://api.vexdb.io/v1/get_awards?team=" +
+    name +
+    (season != undefined ? "&season=" + encodeURIComponent(season) : "");
   let response = await vexDBJSONRequest(awardsurl);
   let reqlist = {};
   let arranged = {};
@@ -310,9 +330,11 @@ async function getTeamAwards(name, season) {
   for (i = 0; i < response.size; i++) {
     if (arranged[response.result[i].sku] == undefined)
       arranged[response.result[i].sku] = [];
-    arranged[response.result[i].sku].push(response.result[i].name.replace("(VRC/VEXU)", ""));
+    arranged[response.result[i].sku].push(
+      response.result[i].name.replace("(VRC/VEXU)", "")
+    );
     if (reqlist[response.result[i].sku] == undefined)
-      reqlist[response.result[i].sku] = getEventInfo(response.result[i].sku)
+      reqlist[response.result[i].sku] = getEventInfo(response.result[i].sku);
   }
   for (var key in arranged) {
     let str = (await reqlist[key]).name.trim() + ": ";
@@ -330,15 +352,26 @@ async function getTeamEvents(name) {
 }
 
 // Gets a list of events (and any awards they earned) for a given team and season
-async function getTeamEventsAwards(name, season = undefined, ignoreawardless = false, eventsonly = false) {
+async function getTeamEventsAwards(
+  name,
+  season = undefined,
+  ignoreawardless = false,
+  eventsonly = false
+) {
   let i = 0;
 
   // Prepare the awards fetch
-  let awardsurl = "https://api.vexdb.io/v1/get_awards?team=" + name + (season != undefined ? "&season=" + encodeURIComponent(season) : "");
+  let awardsurl =
+    "https://api.vexdb.io/v1/get_awards?team=" +
+    name +
+    (season != undefined ? "&season=" + encodeURIComponent(season) : "");
   let awardsfetch = vexDBJSONRequest(awardsurl);
 
   // Get team events
-  let eventsurl = "https://api.vexdb.io/v1/get_events?team=" + name + (season != undefined ? "&season=" + encodeURIComponent(season) : "");
+  let eventsurl =
+    "https://api.vexdb.io/v1/get_events?team=" +
+    name +
+    (season != undefined ? "&season=" + encodeURIComponent(season) : "");
   let eventsResponse = (await vexDBJSONRequest(eventsurl)).result;
 
   // Populate an object
@@ -353,9 +386,11 @@ async function getTeamEventsAwards(name, season = undefined, ignoreawardless = f
   for (i = 0; i < awardsResponse.length; i++) {
     if (events[awardsResponse[i].sku] == undefined) {
       events[awardsResponse[i].sku] = [];
-      eventNames[awardsResponse[i].sku] = getEventInfo(awardsResponse[i].sku)
+      eventNames[awardsResponse[i].sku] = getEventInfo(awardsResponse[i].sku);
     }
-    events[awardsResponse[i].sku].push(awardsResponse[i].name.replace("(VRC/VEXU)", "").trim());
+    events[awardsResponse[i].sku].push(
+      awardsResponse[i].name.replace("(VRC/VEXU)", "").trim()
+    );
   }
 
   // Construct return
@@ -364,7 +399,10 @@ async function getTeamEventsAwards(name, season = undefined, ignoreawardless = f
     if (events[key].length == 0 && ignoreawardless) continue;
     ret[(await eventNames[key]).sku] = {};
     ret[(await eventNames[key]).sku].name = (await eventNames[key]).name.trim();
-    ret[(await eventNames[key]).sku].link = "https://robotevents.com/robot-competitions/vex-robotics-competition/" + (await eventNames[key]).key + ".html";
+    ret[(await eventNames[key]).sku].link =
+      "https://robotevents.com/robot-competitions/vex-robotics-competition/" +
+      (await eventNames[key]).key +
+      ".html";
     ret[(await eventNames[key]).sku].awards = events[key];
   }
   return ret;
