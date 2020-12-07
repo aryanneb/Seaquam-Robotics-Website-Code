@@ -125,6 +125,12 @@ header .logo-box img {
   max-width: 90%;
   max-height: 90%;
   margin-top: 1vh;
+  transition: 0.2s;
+}
+
+header .logo-box img:hover{
+
+  transform: scale(1.1);
 }
 
 header ul {
@@ -555,10 +561,16 @@ footer {
 }
 
 .main-content img {
-  height: 2.5rem;
+  height: 3.5rem;
   margin-right: 1rem;
+  margin-top: -0.5vw;
+  cursor: pointer;
+  transition: 0.2s;
 }
 
+.main-content img:hover {
+  transform: scale(1.2);
+}
 .up {
   flex-basis: 10%;
   height: 33.94px;
@@ -587,6 +599,9 @@ footer {
   list-style: none;
 }
 
+.list-content ul li{
+  transition: 0.2s;
+}
 .list-content ul li a {
   position: relative;
   margin: 1vw;
@@ -595,7 +610,10 @@ footer {
   font-family: "Poppins", sans-serif;
   font-weight: 300;
   font-size: 1.2rem;
-  transition: 0.6s;
+}
+
+.list-content ul li:hover {
+  transform: scale(1.2);
 }
 
 /* center-aligner
