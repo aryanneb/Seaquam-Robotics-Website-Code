@@ -18,7 +18,7 @@
 
 
 .name {
-  min-width: 35%;
+  width: 35%;
   background-color: #ffd38290;
   display: flex;
   flex-direction: column;
