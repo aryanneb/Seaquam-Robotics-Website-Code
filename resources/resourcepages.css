@@ -175,6 +175,11 @@ button:focus {
   display: none;
 }
 
+iframe {
+width: 750px;
+height: 500px;
+}
+
 .boldedText {
   font-weight: 700;
 }
@@ -280,6 +285,14 @@ button:focus {
 
 .jump-button:active{
     background-color: transparent !important;
+}
+
+li {
+  color: #ebebeb;
+  margin-top: 15px;
+  font-size: 1.15rem;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
 }
 
 @media screen and (max-width: 1024px) {
@@ -422,9 +435,20 @@ button:focus {
   .container {
     height: 270px;
   }
+  iframe {
+    width: 55vw;
+    height: 45vw;
+  }
 }
 
 @media screen and (max-width: 680px) {
+  .contentsMargin {
+    margin-left: 2vw;
+    margin-right: 50px;
+    margin-top: 2vw;
+    padding-bottom: 5vw;
+  }
+
   h1 {
     font-size: 3.5rem;
   }
@@ -511,6 +535,10 @@ button:focus {
     width: 150px;
     height: 25px;
     font-size: 15px;
+  }
+  iframe {
+    width: 90vw;
+    height: 65vw;
   }
 }
 
